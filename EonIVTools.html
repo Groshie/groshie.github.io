@@ -1,0 +1,364 @@
+﻿<!doctype HTML>
+<html>
+<head>
+	<title>Eon IV Verktyg</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="authot" content="Groshie">
+	<script>
+		var skadeTabeller = {"Hugg":{"Huvud":{"1":{"text":"Hjälm eller rustning slits bort.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Rustningsskada"]},"2":{"text":"Ytligt köttsår.","blodning":[0,0],"infektion":[2,4],"dodsSlag":0,"handelse":[""]},"3":{"text":" Stapplar tillbaka flera steg. ","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tillbakaknuffad"]},"4":{"text":"Hugg över tinningen.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar"]},"5":{"text":"Omkullslagen.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Faller"]},"6":{"text":"Munnen sönderhuggen med ett krasande läte.","blodning":[0,0],"infektion":[0,0],"dodsSlag":6,"handelse":["Tillbakaknuffad","1T6 Tänder utslagna"]},"7":{"text":"Vapnet fastnar i kraniet och orsakar stark smärta när det slits loss. ","blodning":[0,0],"infektion":[0,0],"dodsSlag":8,"handelse":["1 Smärta"]},"8":{"text":"Hugg i pannan och blod rinner ned i ögonen.","blodning":[0,0],"infektion":[0,0],"dodsSlag":10,"handelse":["Omtöcknad"]},"9":{"text":"Hugg över halsen.","blodning":[1,10],"infektion":[0,0],"dodsSlag":11,"handelse":[""]},"10":{"text":"Hugget slår bort hjälmen eller rustningen och orsakar kraftig hjärnskakning, blodet rinner ur näsan och världen snurrar.","blodning":[0,0],"infektion":[0,0],"dodsSlag":12,"handelse":["Rustningsskada","Tillbakaknuffad"]},"11":{"text":"Träff över sidan av huvudet och örat huggs sönder.","blodning":[0,0],"infektion":[0,0],"dodsSlag":13,"handelse":["Faller","-1 Reaktion"]},"12":{"text":"Käken söndertrasad, benbitar sticker fram ur köttet.","blodning":[0,0],"infektion":[0,0],"dodsSlag":14,"handelse":["Tillbakaknuffad","Sår","2T6 Tänder utslagna"]},"13":{"text":"Hugg över halsen som borrar sig in i skelettet.","blodning":[0,0],"infektion":[0,0],"dodsSlag":15,"handelse":["Tappar","Amputationsrisk 12 (nacke)"]},"14":{"text":"Halspulsådern uppsliten och blodet forsar fram.","blodning":[2,20],"infektion":[0,0],"dodsSlag":16,"handelse":[""]},"15":{"text":" Öga sönderhugget, rinner likt en kletig massa nedför kinden blandat med blod.","blodning":[0,0],"infektion":[0,0],"dodsSlag":18,"handelse":["1 Smärta","Tappar","Öga förstört"]},"16":{"text":"Halsen uppsliten in till skelettet","blodning":[0,0],"infektion":[0,0],"dodsSlag":20,"handelse":["Sår","Amputationsrisk 14 (nacke)"]},"17":{"text":"Kraniet upphugget och hjärnan skadad.","blodning":[0,0],"infektion":[0,0],"dodsSlag":22,"handelse":["1 Smärta","Sår"]},"18":{"text":"Kraniet upphugget, hjärnan blottad. ","blodning":[0,0],"infektion":[0,0],"dodsSlag":24,"handelse":["1 Smärta","Inre skada"]},"19":{"text":"Djupt sår tvärs över ansiktet som sliter sönder ena ögat.","blodning":[0,0],"infektion":[3,22],"dodsSlag":26,"handelse":["1 Smärta","Öga förstört"]},"20":{"text":" Hjärnan genomborrad av vapen eller bitar av skallbenet.","blodning":[0,0],"infektion":[5,34],"dodsSlag":10,"handelse":["1 Smärta","Inre skada"]}},"Torso":{"1":{"text":"Rustning eller klädesplagg slits upp.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Rustningsskada"]},"2":{"text":"Ytligt köttsår.","blodning":[0,0],"infektion":[2,4],"dodsSlag":0,"handelse":[""]},"3":{"text":"Hugg över sidan.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tillbakaknuffad"]},"4":{"text":"Träff i underlivet.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad"]},"5":{"text":"Träff över skuldrorna.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar"]},"6":{"text":"Långt uppfläkt sår.","blodning":[0,0],"infektion":[0,0],"dodsSlag":4,"handelse":["1 Smärta"]},"7":{"text":"Ymnig blödning.","blodning":[1,10],"infektion":[0,0],"dodsSlag":6,"handelse":[""]},"8":{"text":"Slungas tillbaka flera steg.","blodning":[0,0],"infektion":[0,0],"dodsSlag":8,"handelse":["Tillbakaknuffad"]},"9":{"text":"Hugg över revbenen.","blodning":[0,0],"infektion":[0,0],"dodsSlag":9,"handelse":["Omtöcknad"]},"10":{"text":"Djupt hugg som sliter upp muskler och vävnad.","blodning":[0,0],"infektion":[0,0],"dodsSlag":10,"handelse":["Sår"]},"11":{"text":"Kraftig blödning.","blodning":[1,16],"infektion":[0,0],"dodsSlag":11,"handelse":[""]},"12":{"text":"Underlivet uppslitet.","blodning":[0,0],"infektion":[0,0],"dodsSlag":12,"handelse":["Faller","Omtöcknad"]},"13":{"text":"Djupt hugg i sidan sliter upp hud och kött.","blodning":[0,0],"infektion":[2,12],"dodsSlag":14,"handelse":["Tillbakaknuffad"]},"14":{"text":"Magsäcken skadad, blod väller upp ur munnen tillsammans med maginnehåll.","blodning":[0,0],"infektion":[0,0],"dodsSlag":16,"handelse":["1 Smärta","Inre skada"]},"15":{"text":"Revbenen huggs sönder med ett krasande läte.","blodning":[0,0],"infektion":[0,0],"dodsSlag":18,"handelse":["Sår"]},"16":{"text":"Hugg över ryggen, vapnet fastnar i ryggraden innan det slits loss.","blodning":[0,0],"infektion":[0,0],"dodsSlag":20,"handelse":["1 Smärta","Brytrisk 12 (ryggrad)"]},"17":{"text":"Aortan genomborrad och blodet pumpar ut.","blodning":[2,24],"infektion":[0,0],"dodsSlag":22,"handelse":["1 Smärta"]},"18":{"text":"Buken uppsliten, inälvorna väller ut.","blodning":[0,0],"infektion":[3,20],"dodsSlag":24,"handelse":["Faller","Sår"]},"19":{"text":"Hjärtat genomborrat.","blodning":[3,30],"infektion":[0,0],"dodsSlag":26,"handelse":["1 Smärta"]},"20":{"text":"Bröstkorgen upphuggen, magsäcken uppsliten och inälvorna utslitna ur kroppen eller något annat groteskt.","blodning":[0,0],"infektion":[5,26],"dodsSlag":10,"handelse":["Sår","Inre skada"]}},"Arm eller Ben":{"1":{"text":"Rustning eller klädesplagg slits upp.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Rustningsskada"]},"2":{"text":"Ytligt köttsår.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["1 Smärta"]},"3":{"text":"Träff över leden.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller"]},"4":{"text":"Huden slits loss från köttet.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["1 Smärta"]},"5":{"text":"Träff i benpipa.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller"]},"6":{"text":"Vapnet fastnar, orsakar stark smärta då det slits loss.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["1 Smärta"]},"7":{"text":"Djupt hugg i benpipa.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller","Brytrisk 10 (arm/ben)"]},"8":{"text":"Djupt sår slits upp efter hela armen eller benet.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Sår"]},"9":{"text":"Djupt hugg sliter upp pulsåder.","blodning":[1,6],"infektion":[0,0],"dodsSlag":0,"handelse":[""]},"10":{"text":"Senor och muskler avslitna.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller","Sår"]},"11":{"text":"Träff över handleden eller fotleden.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Amputationsrisk 12 (hand/fot)"]},"12":{"text":"Huden slits loss från köttet i en lång remsa som blottar muskler och senor.","blodning":[0,0],"infektion":[2,4],"dodsSlag":0,"handelse":["Tappar eller Faller"]},"13":{"text":"Kraftig blödning.","blodning":[1,10],"infektion":[0,0],"dodsSlag":0,"handelse":[""]},"14":{"text":"Underarmen eller vaden upphuggen.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Amputationsrisk 12 (underarm/vad)"]},"15":{"text":"Senor sönderslitna och köttet uppsprättat.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller","Sår"]},"16":{"text":"Armbågen eller knät sönderslitet.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Amputationsrisk 12 (armbåge/knä)","1 Smärta"]},"17":{"text":"Uppfläkt sår som blottar skelettet.","blodning":[0,0],"infektion":[2,10],"dodsSlag":0,"handelse":["Amputationsrisk 12 (överarm/lår)"]},"18":{"text":"Axeln eller höften söndertrasad.","blodning":[0,0],"infektion":[0,0],"dodsSlag":8,"handelse":["1 Smärta","Tappar eller Faller","Amputationsrisk 12 (axel/höft)"]},"19":{"text":"Ett långt sår slits upp i köttet som löper efter pulsådern och orsakar en kraftig artärblödning.","blodning":[1,20],"infektion":[0,0],"dodsSlag":10,"handelse":["Sår"]},"20":{"text":"Armen eller benet förstört på något groteskt sätt. Genomborrat, stympat, krossat.","blodning":[0,0],"infektion":[0,0],"dodsSlag":12,"handelse":["Tappar eller Faller","Sår","Amputationsrisk 14 (armbåge/ knä)"]}}},"Kross":{"Huvud":{"1":{"text":"Träff över örat.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad"]},"2":{"text":"Hjälm eller rustning slås av eller slits bort.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Rustningsskada"]},"3":{"text":"Slås tillbaka flera steg.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tillbakaknuffad"]},"4":{"text":"Träff över ögat, allt snurrar.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar"]},"5":{"text":"Träffen knäcker näsan, blodet forsar fram.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["1 Smärta"]},"6":{"text":"Faller raklång till marken.","blodning":[0,0],"infektion":[0,0],"dodsSlag":4,"handelse":["Faller"]},"7":{"text":"Munnen sönderslagen.","blodning":[0,0],"infektion":[0,0],"dodsSlag":5,"handelse":["Omtöcknad","1T6 Tänder utslagna"]},"8":{"text":"Träff över tinningen, världen snurrar.","blodning":[0,0],"infektion":[0,0],"dodsSlag":6,"handelse":["1 Smärta"]},"9":{"text":"Träff rätt över halsen.","blodning":[0,0],"infektion":[0,0],"dodsSlag":7,"handelse":["Tappar","Omtöcknad"]},"10":{"text":"Attacken orsakar kraftig hjärnskakning, blodet rinner ur näsan och världen snurrar, hjälm eller rustning slits eller slås av.","blodning":[0,0],"infektion":[0,0],"dodsSlag":8,"handelse":["Rustningsskada","Omtöcknad","Tillbakaknuffad"]},"11":{"text":"Träff över munnen och käken där tänder slås ut och läpparna spricker.","blodning":[0,0],"infektion":[0,0],"dodsSlag":10,"handelse":["1 Smärta","1T6 Tänder utslagna"]},"12":{"text":"Träff rätt över ögat får individen att stappla tillbaka flera steg.","blodning":[0,0],"infektion":[0,0],"dodsSlag":12,"handelse":["Omtöcknad","Tillbakaknuffad"]},"13":{"text":"Käken sönderslagen.","blodning":[0,0],"infektion":[0,0],"dodsSlag":14,"handelse":["2T6 Tänder utslagna","Sår"]},"14":{"text":"Träff över örat får det att ringa i huvudet och världen gungar.","blodning":[0,0],"infektion":[0,0],"dodsSlag":16,"handelse":["Omtöcknad","Tappar"]},"15":{"text":"Träff över nacken.","blodning":[0,0],"infektion":[0,0],"dodsSlag":18,"handelse":["Brytrisk 12 (nacke)","Omtöcknad"]},"16":{"text":"Slag i pannan som spräcker kraniet.","blodning":[0,0],"infektion":[0,0],"dodsSlag":20,"handelse":["3 Smärta"]},"17":{"text":"Träff över nacken och halsen slår personen till marken.","blodning":[0,0],"infektion":[0,0],"dodsSlag":22,"handelse":["Brytrisk 14 (nacke)","Faller"]},"18":{"text":"Träff mitt på huvudet spräcker kraniet.","blodning":[0,0],"infektion":[0,0],"dodsSlag":24,"handelse":["2 Smärta","Inre skada"]},"19":{"text":"Ansiktet sönderslaget.","blodning":[0,0],"infektion":[0,0],"dodsSlag":26,"handelse":["Tappar","Faller","2 Smärta","2T6 Tänder utslagna"]},"20":{"text":"Kraniet uppslaget och bitar av ben tränger in i den blottade hjärnan.","blodning":[0,0],"infektion":[5,22],"dodsSlag":10,"handelse":["Sår","Inre skada"]}},"Torso":{"1":{"text":"Träff mitt i magen.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad"]},"2":{"text":"Träffar mitt i bröstkorgen och slungar personen bakåt.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tillbakaknuffad"]},"3":{"text":"Träff över skuldrorna.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar"]},"4":{"text":"Träff över revbenen får individen att tappa luften.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad"]},"5":{"text":"Träff i underlivet.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["1 Smärta"]},"6":{"text":"Träff i mellangärdet.","blodning":[0,0],"infektion":[0,0],"dodsSlag":4,"handelse":["Tillbakaknuffad"]},"7":{"text":"Träff över ryggen slår individen till marken.","blodning":[0,0],"infektion":[0,0],"dodsSlag":5,"handelse":["Faller"]},"8":{"text":"Träffen tar mitt i bröstet och individen slungas tillbaka flera steg.","blodning":[0,0],"infektion":[0,0],"dodsSlag":6,"handelse":["Tillbakaknuffad"]},"9":{"text":"Sår slits upp i sidan och blodet väller fram.","blodning":[1,6],"infektion":[0,0],"dodsSlag":7,"handelse":[""]},"10":{"text":"Revben och bröstben sargade.","blodning":[0,0],"infektion":[0,0],"dodsSlag":8,"handelse":["1 Smärta","Omtöcknad"]},"11":{"text":"Personen slås omkull av kraften.","blodning":[0,0],"infektion":[0,0],"dodsSlag":10,"handelse":["Faller"]},"12":{"text":"Träff i buken får maginnehållet att välla upp i munnen.","blodning":[0,0],"infektion":[0,0],"dodsSlag":12,"handelse":["1 Smärta","Omtöcknad"]},"13":{"text":"Ryggraden skadas.","blodning":[0,0],"infektion":[0,0],"dodsSlag":14,"handelse":["Brytrisk 12 (ryggrad)"]},"14":{"text":"Sår uppslitet i sidan och revbenen blottade.","blodning":[0,0],"infektion":[0,0],"dodsSlag":16,"handelse":["1 Smärta","Tillbakaknuffad"]},"15":{"text":"Bröstkorgen krossad, revben brutna och splittrade.","blodning":[0,0],"infektion":[0,0],"dodsSlag":18,"handelse":["Sår"]},"16":{"text":"Ryggraden skadas.","blodning":[0,0],"infektion":[0,0],"dodsSlag":20,"handelse":["1 Smärta","Brytrisk 12 (ryggrad)"]},"17":{"text":"Träffen tar i underlivet och slår sönder de intima delarna samt skadar bäckenbenet.","blodning":[0,0],"infektion":[0,0],"dodsSlag":22,"handelse":["2 Smärta","Omtöcknad"]},"18":{"text":"Bröstkorgen krossad och revbenen drivs in i lungorna.","blodning":[0,0],"infektion":[0,0],"dodsSlag":24,"handelse":["Omtöcknad","Inre skada"]},"19":{"text":"Bröstbenet och revbenen splittrade och benflisor trycks in i hjärtat.","blodning":[1,24],"infektion":[0,0],"dodsSlag":26,"handelse":["1 Smärta","Faller"]},"20":{"text":"Bröstkorgen totalt krossad, de inre organen samt magsäcken punkterade av benresterna eller något annat groteskt.","blodning":[0,0],"infektion":[5,22],"dodsSlag":10,"handelse":["Sår","Inre skada"]}},"Arm eller Ben":{"1":{"text":"Träff på nervknut.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad"]},"2":{"text":"Rustning eller klädesplagg slits bort.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Rustningsskada"]},"3":{"text":"Kraftigt slag i armveck eller knäveck.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller"]},"4":{"text":"Träff mitt på knogarna eller tårna.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad"]},"5":{"text":"Slag över armbågen eller knät.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller"]},"6":{"text":"Hårt slag över handleden eller fotleden.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["1 Smärta"]},"7":{"text":"Hård träff vid axeln eller ljumsken.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller"]},"8":{"text":"Muskelfästen skadade och inre blödningar får kroppsdelen att svälla upp.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Sår"]},"9":{"text":"Lemmen vrids ur led.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["1 Smärta"]},"10":{"text":"Handen eller foten krossad.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller","Brytrisk 10 (arm/ben)"]},"11":{"text":"Huden slits upp i ett stort öppet sår.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Sår"]},"12":{"text":"Hård träff i armbågen eller knäleden som sliter av senorna.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller","Sår"]},"13":{"text":"Del av armen eller benet krossad.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Brytrisk 12 (arm/ben)"]},"14":{"text":"Underarmen eller vaden skadad.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller","Brytrisk 12 (arm/ ben)"]},"15":{"text":"Muskelvävnaden sargas sönder och armen eller benet sväller upp på grund av inre blödningar.","blodning":[0,0],"infektion":[2,4],"dodsSlag":0,"handelse":["Tappar eller Faller","Sår"]},"16":{"text":"Kroppsdelen vrids i en onaturlig vinkel och det krasar då den slits ur led.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["1 Smärta","Sår"]},"17":{"text":"Axeln eller höftleden sargad.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller","Brytrisk 14 (arm/ben)"]},"18":{"text":"Inre blödningar får kroppsdelen att svälla upp.","blodning":[0,0],"infektion":[0,0],"dodsSlag":6,"handelse":["2 Smärta"]},"19":{"text":"Köttet slits upp och blod börjar pumpa ut ur såret.","blodning":[1,16],"infektion":[0,0],"dodsSlag":8,"handelse":["2 Smärta"]},"20":{"text":"Armen eller benet söndertrasat.","blodning":[0,0],"infektion":[0,0],"dodsSlag":10,"handelse":["Tappar eller Faller","2 Smärta","Brytrisk 16 (arm/ben)"]}}},"Stick":{"Huvud":{"1":{"text":"Lång rispa slits upp i huden.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad"]},"2":{"text":"Kinden slits upp.","blodning":[0,0],"infektion":[2,4],"dodsSlag":0,"handelse":[""]},"3":{"text":"Sår i ansiktet.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad"]},"4":{"text":"Träff under hakan och upp i munnen.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["1 Smärta"]},"5":{"text":"Huvudsvålen slits upp och ger upphov till en ymnig blödning.","blodning":[1,6],"infektion":[0,0],"dodsSlag":0,"handelse":[""]},"6":{"text":"Träff i munnen som skär sönder läpparna och borrar sig in mellan tänderna.","blodning":[0,0],"infektion":[0,0],"dodsSlag":4,"handelse":["1 Smärta","1T6 Tänder utslagna"]},"7":{"text":"Attacken borrar sig in i strupen.","blodning":[1,10],"infektion":[0,0],"dodsSlag":6,"handelse":[""]},"8":{"text":"Träff i tinningen strax invid ögat.","blodning":[0,0],"infektion":[0,0],"dodsSlag":8,"handelse":["Tappar"]},"9":{"text":"Träffen borrar sig djupt in i halsen och blodet pulserar fram.","blodning":[1,16],"infektion":[0,0],"dodsSlag":9,"handelse":[""]},"10":{"text":"Attacken borrar sig djupt in i kraniet.","blodning":[0,0],"infektion":[0,0],"dodsSlag":10,"handelse":["1 Smärta"]},"11":{"text":"Träffen borrar sig in i nacken.","blodning":[0,0],"infektion":[0,0],"dodsSlag":11,"handelse":["Brytrisk 10 (nacke)"]},"12":{"text":"Sliter upp flikar av köttet och blottar skelettet.","blodning":[0,0],"infektion":[2,10],"dodsSlag":12,"handelse":[""]},"13":{"text":"Träffen borrar sig djupt in i käken med ett krasande läte och munnen fylls med blod.","blodning":[0,0],"infektion":[0,0],"dodsSlag":14,"handelse":["1 Smärta","Omtöcknad"]},"14":{"text":"Träff i struphuvudet som borrar sig vidare in i halsen.","blodning":[1,20],"infektion":[0,0],"dodsSlag":16,"handelse":["Tillbakaknuffad"]},"15":{"text":"Ögat punkteras med ett kladdigt läte.","blodning":[0,0],"infektion":[0,0],"dodsSlag":18,"handelse":["1 Smärta","Tappar","Öga förstört"]},"16":{"text":"Kraniet genomborrat.","blodning":[0,0],"infektion":[3,12],"dodsSlag":20,"handelse":["Sår"]},"17":{"text":"Halsen genomborrad och blodet pumpar fram.","blodning":[2,20],"infektion":[0,0],"dodsSlag":22,"handelse":["1 Smärta"]},"18":{"text":"Ögat punkteras och attacken drivs vidare in i hjärnan.","blodning":[0,0],"infektion":[0,0],"dodsSlag":24,"handelse":["1 Smärta","Inre skada","Öga förstört"]},"19":{"text":"Träffen drivs upp genom munnen och sliter sönder käke och tänder innan den borras djupt in i hjärnan.","blodning":[0,0],"infektion":[0,0],"dodsSlag":26,"handelse":["Sår","Inre skada","2T6 Tänder utslagna"]},"20":{"text":"Halspulsådern slits upp.","blodning":[2,30],"infektion":[0,0],"dodsSlag":10,"handelse":["1 Smärta"]}},"Torso":{"1":{"text":"Träffen tar mitt i bröstbenet och får individen att tappa andan.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad"]},"2":{"text":"Köttet slits upp och blöder rikligt.","blodning":[1,6],"infektion":[0,0],"dodsSlag":0,"handelse":[""]},"3":{"text":"Träffen sliter upp ett stort sår över bröstet som blottar muskler och fettvävnad.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad"]},"4":{"text":"Vapnet sjunker in djupt i sidan av buken.","blodning":[0,0],"infektion":[2,4],"dodsSlag":0,"handelse":[""]},"5":{"text":"Vapnet letar sig in under huden och slits sedan loss vilket leder till en blödande reva i köttet.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["1 Smärta"]},"6":{"text":"Klädnad, rustning eller del av vapen fastnar i det djupa såret.","blodning":[0,0],"infektion":[2,10],"dodsSlag":6,"handelse":[""]},"7":{"text":"Vapnet borrar sig in i ett av revbenen.","blodning":[0,0],"infektion":[0,0],"dodsSlag":8,"handelse":["1 Smärta"]},"8":{"text":"Träffen sjunker djupt in i buken och blodet väller fram.","blodning":[1,10],"infektion":[0,0],"dodsSlag":10,"handelse":[""]},"9":{"text":"Träffen borrar sig in i ryggraden.","blodning":[0,0],"infektion":[0,0],"dodsSlag":11,"handelse":["Brytrisk 10 (ryggrad)"]},"10":{"text":"Klädnad, rustning eller en bit av vapnet fastnar i såret.","blodning":[0,0],"infektion":[2,12],"dodsSlag":12,"handelse":["Omtöcknad"]},"11":{"text":"Träffen sjunker djupt in vid nyckelbenet och ger upphov till en kraftig blödning.","blodning":[1,16],"infektion":[0,0],"dodsSlag":13,"handelse":[""]},"12":{"text":"Vapnet borrar sig in i korsryggen.","blodning":[0,0],"infektion":[0,0],"dodsSlag":14,"handelse":["1 Smärta"]},"13":{"text":"Träffen letar sig in mellan revbenen och in i en av lungorna.","blodning":[0,0],"infektion":[0,0],"dodsSlag":15,"handelse":["Inre skada"]},"14":{"text":"Träffen borrar sig in djupt och sliter sönder muskelvävnad.","blodning":[0,0],"infektion":[2,16],"dodsSlag":16,"handelse":[""]},"15":{"text":"En pulsåder slits upp och klarrött blod sprutar ut.","blodning":[2,16],"infektion":[0,0],"dodsSlag":18,"handelse":[""]},"16":{"text":"Djup reva rätt över bröstet där huden skalas av.","blodning":[0,0],"infektion":[0,0],"dodsSlag":20,"handelse":["Omtöcknad","2 Smärta"]},"17":{"text":"Träffen drivs rätt igenom underlivet och borrar sig in i bäckenet.","blodning":[0,0],"infektion":[0,0],"dodsSlag":22,"handelse":["Inre skada"]},"18":{"text":"Aortan genomborrad. Klarrött blod sprutar fram i taktfasta stötar.","blodning":[3,20],"infektion":[0,0],"dodsSlag":24,"handelse":[""]},"19":{"text":"Buken genomborrad, inälvor samt inre organ punkterade och sönderslitna.","blodning":[0,0],"infektion":[5,22],"dodsSlag":26,"handelse":["Inre skada"]},"20":{"text":"Hjärtat är genomborrat och blodet väller fram.","blodning":[3,36],"infektion":[0,0],"dodsSlag":10,"handelse":["Inre skada"]}},"Arm eller Ben":{"1":{"text":"Rispar upp huden.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad"]},"2":{"text":"Vapnet borrar sig in nära armbågen eller knäleden.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller"]},"3":{"text":"Huden fläks upp och orsakar en ymnig blödning.","blodning":[1,5],"infektion":[0,0],"dodsSlag":0,"handelse":[""]},"4":{"text":"Vapnet sjunker djupt in i köttet.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller"]},"5":{"text":"Rustning, kläder eller del av vapnet fastnar i såret.","blodning":[0,0],"infektion":[1,4],"dodsSlag":0,"handelse":[""]},"6":{"text":"Djup sår i handen eller foten.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller"]},"7":{"text":"Vapnet fastnar och orsakar stark smärta då det slits loss.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["1 Smärta"]},"8":{"text":"Vapnet borrar sig in i benpipan.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller","1 Smärta"]},"9":{"text":"Sjunker in djupt vid axeln eller höften och blodet väller fram.","blodning":[1,10],"infektion":[0,0],"dodsSlag":0,"handelse":[""]},"10":{"text":"Djupt sår.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller","Sår"]},"11":{"text":"Smuts, del av kläder, eller bit av vapnet fastnar i såret.","blodning":[0,0],"infektion":[2,10],"dodsSlag":0,"handelse":[""]},"12":{"text":"Vapnet sätter sig djupt i underarmen eller vaden och fastnar i benpipan.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller","Brytrisk 10 (arm/ ben)"]},"13":{"text":"Underarmen eller vaden genomborrad och blodet väller ut.","blodning":[1,16],"infektion":[0,0],"dodsSlag":0,"handelse":[""]},"14":{"text":"Armbågen eller knät genomborras.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller","Sår"]},"15":{"text":"Djupt sår i muskler och vävnad.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["1 Smärta","Sår"]},"16":{"text":"Vapnet borrar sig genom köttet och skär upp muskler och vävnad.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller","1 Smärta","Sår"]},"17":{"text":"Armen eller benet genomborrat och blodet väller fram.","blodning":[1,20],"infektion":[0,0],"dodsSlag":0,"handelse":[""]},"18":{"text":"Axeln eller höftleden genomborrad.","blodning":[0,0],"infektion":[0,0],"dodsSlag":6,"handelse":["Tappar eller Faller","1 Smärta","Sår"]},"19":{"text":"Pulsådern slits upp och blodet pulserar ut i taktfasta stötar.","blodning":[2,10],"infektion":[0,0],"dodsSlag":8,"handelse":["Sår"]},"20":{"text":"Armen eller benet genomborras och rester av rustning, kläder eller vapnet blir kvar i såret.","blodning":[0,0],"infektion":[3,10],"dodsSlag":10,"handelse":["Tappar eller Faller","Sår"]}}},"Slagsmål":{"Huvud":{"1":{"text":"Fast i ett halslås bakifrån på marken.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Faller"]},"2":{"text":"Dubbelklapp mot öronen.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar"]},"3":{"text":"Ögonbrynet spricker upp illa.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad"]},"4":{"text":"Får del av örat avbitet.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Rustningsskada"]},"5":{"text":"Upprepade käftsmällar spräcker läppen och en tand sväljs.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad","1 tand utslagen"]},"6":{"text":"Kastas in i omgivningen med buller och bång.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Faller"]},"7":{"text":"Kopplat strypgrepp.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad"]},"8":{"text":"Spark i ansiktet. Tänderna flyger.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tillbakaknuffad","2T6 Tänder utslagna"]},"9":{"text":"Slag under hakan får offret att lyfta och falla bakåt.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Faller"]},"10":{"text":"En armbåge rakt mot munnen.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad","1T6 Tänder utslagna"]},"11":{"text":"Bett i kinden efterlämnar ett djupt sår.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Rustningsskada","Faller"]},"12":{"text":"Tar emot ett knä med näsan. Blodet forsar fram.","blodning":[1,2],"infektion":[0,0],"dodsSlag":0,"handelse":[""]},"13":{"text":"Tumme i ögat.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["1 Smärta"]},"14":{"text":"Rak höger knäcker och trycker in näsan.","blodning":[0,0],"infektion":[0,0],"dodsSlag":6,"handelse":["Omtöcknad","Tillbakaknuffad"]},"15":{"text":"Skallad upprepade gånger mitt i ansiktet.","blodning":[0,0],"infektion":[0,0],"dodsSlag":8,"handelse":["Omtöcknad","Tappar"]},"16":{"text":"Käken slås ur led.","blodning":[0,0],"infektion":[0,0],"dodsSlag":10,"handelse":["Omtöcknad","Sår"]},"17":{"text":"Oväntad nacksving och slungas till marken.","blodning":[0,0],"infektion":[0,0],"dodsSlag":12,"handelse":["Faller","Brytrisk 12 (nacke)"]},"18":{"text":"Greppad om huvudet som dunkas i marken.","blodning":[0,0],"infektion":[0,0],"dodsSlag":14,"handelse":["Omtöcknad","Sår"]},"19":{"text":"Huvudet låst i ett nackgrepp.","blodning":[0,0],"infektion":[0,0],"dodsSlag":16,"handelse":["Omtöcknad","Brytrisk 14 (nacke)"]},"20":{"text":"Spricka i kraniet efter ett flertal hårda knytnävsslag.","blodning":[0,0],"infektion":[0,0],"dodsSlag":24,"handelse":["1 Smärta","Inre skada"]}},"Torso":{"1":{"text":"Knuffas hårdhänt bakåt.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tillbakaknuffad"]},"2":{"text":"En fulspark i skrevet.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad"]},"3":{"text":"Spark i ryggen och faller handlöst framåt.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Faller"]},"4":{"text":"Knä i mellangärdet.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad"]},"5":{"text":"Upprepade hårda slag i magen.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tillbakaknuffad"]},"6":{"text":"Slängs omkull och får flera hårda slag mot njurarna.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Faller"]},"7":{"text":"Knuffas in i något hårt som finns i omgivningen, tappar luften.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad"]},"8":{"text":"Spark i magen stapplar bakåt.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tillbakaknuffad"]},"9":{"text":"Armbåge mot solarplexus, tappar luften.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar"]},"10":{"text":"Går ned på knä efter en smäll i magen.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad"]},"11":{"text":"Kastas hårt i marken med ett obehagligt krasande läte från ryggen.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Faller","Omtöcknad"]},"12":{"text":"Smärtfyllt skamgrepp.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["1 Smärta"]},"13":{"text":"Knä i magen får maginnehållet att komma upp i munnen.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad","Tillbakaknuffad"]},"14":{"text":"Hamnar på mage på marken med motståndaren på ryggen och får slag mot ryggen.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Faller","1 Smärta"]},"15":{"text":"Smärtfyllda slag mot revbenen, tumlar omkull och tappar greppet om det man håller i.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Faller","Omtöcknad","Tappar"]},"16":{"text":"Hårda smällar knäcker revben.","blodning":[0,0],"infektion":[0,0],"dodsSlag":6,"handelse":["Omtöcknad","1 Smärta"]},"17":{"text":"Blytungt slag rakt mot hjärtat så bröstbenet bågnar.","blodning":[0,0],"infektion":[0,0],"dodsSlag":8,"handelse":["Sår"]},"18":{"text":"Slungas handlöst bakåt och något hårt drivs upp rätt in i ryggraden.","blodning":[0,0],"infektion":[0,0],"dodsSlag":10,"handelse":["1 Smärta","Brytrisk 12 (ryggrad)"]},"19":{"text":"Spark i bröstet bryter flera revben.","blodning":[0,0],"infektion":[0,0],"dodsSlag":12,"handelse":["1 Smärta","Sår"]},"20":{"text":"Upprepade hårda knäningar i magen, något där inne går sönder.","blodning":[0,0],"infektion":[0,0],"dodsSlag":20,"handelse":["1 Smärta","Inre skada"]}},"Arm eller Ben":{"1":{"text":"Rustning eller klädesplagg slits bort.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Rustningsskada"]},"2":{"text":"Får fatt på fingrar/tår och knäcker till.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller"]},"3":{"text":"Bett i handen/foten som börjar blöda kraftigt.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad"]},"4":{"text":"Spark som träffar armbågen/knät.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller"]},"5":{"text":"Ett fulslag ger ett rejält och smärtsamt blåmärke.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad"]},"6":{"text":"Ett rejält grepp om låret/överarmen tvingar ned offret på marken.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Faller"]},"7":{"text":"Grepp om armen/benet får personen att stappla bakåt.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tillbakaknuffad"]},"8":{"text":"Vaden/underarmen fastlåses i ett plågsamt grepp.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller"]},"9":{"text":"Offret faller med motståndaren över sig. Armen/benet hamnar i en onaturlig vinkel.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Faller","Omtöcknad"]},"10":{"text":"Får foten/handen stampad på.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Brytrisk 10 (arm/ben)","Omtöcknad"]},"11":{"text":"Armbågen/knät får en hård smäll.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller"]},"12":{"text":"Armen/benet hålls fast i ett smärtsamt grepp.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad","Tappar eller Faller"]},"13":{"text":"Handleden/fotleden fasthållen, böjs i fel vinkel och knäcks till.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Brytrisk 12 (arm/ben)"]},"14":{"text":"En spark mot armen/benet får offret att tumla bakåt.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad","Tillbakaknuffad"]},"15":{"text":"Muskelvävnaden slits sönder och armen/benet sväller upp på grund av inre blödningar.","blodning":[0,0],"infektion":[2,4],"dodsSlag":0,"handelse":["Tappar eller Faller"]},"16":{"text":"Kroppsdelen vrids i en onaturlig vinkel.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller","Brytrisk 14 (arm/ben)"]},"17":{"text":"Träff på nervknut sprider en ilande smärta genom kroppen.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller","1 Smärta"]},"18":{"text":"Slag mot handryggen/fotryggen får den att vridas ur led.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad","Sår"]},"19":{"text":"Slås omkull men försöker i panik bromsa effekten med armen/benet.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar eller Faller","Brytrisk 16 (arm/ ben)"]},"20":{"text":"Armbågen/knät böjs i onaturlig vinkel och något slits sönder. Leden är blå och uppsvälld i flera dagar efteråt.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar och Faller","2 Sår"]}}},"Fall":{"Hela kroppen":{"1":{"text":"Stukar foten.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Faller"]},"2":{"text":"Axeln ur led.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar"]},"3":{"text":"Foten ur led.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Faller","Brytrisk 8 (ben)"]},"4":{"text":"Faller på knät.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Faller","1 Smärta","Brytrisk 8 (ben)"]},"5":{"text":"Tar emot fallet med armbågen.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar","1 Smärta","Brytrisk 8 (arm)"]},"6":{"text":"Tar emot fallet med båda händerna.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar","Brytrisk 8 (vänster arm)","Brytrisk 8 (höger arm)","1 Smärta"]},"7":{"text":"Faller på höften.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Faller","Brytrisk 12 (ben)"]},"8":{"text":"Båda fötterna illa tilltygade.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Faller","Brytrisk 12 (vänster ben)","Brytrisk 12 (höger ben)","1 Smärta"]},"9":{"text":"Faller på sidan.","blodning":[0,0],"infektion":[0,0],"dodsSlag":6,"handelse":["Faller","Tappar","Brytrisk 12 (ben)","Brytrisk 12 (arm)","1 Smärta"]},"10":{"text":"Landar på alla fyra.","blodning":[0,0],"infektion":[0,0],"dodsSlag":8,"handelse":["Faller","Tappar","Brytrisk 10 (vänster ben)","Brytrisk 10 (höger ben)","Brytrisk 10 (vänster arm)","Brytrisk 10 (höger arm)"]},"11":{"text":"Ena armen kommer i en onaturlig vinkel.","blodning":[0,0],"infektion":[0,0],"dodsSlag":9,"handelse":["Faller","Tappar","1 Smärta","Sår (arm)","Brytrisk 14 (arm)"]},"12":{"text":"Faller på magen.","blodning":[0,0],"infektion":[0,0],"dodsSlag":10,"handelse":["Faller","Tappar","Omtöcknad","Brytrisk 14 (arm)","Sår (torso)"]},"13":{"text":"Slår huvudet i ena knät.","blodning":[0,0],"infektion":[0,0],"dodsSlag":11,"handelse":["Faller","Tappar","Omtöcknad","Brytrisk 14 (ben)","Sår (huvud)","1T6 tänder utslagna"]},"14":{"text":"Ena benet kommer i en onaturlig vinkel.","blodning":[0,0],"infektion":[0,0],"dodsSlag":12,"handelse":["Faller","Tappar","1 Smärta","Sår (ben)","Brytrisk 14 (ben)"]},"15":{"text":"Faller på ryggen.","blodning":[0,0],"infektion":[0,0],"dodsSlag":13,"handelse":["Faller","Tappar","Sår (torso)","Sår (huvud)","Brytrisk 12 (nacke)"]},"16":{"text":"Båda benen rejält tilltygade.","blodning":[0,0],"infektion":[0,0],"dodsSlag":14,"handelse":["Faller","Tappar","Sår (vänster ben)","Sår (höger ben)","Brytrisk 12 (vänster ben)","Brytrisk 12 (höger ben)"]},"17":{"text":"Faller med huvudet före.","blodning":[0,0],"infektion":[0,0],"dodsSlag":16,"handelse":["Faller","Tappar","Brytrisk 14 (arm)","Brytrisk 14 (nacke)","Sår (huvud)"]},"18":{"text":"Torson illa tilltygad.","blodning":[0,0],"infektion":[0,0],"dodsSlag":18,"handelse":["Faller","Tappar","Inre skada","Brytrisk 14 (ben)","Brytrisk 14 (arm)","Brytrisk 14 (ryggrad)","Sår (torso)","1 Smärta"]},"19":{"text":"Huvudet slår hårt i marken.","blodning":[0,0],"infektion":[0,0],"dodsSlag":20,"handelse":["Faller","Tappar","Brytrisk 16 (nacke)","Sår (huvud)","1 Smärta","2T6 tänder utslagna"]},"20":{"text":"Hela kroppen mosas.","blodning":[0,0],"infektion":[0,0],"dodsSlag":10,"handelse":["Faller","Tappar","Inre skada","Brytrisk 18 (arm)","Brytrisk 18 (ben)","Brytrisk 18 (ryggrad)","Sår (torso)","2 Smärta"]}}},"Brännskador":{"Hela kroppen":{"1":{"text":"Illa bränd, huden blir röd och svullen.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Omtöcknad"]},"2":{"text":"Det brännande medlet letar sig runt kroppen och personen stapplar okontrollerat bakåt.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tillbakaknuffad"]},"3":{"text":"Smärtan får personen att tappa det denne har i händerna för att skydda ansiktet.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Tappar"]},"4":{"text":"Det brännande medlet omsluter kroppen. Personen faller omkull och försöker i panik lindra smärtan.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["Faller","Tappar"]},"5":{"text":"Kläder och rustning har bränts fast i huden. Kräver att man sliter eller skär bort vissa delar av huden för att få bort dessa.","blodning":[0,0],"infektion":[0,0],"dodsSlag":0,"handelse":["1 Smärta"]},"6":{"text":"Kroppsdelen täcks av brännblåsor och ytliga sår som blivit infekterade.","blodning":[0,0],"infektion":[3,6],"dodsSlag":4,"handelse":["Sår (1T10 = 1–2 vänster arm, 3–4 höger arm, 5–6 vänster ben, 7–8 höger ben, 9 båda armarna, 10 båda benen)","Om Eld: Antänd 1/4"]},"7":{"text":"Lemmarna illa brända, täckta av brännblåsor och förstörd vävnad.","blodning":[0,0],"infektion":[0,0],"dodsSlag":5,"handelse":["Omtöcknad","Sår (1T10 = 1–2 vänster arm, 3–4 höger arm, 5–6 vänster ben, 7–8 höger ben, 9 båda armarna, 10 båda benen)","Om Eld: Antänd 1/6"]},"8":{"text":"Hela kroppen ansätts av det brännande medlet. Delar av kläder, rustning samt det som personen bär på sig smälter fast i köttet och måste skäras loss.","blodning":[0,0],"infektion":[0,0],"dodsSlag":6,"handelse":["Omtöcknad","1 Smärta","Om Eld: Antänd 1/8"]},"9":{"text":"Kraftiga brännskador har fått kroppen att hamna i chock. Huden är sönderbränd på många ställen och från dessa sår rinner vätska och var.","blodning":[0,0],"infektion":[4,10],"dodsSlag":7,"handelse":["Sår (1T10 = 1–2 vänster arm, 3–4 höger arm, 5–6 vänster ben, 7–8 höger ben, 9 båda armarna, 10 båda benen)","Om Eld: Antänd 2/8"]},"10":{"text":"Brännskadan förstör hudens yttre lager och skadar nervsystemet. Personen är i fruktansvärda kval.","blodning":[0,0],"infektion":[0,0],"dodsSlag":8,"handelse":["2 Smärta","Om Eld: Antänd 2/10"]},"11":{"text":"Ansiktet svårt ansatt. Får huden att lossna i flagor och ge plats åt brännblåsor i druvstorlek. Ansiktet kommer aldrig bli detsamma.","blodning":[0,0],"infektion":[0,0],"dodsSlag":10,"handelse":["Sår (huvud)","Om Eld: Antänd 2/12"]},"12":{"text":"Armarna sargade av det brännande medlet, förstörd vävnad spricker upp i röda revor som vätskar.","blodning":[0,0],"infektion":[0,0],"dodsSlag":12,"handelse":["Tappar","1 Smärta","Sår (1T10 = 1–4 vänster arm, 5–8 höger arm, 9–10 båda armarna)","Om Eld: Antänd 3/12"]},"13":{"text":"Benen svårt sargade vilket får huden att spricka upp och bli brunsvart och läderartad. Sårvätska och var rinner rikligt från de blodröda sprickorna.","blodning":[0,0],"infektion":[0,0],"dodsSlag":14,"handelse":["Faller","2 Smärta","Om Eld: Antänd 3/14"]},"14":{"text":"Hela kroppen exponeras vilket bränner fast rustning och kläder vid huden. Dessa måste slitas eller skäras bort och drar då med sig stora stycken förstörd hud. Om personen överlever detta kommer kroppen för evigt vara sargad av händelsen.","blodning":[0,0],"infektion":[5,10],"dodsSlag":16,"handelse":["1 Smärta","−2 Kroppsbyggnad","Om Eld: Antänd 3/16"]},"15":{"text":"Underarmarna och händerna blir svårt utsatta och förtvinar i det närmaste av det brännande medlet. Huden på fingrarna svartnar och spricker upp. Vitt ben går att skymta bland de svartbrända resterna.","blodning":[0,0],"infektion":[0,0],"dodsSlag":18,"handelse":["Tappar","Sår (båda armarna)","I framtiden −1T6 på alla färdigheter som kräver fungerande händer","Om Eld: Antänd 4/16"]},"16":{"text":"Det brännande medlet drabbar ena halvan av kroppen, bränner benet, armen, bröstkorgen och halva ansiktet. Dessa områden blir vanställda och förtvinade och täcks av varfyllda brännblåsor. Ena halvan av ansiktet är sönderbränt och ögat kokar sönder i ögonhålan och spricker med ett högt knäppande.","blodning":[0,0],"infektion":[0,0],"dodsSlag":20,"handelse":["2 Smärta","Öga förstört","Om Eld: Antänd 4/18"]},"17":{"text":"Hela huvudet drabbas av det brännande medlet. Ansiktet vanställs och smälter samman. Öronen förkolnar, näsan blir till ett svartnat hål ovanför läpparna som spricker sönder med ett knastrande läte och tänderna blottas. Kvar blir ett förvridet, svart-rött anlete täckt av brännblåsor.","blodning":[0,0],"infektion":[0,0],"dodsSlag":22,"handelse":["Sår (huvud)","1 Smärta","−2 Reaktion","−2 Vaksamhet","Om Eld: Antänd 4/20"]},"18":{"text":"Det brännande medlet sargar överkroppen som får djupa hål i bröstkorgen, buken och underlivet. Fettet smälter fräsande och sprider en kraftig stank i omgivningen.","blodning":[0,0],"infektion":[5,22],"dodsSlag":24,"handelse":["2 Smärta","Om Eld: Antänd 5/20"]},"19":{"text":"Det brännande medlet drabbar armar och ben, fläker upp huden och blottar skelettet på lemmarna. Blodet i ådrorna kokar bort, fryser till is eller löses upp med hud och kött till ett klibbigt slem.","blodning":[0,0],"infektion":[0,0],"dodsSlag":26,"handelse":["Sår (alla kroppsdelar)","Om Eld: Antänd 5/22"]},"20":{"text":"Kroppen bränns till oigenkännlighet. Av det som återstår är det svårt att säga om det är en kropp eller inte. Det man ser är en svart-röd flagnande yta som en gång i tiden var hud och muskler genomkorsad av revor i rött där vätska tränger fram.","blodning":[0,0],"infektion":[5,26],"dodsSlag":10,"handelse":["Inre skada","Sår (alla kroppsdelar)","Om Eld: Antänd 6/24"]}}}}
+
+	
+		function diceRoll(array=[1,6,0], ob=false) {
+			// Slå tärning: (array = [antal tärningar, sidor på tärning, modifikation], ob=true/false)
+			//console.log("Tärningar: " + array[0] + "T" + array[1] + "+" + array[2]);
+			/*
+			if (isNaN(parseInt(array[0])) || isNaN(parseInt(array[2])) || array[0] == "" || array[2] == "") {
+				return "Fälten får bara innehålla siffror!"
+			}
+			*/
+			let rollSum = Math.floor(parseInt(array[2]));
+			let rolledDice = [];
+			for (rolls=0;rolls<parseInt(Math.floor(array[0]));rolls++) {
+				let currentRoll = Math.floor(Math.random() * parseInt(array[1])) + 1;
+				rolledDice.push(currentRoll);
+				if (currentRoll == array[1] && ob == true) {
+					rolls -= 2;
+					continue
+				}
+				rollSum += currentRoll;
+			}
+			//console.log(ob == true);
+			if (ob == true) {
+				document.getElementById("diceList").innerHTML = rolledDice + " + " + Math.floor(parseInt(array[2]));
+			}
+			/*
+			if (document.getElementById("damCheckBox").checked) {
+				document.getElementById("damage").value = parseInt(rollSum);
+			}
+			*/
+			console.log("Tärningar som rullats: " + rolledDice + ", med bonus: " + Math.floor(parseInt(array[2])));
+			return parseInt(rollSum)
+		}
+
+
+		function calcSkadeTabellDice(damage) {
+			// Om skada är under 1
+			if (parseInt(damage) < 1) {
+				return [0, [0,0,0]]
+			}
+			// Om skada är under 5
+			if (damage < 5) {
+				return [1,[0,0,0]]
+			}
+			// Om skada är mellan 5-9
+			else if (damage < 10 && damage > 4) {
+				return [2,[0,0,0]]
+			}
+			// Om skada är 10+
+			else {
+				let thisDam = Math.floor(damage/5) * 2;
+				let diceMod = damage - 14;
+				if (diceMod <= 0) {
+					diceMod = 0;
+				}
+				diceMod = Math.ceil(diceMod/5) * 2;
+				// Returnera [Utmattning, [antal tärningar, sidor på tärning, bonus till tärningsslag]]
+				return [thisDam, [1,10,diceMod]]
+			}
+			return
+		}
+		
+		
+		function calcDamResult() {
+			// Räknar ut och sätter ut skaderesultat
+			let damage = document.getElementById("damage").value;
+			//let damageResult = [];
+			let damageResult = calcSkadeTabellDice(damage);
+			let table = document.getElementById("skadeTabell").value;
+			let bodyPart = document.getElementById("kroppsDel2").value;
+			let skadeText = "<tr><th>";
+			
+			// Om skada är under 10
+			if (damage < 10) {
+				skadeText += "Exempel:</th><td>Mindre skråma, knapp träff eller mindre brännskada.</td></tr>";
+				skadeText += "<tr><th>Utmattning:</th><td>+" + damageResult[0] + "</td></tr>";
+			} else {
+			// Om skada är 10 eller mer
+				//console.log("0: " + damageResult[1][0])
+				//console.log("1: " + damageResult[1][1])
+				//console.log("2: " + damageResult[1][2])
+				var tableResult = diceRoll([parseInt(damageResult[1][0]), parseInt(damageResult[1][1]), parseInt(damageResult[1][2])]);
+				// Om skaderesultatet är över 20...
+				if (tableResult > 20) {
+					// ... Sätt tabellresultatet till 20 eftersom tabellen bara går till 20
+					var modResult = 20;
+				} else {
+					// ... Annars behåller vi tabellresultatet
+					modResult = tableResult;
+				}
+				
+				// Felsökning nedan
+				//console.log("damage: " + damage);
+				//console.log("tableResult: " + tableResult);
+				//console.log("damageResult: " + damageResult[1]);
+				//console.log("modResult: " + modResult)
+				//console.log("bodyPart: " + bodyPart);
+				//console.log("table: " + table);
+				
+				let damageContent = skadeTabeller[table][bodyPart][modResult];
+				//console.log(damageContent);
+				skadeText += "Tabellresultat:<th><td>" + modResult + "</td><tr>";
+				skadeText += "<tr><th>Tärningsresultat:<th><td>" + tableResult + "</td><tr>";
+				skadeText += "<tr><th>Exempel:<th><td>" + damageContent.text + "</td><tr>";
+				skadeText += "<tr><th>Utmattning:<th><td>+" + damageResult[0] + "</td><tr>";
+				if (damageContent.blodning[0] > 0) {
+					skadeText += "<tr><th>Blödning:<th><td>" + damageContent.blodning[0] + "/" + damageContent.blodning[1] + "</td><tr>";
+				}
+				if (damageContent.infektion[0] > 0) {
+					skadeText += "<tr><th>Infektion:<th><td>" + damageContent.infektion[0] + "/" + damageContent.infektion[1] + "</td><tr>";
+				}
+				if (damageContent.dodsSlag > 0) {
+					if (parseInt(modResult) == 20) {
+						if (table != "Slagsmål" && bodyPart != "Arm eller Ben") {
+							var deathSave = parseInt(damageContent.dodsSlag + tableResult);
+						} else {
+							var deathSave = parseInt(damageContent.dodsSlag);
+						}
+					} else {
+						var deathSave = parseInt(damageContent.dodsSlag);
+					}
+					skadeText += "<tr><th>Dödsslag:<th><td>" + deathSave + "</td><tr>";
+				}
+				if (damageContent.handelse[0]) {
+					for (i=0;i<damageContent.handelse.length;i++) {
+						skadeText += "<tr><th>Händelse " + parseInt(i+1) + ":<th><td>" + damageContent.handelse[i] + "</td><tr>";
+					}
+				} 
+			}
+			document.getElementById("damageResult").innerHTML = skadeText;
+			return
+		}
+		
+		
+		function setBodyParts(element) {
+			// Sätter värdet i skadetabellens träffområden
+			let kroppsTabell = document.getElementById("kroppsDel2");
+			let container = document.getElementById("bodyPartContainer");
+			
+			// Tar bort den tidigare listan
+			kroppsTabell.remove();
+			
+			// Skapar den nya listan
+			kroppsTabell = document.createElement("select");
+			kroppsTabell.id = "kroppsDel2";
+			kroppsTabell.style.width = "120px";
+			
+			// Lägger in nya värden i kroppsdelslistan
+			for (kroppsDel in skadeTabeller[element.value]) {
+				let kroppOption = document.createElement("option");
+				kroppOption.text = kroppsDel;
+				kroppsTabell.add(kroppOption);
+			}
+			
+			// Fäster listan i tabellen för visning
+			container.appendChild(kroppsTabell);
+			return element.value
+		}
+		
+		
+		function calcHitArea() {
+			// Beräknar träfftabell med 1T10, returnerar: [Huvudområde, Delområde]
+			let thisHit = diceRoll([1,10,0]);
+			let thisPart = diceRoll([1,10,0]);
+			
+			if (thisHit == 1) {
+				// Om 1 = Huvud
+				if (thisPart < 5) {
+					return ["Huvud", "Ansikte"]
+				}
+				if (thisPart > 4 && thisPart < 9) {
+					return ["Huvud", "Skalle"]
+				}
+				if (thisPart > 8) {
+					return ["Huvud", "Hals"]
+				}
+				return ["Huvud", "Huvud"]
+			}
+			if (thisHit > 1 && thisHit < 5) {
+				// Om 2-4 = Torso
+				if (thisPart < 7) {
+					return ["Torso", "Bröstkorg"]
+				}
+				if (thisPart > 6 && thisPart < 10) {
+					return ["Torso", "Mage"]
+				}
+				if (thisPart > 9) {
+					return ["Torso", "Underliv"]
+				}
+				return ["Torso", "Torso"]
+			}
+			if (thisHit > 4 && thisHit < 7) {
+				// Om 5-6 = Vänster arm
+				if (thisPart < 3) {
+					return ["Vänster arm", "Skuldra"]
+				}
+				if (thisPart > 2 && thisPart < 5) {
+					return ["Vänster arm", "Överarm"]
+				}
+				if (thisPart == 5) {
+					return ["Vänster arm", "Armbåge"]
+				}
+				if (thisPart > 5 && thisPart < 9) {
+					return ["Vänster arm", "Underarm"]
+				}
+				if (thisPart > 8) {
+					return ["Vänster arm", "Hand"]
+				}
+				return ["Vänster arm", "Arm eller Ben"]
+			}
+			if (thisHit > 6 && thisHit < 9) {
+				// Om 7-8 = Höger arm
+				if (thisPart < 3) {
+					return ["Höger arm", "Skuldra"]
+				}
+				if (thisPart > 2 && thisPart < 5) {
+					return ["Höger arm", "Överarm"]
+				}
+				if (thisPart == 5) {
+					return ["Höger arm", "Armbåge"]
+				}
+				if (thisPart > 5 && thisPart < 9) {
+					return ["Höger arm", "Underarm"]
+				}
+				if (thisPart > 8) {
+					return ["Höger arm", "Hand"]
+				}
+				return ["Höger arm", "Arm eller Ben"]
+			}
+			if (thisHit == 9) {
+				// Om 9 = Vänster ben
+				if (thisPart < 3) {
+					return ["Vänster ben", "Höft"]
+				}
+				if (thisPart > 2 && thisPart < 5) {
+					return ["Vänster ben", "Lår"]
+				}
+				if (thisPart > 4 && thisPart < 7) {
+					return ["Vänster ben", "Knä"]
+				}
+				if (thisPart > 6 && thisPart < 10) {
+					return ["Vänster ben", "Vad"]
+				}
+				if (thisPart > 9) {
+					return ["Vänster ben", "Fot"]
+				}
+				return ["Vänster ben", "Arm eller Ben"]
+			}
+			// Om 10 = Höger ben
+			if (thisPart < 3) {
+				return ["Höger ben", "Höft"]
+			}
+			if (thisPart > 2 && thisPart < 5) {
+				return ["Höger ben", "Lår"]
+			}
+			if (thisPart > 4 && thisPart < 7) {
+				return ["Höger ben", "Knä"]
+			}
+			if (thisPart > 6 && thisPart < 10) {
+				return ["Höger ben", "Vad"]
+			}
+			if (thisPart > 9) {
+				return ["Höger ben", "Fot"]
+			}
+			return ["Höger ben", "Arm eller Ben"]
+		}
+		
+		
+		function initPage() {
+			// Körs när sidan laddat
+			let damageInput = document.getElementById("damage");
+			let tabellSelect = document.getElementById("skadeTabell");
+			let kroppSelect = document.getElementById("kroppsDel2");
+			
+			// Sätter värden i inputs och selects
+			damageInput.value = 0;
+			for (tabell in skadeTabeller) {
+				let tabellOption = document.createElement("option");
+				tabellOption.text = tabell;
+				tabellSelect.add(tabellOption);
+			}
+			for (kroppsDel in skadeTabeller[tabellSelect.value]) {
+				let kroppOption = document.createElement("option");
+				kroppOption.text = kroppsDel;
+				kroppSelect.add(kroppOption);
+			}
+		}
+	</script>
+	<style>
+		body {font-family: calibri;background-color: black}
+		div {border: 1px solid gray;margin: 5px;padding: 5px}
+		td, th {text-align: left}
+		p, td, th, h1, h2, h3 {color: white;padding: 0px}
+	</style>
+</head>
+
+<body onload="initPage()">
+	<h1>Eon IV-verktyg</h1>
+	<div id="diceRoller">
+		<h2>Rulla tärningar (ob)</h2>
+		<table>
+			<tr>
+				<td>
+					<input id="diceAmount" type="number" min=0 style="width:35px" value=1></input>
+				</td>
+				<td>
+					T6 +
+				</td>
+				<td>
+					<input id="diceBonus" type="number" style="width:35px" value=0></input>
+				</td>
+				<td>
+					<button id="rollButton" onclick="document.getElementById('diceResult').innerHTML = diceRoll([document.getElementById('diceAmount').value,6,document.getElementById('diceBonus').value], true)">Rulla</button>
+				</td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<th>Resultat:</th>
+				<td id="diceResult">0</td>
+			</tr>
+			<tr>
+				<th>Tärningar:</th>
+				<td id="diceList">0</td>
+			</tr>
+		</table>
+	</div>
+	
+	<div id="traffTabell">
+		<h2>Träfftabellsuträkning</h2>
+		<table>
+			<tr>
+				<td><button onclick="let thisHit = calcHitArea();document.getElementById('traffOmrade').innerHTML = thisHit[0] + ' (' + thisHit[1] + ')'">Beräkna träffområde</button></td>
+				<td id="traffOmrade" style="padding-left: 5px"></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div id="damageCalc">
+		<h2>Skadetabellsuträkning</h2>
+		<p>Fyll i modifierad skada, välj därefter skadetabell och kroppsdel innan du trycker på <em>Beräkna</em>:</p>
+		<table>
+			<tr><th>Skada</th><th>Skadetabell</th><th>Kroppsdel</th><th></th></tr>
+			<tr>
+				<th><input id="damage" type="number" style="width: 50px"></input></th>
+				<th><select id="skadeTabell" onchange="setBodyParts(this)"></select></th>
+				<th id="bodyPartContainer"><select id="kroppsDel2" style="width:120px"></select></th>
+				<th><button onclick="calcDamResult()">Beräkna</button>
+			</tr>
+		</table>
+		<h3>Resultat:</h3>
+		<table id="damageResult">
+		</table>
+	</div>
+</body>
+</html>
