@@ -20,7 +20,7 @@ const selectedDice = [["D6", "Strength"]]; // Always start with D6
 const rollHistory = [];
 
 // Declare general talents + spells and chosen talent list (does not include kin-talent)
-const generalTalents = {};
+const generalTalents = getData("https://github.com/Groshie/groshie.github.io/tree/main/Forbidden%20Lands%20Tools/data/generalTalents.json");
 const selectedTalents = {};
 const selectedItems = {
     "Eq": [],
@@ -28,27 +28,27 @@ const selectedItems = {
     "Weapons": []
 };
 
-const spells = {};
+const spells = getData("https://github.com/Groshie/groshie.github.io/tree/main/Forbidden%20Lands%20Tools/data/spells.json");
 
 // Declare main skill object
-const skills = {};
+const skills = getData("https://github.com/Groshie/groshie.github.io/tree/main/Forbidden%20Lands%20Tools/data/skills.json");
 
 // Declare main kin object
-const kins = {};
+const kins = getData("https://github.com/Groshie/groshie.github.io/tree/main/Forbidden%20Lands%20Tools/data/kins.json");
 
 // Declare main profession object
-const profs = {};
+const profs = getData("https://github.com/Groshie/groshie.github.io/tree/main/Forbidden%20Lands%20Tools/data/profs.json");
 
 // Declare main age group object
-const ages = {};
+const ages = getData("https://github.com/Groshie/groshie.github.io/tree/main/Forbidden%20Lands%20Tools/data/ages.json");
 
 // Declare item objects
-const items = {};
-const weapons = {};
-const armors = {};
+const items = getData("https://github.com/Groshie/groshie.github.io/tree/main/Forbidden%20Lands%20Tools/data/items.json");
+const weapons = getData("https://github.com/Groshie/groshie.github.io/tree/main/Forbidden%20Lands%20Tools/data/weapons.json");
+const armors = getData("https://github.com/Groshie/groshie.github.io/tree/main/Forbidden%20Lands%20Tools/data/armors.json");
 
 // Declare critical injury object
-const critDamage = {};
+const critDamage = getData("https://github.com/Groshie/groshie.github.io/tree/main/Forbidden%20Lands%20Tools/data/critInjuries.json");
 
 /*
 #############################
@@ -1551,18 +1551,6 @@ async function getData(url) {
 
 // Main function to start generating the webpage and set initial values
 function init() {
-    // Start by fetching data into variables
-    generalTalents = getData("data/generalTalents.json");
-    spells = getData("data/spells.json");
-    skills = getData("data/skills.json");
-    kins = getData("data/kins.json");
-    profs = getData("data/profs.json");
-    ages = getData("data/ages.json");
-    items = getData("data/items.json");
-    weapons = getData("data/weapons.json");
-    armors = getData("data/armors.json");
-    critDamage = getData("data/critInjuries.json");
-    
     // Start initializing the page
     createAttrTable();
     createSkillTable();
