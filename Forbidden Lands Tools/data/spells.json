@@ -1,0 +1,134 @@
+{
+    "General": {
+        "1": [
+            "Sense magic",
+            "Arcane sigil"
+        ],
+        "2": [
+            "Anti magic",
+            "Hide spell"
+        ],
+        "3": [
+            "Bind spell",
+            "Transfer"
+        ]
+    },
+    "Path of Healing": {
+        "1": [
+            "Healing hands",
+            "Healer",
+            "Soul light"
+        ],
+        "2": [
+            "Destroy undead",
+            "Banish demon",
+            "Cure critical wounds"
+        ],
+        "3": [
+            "Harmony",
+            "Control weather",
+            "Resurrect"
+        ]
+    },
+    "Path of Shapeshifting": {
+        "1": [
+            "Hawkeye",
+            "Catfoot",
+            "Speak with animal"
+        ],
+        "2": [
+            "Control animal",
+            "Bear ram",
+            "Deer leap"
+        ],
+        "3": [
+            "Animal influence",
+            "Shapeshift"
+        ]
+    },
+    "Path of Sight": {
+        "1": [
+            "Lightbringer",
+            "Hexed hearing",
+            "True sight"
+        ],
+        "2": [
+            "Past sight",
+            "Farsight",
+            "The wise path"
+        ],
+        "3": [
+            "Intuition",
+            "Tell fortune",
+            "Transfer thoughts"
+        ]
+    },
+    "Path of Sigils": {
+        "1": [
+            "Paralyze",
+            "Tempt",
+            "Terrify"
+        ],
+        "2": [
+            "Blind",
+            "Twist mind",
+            "Prevent action"
+        ],
+        "3": [
+            "Dominate",
+            "Power sigil",
+            "Portal"
+        ]
+    },
+    "Path of Stone": {
+        "1": [
+            "Stun",
+            "Stone dust",
+            "Mountainspeaker"
+        ],
+        "2": [
+            "Shape rock",
+            "Propel rock",
+            "Wither rock"
+        ],
+        "3": [
+            "Song of smithing",
+            "Quake",
+            "Stone servant"
+        ]
+    },
+    "Path of Blood": {
+        "1": [
+            "Arouse",
+            "Unaffected"
+        ],
+        "2": [
+            "Force demon",
+            "Blood oath",
+            "Combust"
+        ],
+        "3": [
+            "Hex",
+            "Imbue power",
+            "Trap soul"
+        ]
+    },
+    "Path of Death": {
+        "1": [
+            "Infect",
+            "Defile",
+            "Cold of death",
+            "Dampen mind"
+        ],
+        "2": [
+            "Hand of death",
+            "Speak to the dead",
+            "Awaken dead"
+        ],
+        "3": [
+            "Absorb life",
+            "Terror",
+            "Age"
+        ]
+    }
+}

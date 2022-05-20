@@ -1,0 +1,270 @@
+{
+    "Lightning fast": {
+        "Description": "You react with the speed of a snake, and usually strike before your opponent.",
+        "1": "You can draw two initiative cards instead of one during the initiative draw. Choose the one you want to use, and shuffle the other one back into the deck before others draw their cards.",
+        "2": "You can draw three initiative cards instead of one during the initiative draw.",
+        "3": "You can draw four initiative cards instead of one during the initiative draw."
+    },
+    "Bowyer": {
+        "Description": "You have learned how to turn wood and leather into lethal bows and slings.",
+        "1": "You can use the CRAFTING skill to make ranged weapons from the weapons table (see page 103), with normal stats.",
+        "2": "You can make ranged weapons with a Weapon Bonus that is one point higher than normal. This takes twice as long, and your roll is modified by –2.",
+        "3": "You can make ranged weapons with a Weapon Bonus that is two points higher than normal. This takes four times as long and your roll is modified by –4."
+    },
+    "Builder": {
+        "Description": "You are are a skilled engineer and can build advanced constructions in your stronghold.",
+        "1": "You can build advanced functions in your stronghold. See Chapter 8.",
+        "2": "You get a +1 modification when you build a function in a stronghold.",
+        "3": "You can add a D8 Artifact Die to your roll when you build a function in your stronghold."
+    },
+    "Berserker": {
+        "Description": "When you are Broken (see page 107), you can choose to unleash a primal rage uponthe world. You immediately recover as many points in the attribute that has been decreased to zero as your rank in BERSERKER. You must immediately attack the nearest opponent in close combat, and keep fighting until you are Broken (again) or until all opponents within sight have been Broken. During your rage, you are immune to any attempts to MANIPULATE you and all your close combat attacks do one extra point of damage. If Broken during a BERSERKER rage, you cannot use this talent."
+    },
+    "Executioner": {
+        "Description": "You know where to strike to make sure your opponent falls and does not get up again. Ever.",
+        "1": "When you inflict a critical injury on your opponent, you can reroll once. The highest roll counts.",
+        "2": "As per rank 1, but you can also reverse the D66 roll for the critical injury – a roll of 16 becomes 61, for example.",
+        "3": "When you inflict a critical injury on your enemy, you may choose freely from the relevant list."
+    },
+    "Defender": {
+        "Description": "You are skilled at using weapons and shields to protect yourself in close combat.",
+        "1": "You get one free PARRY every round of combat. The extra PARRY does not count as one of your actions in the round.",
+        "2": "You get a +1 bonus to all PARRIES.",
+        "3": "You can PARRY an unlimited number of times in the same round of combat, but only once against the same attack. Only the first PARRY counts towards your actions in the round."
+    },
+    "Dragonslayer": {
+        "Description": "Dragonslayer is the title given to those who seek talents 75 honor and fame by killing beasts and monsters.",
+        "1": "All your attacks against monsters are modified by +1.",
+        "2": "Your attacks against monsters cause 1 additional point of damage.",
+        "3": "You can add a D8 Artifact Die to your roll in attacks against monsters."
+    },
+    "Ambidextrous": {
+        "Description": "You are skilled in the art of fighting with one close combat weapon in each hand. You have a primary weapon in your favored (or sword) hand and a secondary weapon in your other hand. You can draw both weapons with a single DRAW WEAPON action.",
+        "1": "You can use your secondary weapon to perform one extra attack per round, as a fast action. It must be a LIGHT weapon and the attack is modified by –2.",
+        "2": "Same as per rank 1, but you can use a normal weapon as your secondary weapon.",
+        "3": "Same as per rank 2, and your attack with your secondary weapon is not modified."
+    },
+    "Fisher": {
+        "Description": "You have mastered the art of pulling fish from rivers and lakes. You need a net, a rod, or some other piece of fishing equipment. Read more about fishing in Chapter 7.",
+        "1": "Your roll for SURVIVAL is modified by +1 when you FISH.",
+        "2": "Fishing sets you at ease. A Quarter Day spent FISHING counts as RESTING for you.",
+        "3": "The amount of FISH you catch is doubled."
+    },
+    "Tanner": {
+        "Description": "You know the art of turning pelts into leather, and to craft that leather into armor.",
+        "1": "With a successful CRAFTING roll, you can turn up to D6 units of PELTS into LEATHER. If you fail, the PELTS are destroyed. If you have access to a TANNERY (see page 172), you can create LEATHER faster and without rolling dice. You can also use the CRAFTING skill to make leather armor with normal stats according to the armor table on page 106.",
+        "2": "You can make leather armor with an Armor Rating that is one point higher than normal. This takes twice as long, and your roll is modified by –2.",
+        "3": "You can make leather armor with an Armor Rating that is two points higher than normal. This takes four times as long and your roll is modified by –4."
+    },
+    "Poisoner": {
+        "Description": "You have mastered the art of brewing poisons of every kind. Read more about poisons in Chapter 5.",
+        "1": "You can use the CRAFTING skill to concoct poisons. See the table on page 186 for required raw materials and equipment. The Potency of the poison increases by 1 for every success you roll beyond the first.",
+        "2": "As per rank 1, and all your rolls to concoct poisons are modified by +1.",
+        "3": "As per rank 2, and you can add a D8 Artifact Die to your rolls to concoct poisons."
+    },
+    "Fast footwork": {
+        "Description": "You are fast and quick on your feet, and hard to hit in combat.",
+        "1": "You can DODGE for free once in every round of combat. The extra DODGE doesn’t count toward your actions in the round.",
+        "2": "You get a +1 bonus whenever you DODGE.",
+        "3": "You can DODGE an unlimited number of times in the same round of combat, but only once against the same attack. Only the first DODGE counts towards your actions in the round."
+    },
+    "Threatening": {
+        "Description": "You have a scary physical presence and can threaten people to make them do what you want.",
+        "1": "You can roll MIGHT instead of MANIPULATE when you threaten someone to make them do what you want. If you succeed, your opponent cannot demand anything in return from you. He can still choose to attack you.",
+        "2": "As per rank 1, and your MIGHT roll is modified by +1 when you threaten someone.",
+        "3": "As per rank 2, and you can add a D8 Artifact Die to your roll when you threaten someone."
+    },
+    "Master of the hunt": {
+        "Description": "You are a skilled hunter and can find prey where others cannot.",
+        "1": "Your SURVIVAL roll is modified by +1 when you HUNT during journeys. Read more about journeys in Chapter 7.",
+        "2": "Hunting sets you at ease. A Quarter Day spent HUNTING counts as RESTING.",
+        "3": "When HUNTING, you may roll two D6s on the animals table (see page 152) and choose which result you want to use."
+    },
+    "Firm grip": {
+        "Description": "It takes a lot for you to lose your grip on your weapon.",
+        "1": "DISARMING you requires an extra success – that is, two successes for a one-handed weapon and three successes for a two-handed weapon.",
+        "2": "DISARMING you requires two extra successes – three successes for a one-handed weapon and four successes for a two-handed weapon.",
+        "3": "You cannot be DISARMED."
+    },
+    "Cold blooded": {
+        "Description": "You are completely callous and can kill defenseless enemies without so much as a second’s hesitation.",
+        "1": "You can perform a COUP DE GRACE (see page 108) without needing to roll dice.",
+        "2": "As per rank 1, and you also don’t need to spend a Willpower Point or suffer damage to Empathy.",
+        "3": "As per rank 2, but you also recover a point of lost Empathy when you perform a COUP DE GRACE."
+    },
+    "Throwing arm": {
+        "Description": "You can hit anything with a thrown rock.",
+        "1": "Your attack rolls are modified by +1 when you use a thrown weapon or a sling.",
+        "2": "You can throw incredibly far. All attacks with a thrown weapon or a sling have LONG range.",
+        "3": "You can add a D8 Artifact Die to attacks with a thrown weapon or a sling."
+    },
+    "Knife fighter": {
+        "Description": "You are lethal with a knife in hand.",
+        "1": "Your attack rolls are modified by +1 when you fight with a knife or a dagger.",
+        "2": "You can STAB as a fast action using a knife or a dagger.",
+        "3": "You can add a D8 Artifact Die to all attacks with a knife or a dagger."
+    },
+    "Chef": {
+        "Description": "You know how to cook using simple things, even while you are on a journey through the wilderness.",
+        "1": "You can turn up to D6 units of VEGETABLES, MEAT, or FISH into FOOD (see Chapter 7). Cooking requires a fire and takes a Quarter Day (see page 144). In a proper kitchen, you can cook up to a dozen units of FOOD in a Quarter Day.",
+        "2": "When you cook for a Quarter Day, you create an extra unit of FOOD.",
+        "3": "The food you cook is so delicious that whoever eats it immediately recovers a point of lost Empathy."
+    },
+    "Quartermaster": {
+        "Description": "You can find good campsites and can make sure your party are comfortable by the campfire.",
+        "1": "Your SURVIVAL roll is modified by +1 when you MAKE CAMP during journeys. Read more about journeys in Chapter 7.",
+        "2": "When you have MADE CAMP, the person KEEPING WATCH gets a +2 bonus to SCOUTING.",
+        "3": "You can add a D8 Artifact Die to your roll when you MAKE CAMP."
+    },
+    "Lockpicker": {
+        "Description": "You have mastered the art of picking locks. You need some sort of tool. Lockpicks can give you a bonus.",
+        "1": "Your SLEIGHT OF HAND roll is modified by +1 when you pick a lock.",
+        "2": "You can roll for SLEIGHT OF HAND to get out of chains or ropes even when you are bound yourself.",
+        "3": "You can add a D8 Artifact Die to your roll when you pick a lock."
+    },
+    "Incorruptible": {
+        "Description": "When others try to affect you, you are as immovable as a mighty oak in the wind.",
+        "1": "Your INSIGHT roll is modified by +1 when someone attempts to MANIPULATE you.",
+        "2": "You can add a D8 Artifact Die to your roll when someone MANIPULATES you.",
+        "3": "You cannot be MANIPULATED."
+    },
+    "Fearless": {
+        "Description": "Not even the horrors that lurk in the Forbidden Lands scare you.",
+        "1": "You can roll an INSIGHT roll as “armor” against fear attacks – each success rolled eliminates one success rolled in the fear attack. The INSIGHT roll does not count as an action.",
+        "2": "You can choose to have damage from a fear attack decrease your Empathy instead of your Wits.",
+        "3": "You are immune to fear attacks."
+    },
+    "Pack rat": {
+        "Description": "You know how to pack your belongings so they don’t take up much space and your gear becomes easy to carry.",
+        "1": "You can carry two more items than normal without being encumbered (see page 37).",
+        "2": "You can carry five more items than normal without being encumbered.",
+        "3": "You can carry ten more items than normal without being encumbered."
+    },
+    "Sharpshooter": {
+        "Description": "You are a master archer and your arrow almost always hits its target.",
+        "1": "Your attack rolls are modified by +1 when you SHOOT a bow or a crossbow.",
+        "2": "You can SHOOT a bow or a crossbow at SHORT and LONG range without any penalties (see page 97).",
+        "3": "You can add a D8 Artifact Die to any attack with a bow or a crossbow."
+    },
+    "Horseback fighter": {
+        "Description": "You are trained in the art of fightning from the back of a mount. All of the effects below require you to be in an OPEN zone (see page 88).",
+        "1": "You can fire a short bow or sling from a mount.",
+        "2": "You get a +1 bonus to all melee attacks from a mount.",
+        "3": "You can make a MOUNTED CHARGE attack from a mount. This combines a full movement action by the mount (from at least SHORT range to ARM’S LENGTH) with a melee attack by you. You can add a D8 Artifact Die to the melee attack."
+    },
+    "Sailor": {
+        "Description": "You know how to steer rafts and boats over unknown waters.",
+        "1": "Your SURVIVAL roll is modified by +1 when you LEAD THE WAY at sea (see page 147).",
+        "2": "Life at sea is soothing to you. A Quarter Day spent LEADING THE WAY on a boat counts as REST for you.",
+        "3": "You can add a D8 Artifact Die to your SURVIVAL rolls when you LEAD THE WAY at sea."
+    },
+    "Tailor": {
+        "Description": "You know the art of turning wool into cloth, and to craft that cloth into clothes.",
+        "1": "With a successful CRAFTING roll, you can turn up to D6 units of WOOL into CLOTH. If you fail, the WOOL is destroyed. If you have access to a TAILOR SHOP (see page 171), you can create CLOTH faster and without rolling dice. You can also use CRAFTING to sew clothes of normal quality, similar to to what’s found in the equipment lists on page 190.",
+        "2": "You can make clothes of superior quality, which can be sold at twice the normal price. Your roll is modified by –2.",
+        "3": "You can make clothes of exceptional quality, which can be sold at four times the normal price. Your roll is modified by –4."
+    },
+    "Shield fighter": {
+        "Description": "You are one with your shield, and it can protect you from any attack.",
+        "1": "Your PARRY rolls are modified by ! when you have a shield.",
+        "2": "You can use your shield to SLASH as a fast action. The Weapon Damage is 1 (blunt trauma).",
+        "3": "You can add a D8 Artifact Die to all PARRY rolls when you use a shield."
+    },
+    "Brawler": {
+        "Description": "You don’t need weapons to strike down your enemy.",
+        "1": "All your unarmed attacks are modified by +1.",
+        "2": "You can headbutt your enemy. It counts as a normal unarmed attack, but it is a fast action.",
+        "3": "You can add a D8 Artifact Die to all your unarmed attacks."
+    },
+    "Smith": {
+        "Description": "You know the art of hammering coarse iron into lethal blades and protective armor.",
+        "1": "You can use the CRAFTING skill to make any close combat weapon, shield, or metal armor from the weapons tables in Chapter 5, with normal stats. You can also turn IRON ORE into IRON at a FORGE (see page 167).",
+        "2": "You can make weapons, shields and metal armor with a Weapon Bonus or Armor Rating that is one point higher than normal. This takes twice as long, and your roll is modified by –2.",
+        "3": "You can make weeapons, shields and metal armor with a Weapon Bonus or Armor Rating that is two points higher than normal. This takes four times as long and your roll is modified by –4."
+    },
+    "Pain resistant": {
+        "Description": "You have learned to endure pain that would make others lose their minds. This talent can only be used if you use the advanced close combat rules.",
+        "1": "If you take a single point of damage from a close combat attack, you don’t lose your attack in the same step (see page 96).",
+        "2": "You never lose your own attack because of pain.",
+        "3": "You recover one lost point of Agility, Wits or Empathy for every point of damage to Strength that you suffer."
+    },
+    "Quickdraw": {
+        "Description": "You draw your weapon quicker than the enemy can blink.",
+        "1": "You can draw a LIGHT weapon without spending an action. This includes picking up a weapon from the ground.",
+        "2": "As per rank 1, but also applicable to normal weapons.",
+        "3": "As per rank 2, but also applicable to HEAVY weapons."
+    },
+    "Fast shooter": {
+        "Description": "You can fire your bow or sling lightning fast. Hunters can combine this talent with PATH OF THE ARROW.",
+        "1": "You don’t need to PREPARE before you SHOOT with a ranged weapon. Does not apply to crossbows.",
+        "2": "You can SHOOT with a ranged weapon and RUN at the same time.",
+        "3": "You only need to spend a fast action to SHOOT with a ranged weapon, meaning you can SHOOT twice in a round."
+    },
+    "Spear fighter": {
+        "Description": "A mighty spear can slay even the biggest of monsters.",
+        "1": "You get +1 when you attack with a spear, pike, halberd, or trident.",
+        "2": "When you wield a spear, pike, halberd, or trident, you may immediately strike an enemy who moves from NEAR range to ARM’S LENGTH from you. The attack counts towards your actions in the round, but breaks the turn order and occurs before the enemy can attack you.",
+        "3": "You can add a D8 Artifact Die to attacks with a spear, halberd, or trident."
+    },
+    "Steady feet": {
+        "Description": "You have good balance and cannot be knocked over easily.",
+        "1": "SHOVING you to the ground requires two successes instead of one.",
+        "2": "You cannot be SHOVED to the ground.",
+        "3": "You get up from a prone position without spending an action on it. It still needs to happen at your turn in the round."
+    },
+    "Pathfinder": {
+        "Description": "You are a master at finding the right path through woods and over mountains in the wilderness.",
+        "1": "Your SURVIVAL roll is modified by +1 when you LEAD THE WAY (see page 147).",
+        "2": "You’re most comfortable in the wilds. LEADING THE WAY for a Quarter Day counts as REST for you.",
+        "3": "You can add a D8 Artifact Die to your SURVIVAL rolls when you LEAD THE WAY."
+    },
+    "Melee charge": {
+        "Description": "You throw yourself into combat without any concern for the risk",
+        "1": "When you move from NEAR to ARM’S LENGTH range you can, as the same action, SLASH, STAB, PUNCH, or SHOVE. This is called a CHARGE.",
+        "2": "Your attack is modified by +1 when you CHARGE.",
+        "3": "When you CHARGE, you can add a D8 Artifact Die to the roll."
+    },
+    "Sword fighter": {
+        "Description": "You have practiced with a sword in hand since you were a child.",
+        "1": "Your attack and PARRY rolls are modified by +1 when you fight with a sword.",
+        "2": "You can SLASH two enemies with your sword with a single action. Roll separately for the two attacks. If you use hidden combinations (see page 94), the second attack occurs outside of the combination.",
+        "3": "You can add a D8 Artifact Die to all attack and PARRY rolls with a sword."
+    },
+    "Lucky": {
+        "Description": "No matter how bad the odds are, you always get away unscathed.",
+        "1": "When you suffer a critical injury, you can reroll once. The lowest roll counts.",
+        "2": "As per rank 1, but you can also reverse the D66 roll for the critical injury – a roll of 16 becomes 61, for example.",
+        "3": "When you suffer a critical injury, you may choose your injury freely from the relevant list.",
+        "Comment": "If your opponent has the talent EXECUTIONER, these talents cancel each other out. One rank in EXECUTIONER cancels out one rank of LUCKY."
+    },
+    "Wanderer": {
+        "Description": "You can travel on foot through the wilderness for a long time without stopping for rest.",
+        "1": "Your ENDURANCE roll is modified by +1 when you force march (see page 146).",
+        "2": "Your ENDURANCE rolls for forced marches succeed automatically.",
+        "3": "HIKING for a Quarter Day counts as REST for you."
+    },
+    "Sharp tongued": {
+        "Description": "You are a master at formulating scathing abuses that can unhinge even the most steadfast of enemies.",
+        "1": "When you MANIPULATE someone, and roll more successes than you need to win the opposed roll, you can inflict 1 point of damage to Empathy on your opponent per extra success.",
+        "2": "Your MANIPULATE roll is modified by +1 if you insult your opponent.",
+        "3": "You can add a D8 Artifact Die to your MANIPULATE roll if you insult your opponent in some way."
+    },
+    "Axe fighter": {
+        "Description": "Nothing splits a shield – or a skull – like a mighty axe.",
+        "1": "Your attack rolls are modified by +1 when you fight with an axe.",
+        "2": "When you hit an enemy with your axe and inflict at least 1 point of damage, you automatically inflict a critical injury (slash wound). The critical injury itself doesn’t break your opponent – unless it kills him of course. No effect against monsters or animals.",
+        "3": "You can add a D8 Artifact Die to all attack rolls with an axe."
+    },
+    "Sixth sense": {
+        "Description": "The hairs on the back of your neck stand up when enemies lurk in the bushes.",
+        "1": "Your SCOUT roll is modified by +1 when an enemy tries to ambush you or performs a sneak attack (see page 90).",
+        "2": "When you spot an ambush or a sneak attack, you also see how many the attackers are, what kin they belong to, and what weapons they use.",
+        "3": "You can add a D8 Artifact Die to your SCOUT roll when you try to spot an ambush or a sneak attack."
+    },
+    "Herbalist": {
+        "Description": "You know the difference between edible plants and regular weeds.",
+        "1": "Your SURVIVAL roll is modified by +1 when you FORAGE during journeys. Read more about journeys in Chapter 7.",
+        "2": "Walking the lands sets you at ease. A Quarter Day spent FORAGING counts as RESTING for you.",
+        "3": "The amount of VEGETABLES you find when FORAGING is doubled."
+    }
+}

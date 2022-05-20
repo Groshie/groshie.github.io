@@ -1,0 +1,50 @@
+{
+    "Human": {
+        "Attribute": "Empathy", 
+        "Talent": {
+            "Adaptive": "Humans are new to the Forbidden Lands and are seen as intruders by the other kin. But no other kin can adapt to new situations and living conditions the way the humans can. If you spend a Willpower Point when you are about to roll for a skill, you can roll for any skill of your choice to achieve the same result. You must be able to motivate how you use the chosen skill. The GM has final say, but should give you some leeway."
+        }
+    }, 
+    "Elf": {
+        "Attribute": "Agility", 
+        "Talent": {
+            "Inner peace": "Elves have a connection to the inner nature of their own, far beyond that of any of the other kin. Their immortality makes them less susceptible to the trials of the world compared to the other kin. By spending a Willpower Point, you can enter a state of deep meditation. This lasts for a Quarter of a day (see page 144) during which you must remain undisturbed. When you emerge from the meditation, you have healed all damage to all attributes as well as any critical injuries."
+        }
+    }, 
+    "Half-elf": {
+        "Attribute": "Wits", 
+        "Talent": {
+            "Psychic power": "The dual heritage of the half-elves makes them particularly suited to channel their force of will to achieve feats beyond the natural. Every time you spend one or more Willpower Points to activate a talent or cast a spell, the first WP count as two. If you spend two WP it counts as three, and so on. Note that this also increases the risk of magic mishaps (see page 118)."
+        }
+    }, 
+    "Dwarf": {
+        "Attribute": "Strength", 
+        "Talent": {
+            "True grit": "Dwarves are far more stubborn than others, and can fight on when other kin have no strength left. You can push a dice roll multiple times (see page 44) by spending Willpower Points. Every point spent allows you to push the roll one more time."
+        }
+    }, 
+    "Halfling": {
+        "Attribute": "Empathy", 
+        "Talent": {
+            "Hard to catch": "Halflings are notoriously hard to get a grip on, and they can easily evade even the most tenacious of pursuers. You can spend Willpower Points in combat to avoid being hit by physical attacks (see Chapter 5). Every WP spent eliminates one success the attacker rolls."
+        }
+    }, 
+    "Wolfkin": {
+        "Attribute": "Agility", 
+        "Talent": {
+            "Hunting instincts": "The wolfkin have a powerful sense of smell and can track their prey for days once they have caught their scent. You can spend Willpower Points to designate a person or a creature as your prey. Your prey must be within line of sight, or there must be a scent to follow. The number of WP you spend equals the number of days that you can follow your prey’s scent. In combat, all your attacks against your prey get a +1 bonus per WP spent, until the creature is Broken or until you choose to let your prey go."
+        }
+    }, 
+    "Orc": {
+        "Attribute": "Strength", 
+        "Talent": {
+            "Unbreakable": "The orcs were created to serve. Their bodies are strong, and they are very resilient when it comes to pain and punishment. When you are Broken by any kind of damage (see page 107), you can spend Willpower Points to immediately get back on your feet. For every point you spend, you recover 1 point of the Broken attribute. You cannot use this talent unless you are Broken. The talent does not affect critical injuries."
+        }
+    }, 
+    "Goblin": {
+        "Attribute": "Agility", 
+        "Talent": {
+            "Sneaky": "Goblins are often considered sneaky and untrustworthy by other kin, and many do their best to live up their infamy. When rolling for STEALTH, you can spend Willpower Points which are automatically turned into extra x. You may even roll first and spend WP after you see how the roll goes."
+        }
+    }
+}

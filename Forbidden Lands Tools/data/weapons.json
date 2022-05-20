@@ -1,0 +1,290 @@
+{
+    "Unarmed": {
+        "Grip": "-",
+        "Bonus": "-",
+        "Damage": 1,
+        "Range": "Arm",
+        "Cost": 0,
+        "Features": ["Blunt"]
+    }, 
+    "Knife": {
+        "Grip": 1,
+        "Bonus": 1,
+        "Damage": 1,
+        "Range": "Arm",
+        "Cost": 1,
+        "Features": ["Light", "Pointed"]
+    }, 
+    "Dagger": {
+        "Grip": 1,
+        "Bonus": 1,
+        "Damage": 1,
+        "Range": "Arm",
+        "Cost": 2,
+        "Features": ["Light", "Edged", "Pointed"]
+    }, 
+    "Falchion": {
+        "Grip": 1,
+        "Bonus": 1,
+        "Damage": 2,
+        "Range": "Arm",
+        "Cost": 4,
+        "Features": ["Edged", "Pointed"]
+    }, 
+    "Shortsword": {
+        "Grip": 1,
+        "Bonus": 2,
+        "Damage": 1,
+        "Range": "Arm",
+        "Cost": 6,
+        "Features": ["Edged", "Pointed", "Parrying"]
+    }, 
+    "Broadsword": {
+        "Grip": 1,
+        "Bonus": 2,
+        "Damage": 2,
+        "Range": "Arm",
+        "Cost": 10,
+        "Features": ["Edged", "Pointed", "Parrying"]
+    }, 
+    "Longsword": {
+        "Grip": 1,
+        "Bonus": 2,
+        "Damage": 2,
+        "Range": "Arm",
+        "Cost": 18,
+        "Features": ["Heavy", "Edged", "Pointed", "Parrying"]
+    }, 
+    "Two-Handed sword": {
+        "Grip": 2,
+        "Bonus": 2,
+        "Damage": 3,
+        "Range": "Arm",
+        "Cost": 40,
+        "Features": ["Heavy", "Edged", "Pointed", "Parrying"]
+    }, 
+    "Scimitar": {
+        "Grip": 1,
+        "Bonus": 1,
+        "Damage": 2,
+        "Range": "Arm",
+        "Cost": 8,
+        "Features": ["Edged", "Pointed", "Hook", "Parrying"]
+    }, 
+    "Handaxe": {
+        "Grip": 1,
+        "Bonus": 2,
+        "Damage": 2,
+        "Range": "Arm",
+        "Cost": 2,
+        "Features": ["Edged", "Hook"]
+    }, 
+    "Battleaxe": {
+        "Grip": 1,
+        "Bonus": 2,
+        "Damage": 2,
+        "Range": "Arm",
+        "Cost": 6,
+        "Features": ["Heavy", "Edged", "Hook"]
+    },
+    "Two-Handed Axe": {
+        "Grip": 2,
+        "Bonus": 2,
+        "Damage": 3,
+        "Range": "Arm",
+        "Cost": 18,
+        "Features": ["Heavy", "Edged", "Hook"]
+    },  
+    "Mace": {
+        "Grip": 1,
+        "Bonus": 2,
+        "Damage": 1,
+        "Range": "Arm",
+        "Cost": 4,
+        "Features": ["Blunt"]
+    }, 
+    "Morningstar": {
+        "Grip": 1,
+        "Bonus": 2,
+        "Damage": 2,
+        "Range": "Arm",
+        "Cost": 8,
+        "Features": ["Blunt"]
+    }, 
+    "Warhammer": {
+        "Grip": 1,
+        "Bonus": 2,
+        "Damage": 2,
+        "Range": "Arm",
+        "Cost": 12,
+        "Features": ["Blunt", "Hook"]
+    }, 
+    "Flail": {
+        "Grip": 1,
+        "Bonus": 1,
+        "Damage": 2,
+        "Range": "Near",
+        "Cost": 16,
+        "Features": ["Blunt"]
+    }, 
+    "Wooden Club": {
+        "Grip": 1,
+        "Bonus": 1,
+        "Damage": 1,
+        "Range": "Arm",
+        "Cost": 1,
+        "Features": ["Blunt"]
+    }, 
+    "Large Wooden Club": {
+        "Grip": 2,
+        "Bonus": 1,
+        "Damage": 2,
+        "Range": "Arm",
+        "Cost": 2,
+        "Features": ["Blunt"]
+    }, 
+    "Heavy Warhammer": {
+        "Grip": 2,
+        "Bonus": 2,
+        "Damage": 3,
+        "Range": "Arm",
+        "Cost": 22,
+        "Features": ["Heavy", "Blunt", "Hook"]
+    }, 
+    "Staff": {
+        "Grip": 2,
+        "Bonus": 1,
+        "Damage": 1,
+        "Range": "Near",
+        "Cost": 1,
+        "Features": ["Blunt", "Hook", "Parrying"]
+    }, 
+    "Short Spear": {
+        "Grip": 1,
+        "Bonus": 1,
+        "Damage": 2,
+        "Range": "Near",
+        "Cost": 2,
+        "Features": ["Pointed"]
+    }, 
+    "Long Spear": {
+        "Grip": 2,
+        "Bonus": 2,
+        "Damage": 1,
+        "Range": "Near",
+        "Cost": 4,
+        "Features": ["Pointed"]
+    }, 
+    "Pike": {
+        "Grip": 2,
+        "Bonus": 2,
+        "Damage": 2,
+        "Range": "Near",
+        "Cost": 12,
+        "Features": ["Heavy", "Pointed"]
+    }, 
+    "Halberd": {
+        "Grip": 2,
+        "Bonus": 2,
+        "Damage": 2,
+        "Range": "Near",
+        "Cost": 30,
+        "Features": ["Heavy", "Edged", "Pointed", "Hook"]
+    }, 
+    "Trident": {
+        "Grip": 2,
+        "Bonus": 1,
+        "Damage": 2,
+        "Range": "Near",
+        "Cost": 6,
+        "Features": ["Pointed", "Hook"]
+    }, 
+    "Rock": {
+        "Grip": 1,
+        "Bonus": 0,
+        "Damage": 1,
+        "Range": "Short",
+        "Cost": 0,
+        "Features": ["Light"]
+    }, 
+    "Throwing Knife": {
+        "Grip": 1,
+        "Bonus": 1,
+        "Damage": 1,
+        "Range": "Short",
+        "Cost": 1,
+        "Features": ["Light"]
+    }, 
+    "Throwing Axe": {
+        "Grip": 1,
+        "Bonus": 1,
+        "Damage": 2,
+        "Range": "Short",
+        "Cost": 2,
+        "Features": []
+    }, 
+    "Throwing Spear": {
+        "Grip": 1,
+        "Bonus": 2,
+        "Damage": 1,
+        "Range": "Short",
+        "Cost": 3,
+        "Features": []
+    }, 
+    "Sling": {
+        "Grip": 1,
+        "Bonus": 1,
+        "Damage": 1,
+        "Range": "Short",
+        "Cost": 1,
+        "Features": ["Light"]
+    }, 
+    "Short Bow": {
+        "Grip": 2,
+        "Bonus": 2,
+        "Damage": 1,
+        "Range": "Short",
+        "Cost": 6,
+        "Features": ["Light"]
+    }, 
+    "Longbow": {
+        "Grip": 2,
+        "Bonus": 2,
+        "Damage": 1,
+        "Range": "Long",
+        "Cost": 12,
+        "Features": ["Light"]
+    }, 
+    "Light Crossbow": {
+        "Grip": 2,
+        "Bonus": 1,
+        "Damage": 2,
+        "Range": "Long",
+        "Cost": 24,
+        "Features": ["Loading is a slow action"]
+    }, 
+    "Heavy Crossbow": {
+        "Grip": 2,
+        "Bonus": 1,
+        "Damage": 3,
+        "Range": "Long",
+        "Cost": 40,
+        "Features": ["Heavy", "Loading is a slow action"]
+    },
+    "Small Shield": {
+        "Grip": 1,
+        "Bonus": 1,
+        "Damage": 0,
+        "Range": "Arm",
+        "Cost": 6,
+        "Features": ["Light"]
+    }, 
+    "Large Shield": {
+        "Grip": 1,
+        "Bonus": 2,
+        "Damage": 0,
+        "Range": "Arm",
+        "Cost": 15,
+        "Features": []
+    }
+}

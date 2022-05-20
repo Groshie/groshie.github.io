@@ -1,0 +1,513 @@
+{
+    "Arrows, iron": {
+        "cost": "12 copper",
+        "weight": "Normal",
+        "bonus": 0,
+        "type": "Resource",
+        "effect": "Increase Arrows-resource die by one step"
+    },
+    "Arrows, wood": {
+        "cost": "6 copper",
+        "weight": "Normal",
+        "bonus": 0,
+        "type": "Resource",
+        "effect": "Increase Arrows-resource die by one step - target defense value is doubled"
+    },
+    "Quiver": {
+        "cost": "8 copper",
+        "weight": "-",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "Does not count towards encumbrance"
+    },
+    "Grappling hook": {
+        "cost": "3 silver",
+        "weight": "Normal",
+        "bonus": [1, "Climbing"],
+        "type": "Utility",
+        "effect": "User has +1 item bonus when climbing"
+    },
+    "Rope, 10 meter": {
+        "cost": "2 silver",
+        "weight": "Normal",
+        "bonus": [1, "Climbing"],
+        "type": "Utility",
+        "effect": "User has +1 item bonus when climbing"
+    },
+    "Tallow candle": {
+        "cost": "6 copper",
+        "weight": "Tiny",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "Provides light within an arms length for a quarter day"
+    },
+    "Oil lamp": {
+        "cost": "5 copper",
+        "weight": "Light",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "Provides light for one indoor zone - needs lamp oil"
+    },
+    "Oil lantern": {
+        "cost": "2 silver",
+        "weight": "Light",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "Provides light within one zone - needs lamp oil"
+    },
+    "Torch": {
+        "cost": "5 copper",
+        "weight": "Normal",
+        "bonus": 0,
+        "type": "Resource",
+        "effect": "Increase Torches-resource die by one step - Provides light for one zone, roll resource die each quarter of an hour"
+    },
+    "Bag": {
+        "cost": "8 copper",
+        "weight": "-",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "Does not count towards encumbrance"
+    },
+    "Backpack": {
+        "cost": "4 silver",
+        "weight": "-",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "Does not count towards encumbrance"
+    },
+    "Water skin": {
+        "cost": "3 silver",
+        "weight": "-",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "Needed for carrying water. Does not count towards encumbrance"
+    },
+    "Cloth bandage": {
+        "cost": "6 copper",
+        "weight": "Light",
+        "bonus": [1, "Healing"],
+        "type": "Utility",
+        "effect": "User has +1 item bonus in Healing attempts"
+    },
+    "Lamp oil": {
+        "cost": "2 copper",
+        "weight": "Light",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "Enough for a quarter of a day"
+    },
+    "Feather pen and ink": {
+        "cost": "2 silver",
+        "weight": "Tiny",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "Can be used to write spells"
+    },
+    "Parchment": {
+        "cost": "6 copper",
+        "weight": "Tiny",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "Can be used to write spells"
+    },
+    "Blanket": {
+        "cost": "7 copper",
+        "weight": "Light",
+        "bonus": [1, "Cold"],
+        "type": "Utility",
+        "effect": "User has +1 item bonus against cold"
+    },
+    "Sleeping bag": {
+        "cost": "3 silver",
+        "weight": "Normal",
+        "bonus": [2, "Cold"],
+        "type": "Utility",
+        "effect": "User has +2 item bonus against cold"
+    },
+    "Flint and steel": {
+        "cost": "2 copper",
+        "weight": "Tiny",
+        "bonus": [1, "Making camp"],
+        "type": "Utility",
+        "effect": "User has +1 item bonus when Making camp during travel"
+    },
+    "Lockpicks": {
+        "cost": "1 gold",
+        "weight": "Tiny",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "User has +1 item bonus in Sleight-of-hand when lockpicking"
+    },
+    "Field rations": {
+        "cost": "1 silver",
+        "weight": "Normal",
+        "bonus": 0,
+        "type": "Resource",
+        "effect": "One unit of food. Increases resource die for Food by one step"
+    },
+    "Field kitchen": {
+        "cost": "4 silver",
+        "weight": "Heavy",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "Makes it possible to cook 2D6 units of food per quarter of a day"
+    },
+    "Cookware": {
+        "cost": "18 copper",
+        "weight": "Normal",
+        "bonus": [1, "Food"],
+        "type": "Utility",
+        "effect": "User has +1 item bonus when creating food"
+    },
+    "Wine fount (metal)": {
+        "cost": "7 copper",
+        "weight": "Light",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "None"
+    },
+    "Tankard": {
+        "cost": "2 copper",
+        "weight": "Light",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "None"
+    },
+    "Plate (metal)": {
+        "cost": "8 copper",
+        "weight": "Light",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "None"
+    },
+    "Table knife": {
+        "cost": "6 copper",
+        "weight": "Tiny",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "None"
+    },
+    "Spoon": {
+        "cost": "8 copper",
+        "weight": "Tiny",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "None"
+    },
+    "Leghold trap": {
+        "cost": "5 silver",
+        "weight": "Normal",
+        "bonus": [2, "Hunting"],
+        "type": "Utility",
+        "effect": "User has +2 item bonus when Hunting during travel"
+    },
+    "Snares": {
+        "cost": "1 silver",
+        "weight": "Light",
+        "bonus": [1, "Hunting"],
+        "type": "Utility",
+        "effect": "User has +1 item bonus when Hunting during travel"
+    },
+    "Barrel": {
+        "cost": "8 copper",
+        "weight": "Heavy",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "Can hold 10 units of water or other liquids"
+    },
+    "Clay pot": {
+        "cost": "5 copper",
+        "weight": "Light",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "Can hold one unit of water or other liquids"
+    },
+    "Small tent": {
+        "cost": "2 silver",
+        "weight": "Normal",
+        "bonus": [2, "Make camp"],
+        "type": "Utility",
+        "effect": "Room for two people. User has +2 when Making camp"
+    },
+    "Large tent": {
+        "cost": "5 silver",
+        "weight": "Heavy",
+        "bonus": [2, "Make camp"],
+        "type": "Utility",
+        "effect": "Room for six people. User has +2 when Making camp"
+    },
+    "Fishing hook and line": {
+        "cost": "4 copper",
+        "weight": "Light",
+        "bonus": [2, "Fishing"],
+        "type": "Utility",
+        "effect": "User has +1 item bonus when Fishing during travel"
+    },
+    "Fishing net": {
+        "cost": "1 silver",
+        "weight": "Normal",
+        "bonus": [2, "Fishing"],
+        "type": "Utility",
+        "effect": "User has +2 item bonus when Fishing during travel"
+    },
+    "Magnifying glass": {
+        "cost": "3 gold",
+        "weight": "Tiny",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "Can be used as an ingredient for spells"
+    },
+    "Holy symbol": {
+        "cost": "1 silver",
+        "weight": "Tiny",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "Can be used as an ingredient for spells"
+    },
+    "Crayons": {
+        "cost": "2 copper",
+        "weight": "Tiny",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "Can be used by symbolists"
+    },
+    "Map": {
+        "cost": "4 silver",
+        "weight": "Tiny",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "Can be used as an ingredient for spells"
+    },
+    "Binoculars": {
+        "cost": "3 gold",
+        "weight": "Normal",
+        "bonus": [2, "Scouting"],
+        "type": "Utility",
+        "effect": "User has +2 item bonus when Scouting at a Long distance"
+    },
+    "Scrying ball": {
+        "cost": "6 silver",
+        "weight": "Light",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "Can be used as an ingredient for spells"
+    },
+    "Hourglass": {
+        "cost": "12 silver",
+        "weight": "Light",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "Can be used as an ingredient for spells"
+    },
+    "Scale": {
+        "cost": "3 silver",
+        "weight": "Normal",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "Can be used as an ingredient for spells"
+    },
+    "Flute": {
+        "cost": "15 copper",
+        "weight": "Light",
+        "bonus": [1, "Performance"],
+        "type": "Utility",
+        "effect": "User has +1 item bonus when Performing"
+    },
+    "Horn": {
+        "cost": "3 silver",
+        "weight": "Normal",
+        "bonus": [1, "Performance"],
+        "type": "Utility",
+        "effect": "User has +1 item bonus when Performing"
+    },
+    "Lyre": {
+        "cost": "5 silver",
+        "weight": "Normal",
+        "bonus": [1, "Performance"],
+        "type": "Utility",
+        "effect": "User has +1 item bonus when Performing"
+    },
+    "Harp": {
+        "cost": "8 silver",
+        "weight": "Heavy",
+        "bonus": [2, "Performance"],
+        "type": "Utility",
+        "effect": "User has +2 item bonus when Performing"
+    },
+    "Drum": {
+        "cost": "18 copper",
+        "weight": "Normal",
+        "bonus": [1, "Performance"],
+        "type": "Utility",
+        "effect": "User has +1 item bonus when Performing"
+    },
+    "Killing poison (one dose)": {
+        "cost": "5 silver",
+        "weight": "Tiny",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "Poison strength 3. Every increase of Poison strength doubles the cost"
+    },
+    "Paralyzing poison (one dose)": {
+        "cost": "4 silver",
+        "weight": "Tiny",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "Poison strength 3. Every increase of Poison strength doubles the cost"
+    },
+    "Tranquilizing poison (one dose)": {
+        "cost": "5 silver",
+        "weight": "Tiny",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "Poison strength 3. Every increase of Poison strength doubles the cost"
+    },
+    "Hallucinogenic poison (one dose)": {
+        "cost": "5 silver",
+        "weight": "Tiny",
+        "bonus": 0,
+        "type": "Utility",
+        "effect": "Poison strength 3. Every increase of Poison strength doubles the cost"
+    },
+    "Shovel": {
+        "cost": "2 silver",
+        "weight": "Normal",
+        "bonus": 0,
+        "type": "Tool",
+        "effect": "None"
+    },
+    "Saw": {
+        "cost": "5 silver",
+        "weight": "Normal",
+        "bonus": 0,
+        "type": "Tool",
+        "effect": "None"
+    },
+    "Wood axe": {
+        "cost": "2 silver",
+        "weight": "Normal",
+        "bonus": 0,
+        "type": "Tool",
+        "effect": "None"
+    },
+    "Tongs": {
+        "cost": "2 silver",
+        "weight": "Light",
+        "bonus": 0,
+        "type": "Tool",
+        "effect": "None"
+    },
+    "Needle and thread": {
+        "cost": "3 copper",
+        "weight": "Normal",
+        "bonus": 0,
+        "type": "Tiny",
+        "effect": "None"
+    },
+    "Hammer": {
+        "cost": "1 silver",
+        "weight": "Normal",
+        "bonus": 0,
+        "type": "Tool",
+        "effect": "None"
+    },
+    "Sledgehammer": {
+        "cost": "2 copper",
+        "weight": "Heavy",
+        "bonus": 0,
+        "type": "Tool",
+        "effect": "None"
+    },
+    "Chariot, two wheels": {
+        "cost": "15 silver",
+        "weight": "Too heavy",
+        "bonus": 0,
+        "type": "Vehicle",
+        "effect": "Pulled by one animal - Can carry 2 people and 50 items"
+    },
+    "Chariot, four wheels": {
+        "cost": "3 gold",
+        "weight": "Too heavy",
+        "bonus": 0,
+        "type": "Vehicle",
+        "effect": "Pulled by two animals - Can carry four people and 200 items"
+    },
+    "Canoe": {
+        "cost": "6 silver",
+        "weight": "Heavy",
+        "bonus": 0,
+        "type": "Vehicle",
+        "effect": "Can carry two people and 10 items"
+    },
+    "Rowboat": {
+        "cost": "15 silver",
+        "weight": "Too heavy",
+        "bonus": 0,
+        "type": "Vehicle",
+        "effect": "Can carry four people and 50 items"
+    },
+    "Sailboat": {
+        "cost": "4 gold",
+        "weight": "Too heavy",
+        "bonus": 0,
+        "type": "Vehicle",
+        "effect": "Can carry six people and 200 items"
+    },
+    "Rags": {
+        "cost": "5 copper",
+        "weight": "Worn",
+        "bonus": [-2, "Manipulation"],
+        "type": "Clothing",
+        "effect": "Wearer has -2 in Manipulation attempts"
+    },
+    "Normal clothes": {
+        "cost": "15 copper",
+        "weight": "Worn",
+        "bonus": 0,
+        "type": "Clothing",
+        "effect": "None"
+    },
+    "Noble clothes": {
+        "cost": "4 gold",
+        "weight": "Worn",
+        "bonus": [2, "Manipulation"],
+        "type": "Clothing",
+        "effect": "Wearer has +2 item bonus in Manipulation attempts"
+    },
+    "Fur": {
+        "cost": "3 silver",
+        "weight": "Worn",
+        "bonus": [2, "Cold"],
+        "type": "Clothing",
+        "effect": "Wearer has +2 item bonus against cold"
+    },
+    "Smock": {
+        "cost": "1 silver",
+        "weight": "Worn",
+        "bonus": 0,
+        "type": "Clothing",
+        "effect": "Can carry four people and 50 items"
+    },
+    "Mantle": {
+        "cost": "2 silver",
+        "weight": "Worn",
+        "bonus": 0,
+        "type": "Clothing",
+        "effect": "Can carry four people and 50 items"
+    },
+    "Boots": {
+        "cost": "3 silver",
+        "weight": "Worn",
+        "bonus": [1, "Wander"],
+        "type": "Clothing",
+        "effect": "Wearer has +1 item bonus to Wander"
+    },
+    "Silver buckle": {
+        "cost": "8 silver",
+        "weight": "Worn",
+        "bonus": [1, "Manipulation"],
+        "type": "Clothing",
+        "effect": "Wearer has +1 item bonus in Manipulation attempts"
+    }
+}

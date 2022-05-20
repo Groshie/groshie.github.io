@@ -1,0 +1,906 @@
+{
+    "Slash wounds": [
+        {
+            "Injury": "Bleeding forehead",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "None",
+            "Healing time": "-"
+        }, 
+        {
+            "Injury": "Bleeding forehead",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "None",
+            "Healing time": "-"
+        }, {
+            "Injury": "Severed nose",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "-1 to MANIPULATE",
+            "Healing time": "D6"
+        }, {
+            "Injury": "Severed nose",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "-1 to MANIPULATE",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Severed finger",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "Two-handed weapons cannot be used",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Severed finger",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "Two-handed weapons cannot be used",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Severed toe",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Severed toe",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Bleeding thigh",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Bleeding thigh",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Slashed mouth",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "-2 to MANIPULATE",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Slashed mouth",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "-2 to MANIPULATE",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Severed tendon",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Severed tendon",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Wounded shoulder",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "Two-handed weapons cannot be used",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Wounded shoulder",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "Two-handed weapons cannot be used",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Severed ear",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "-1 to SCOUTING",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Severed ear",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "-1 to SCOUTING",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Slashed eye",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "-2 to MARKSMANSHIP and SCOUTING",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Slashed eye",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "-2 to MARKSMANSHIP and SCOUTING",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Punctured lung",
+            "Deadly": "Yes",
+            "Time limit": "D6 days",
+            "Effect": "-2 to ENDURANCE and MOVE",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Punctured lung",
+            "Deadly": "Yes",
+            "Time limit": "D6 days",
+            "Effect": "-2 to ENDURANCE and MOVE",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Severed foot",
+            "Deadly": "Yes",
+            "Time limit": "D6 days",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "Permanent" 
+        }, {
+            "Injury": "Severed foot",
+            "Deadly": "Yes",
+            "Time limit": "D6 days",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "Permanent" 
+        }, {
+            "Injury": "Severed foot",
+            "Deadly": "Yes",
+            "Time limit": "D6 days",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "Permanent" 
+        }, {
+            "Injury": "Bleeding gut",
+            "Deadly": "Yes",
+            "Time limit": "D6 hours",
+            "Effect": "1 point of damage at each roll for MIGHT, MOVE and MELEE",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Bleeding gut",
+            "Deadly": "Yes",
+            "Time limit": "D6 hours",
+            "Effect": "1 point of damage at each roll for MIGHT, MOVE and MELEE",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Ruptured intestines",
+            "Deadly": "Yes",
+            "Time limit": "D6 hours",
+            "Effect": "Disease with Virulence 6",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Ruptured intestines",
+            "Deadly": "Yes",
+            "Time limit": "D6 hours",
+            "Effect": "Disease with Virulence 6",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Severed arm",
+            "Deadly": "Yes, -1",
+            "Time limit": "D6 hours",
+            "Effect": "Two-handed weapons cannot be used",
+            "Healing time": "Permanent" 
+        }, {
+            "Injury": "Severed arm",
+            "Deadly": "Yes, -1",
+            "Time limit": "D6 hours",
+            "Effect": "Two-handed weapons cannot be used",
+            "Healing time": "Permanent" 
+        }, {
+            "Injury": "Severed leg",
+            "Deadly": "Yes, -1",
+            "Time limit": "D6 hours",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "Permanent" 
+        }, {
+            "Injury": "Severed leg",
+            "Deadly": "Yes, -1",
+            "Time limit": "D6 hours",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "Permanent" 
+        }, {
+            "Injury": "Slit throat",
+            "Deadly": "Yes, -1",
+            "Time limit": "D6 turns",
+            "Effect": "-2 to ENDURANCE",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Slit throat",
+            "Deadly": "Yes, -1",
+            "Time limit": "D6 turns",
+            "Effect": "-2 to ENDURANCE",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Cleft skull",
+            "Deadly": "Yes",
+            "Time limit": "-",
+            "Effect": "You die immediately",
+            "Healing time": "-" 
+        }, {
+            "Injury": "Decapitation",
+            "Deadly": "Yes",
+            "Time limit": "-",
+            "Effect": "Your head leaves your body",
+            "Healing time": "-" 
+        }
+    ],
+    "Stab wounds": [
+        {
+            "Injury": "Pierced ear",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "None",
+            "Healing time": "-"
+        }, 
+        {
+            "Injury": "Pierced ear",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "None",
+            "Healing time": "-"
+        }, {
+            "Injury": "Pierced ear",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "None",
+            "Healing time": "-"
+        }, {
+            "Injury": "Skewered foot",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "D6"
+        }, {
+            "Injury": "Skewered foot",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "D6"
+        }, {
+            "Injury": "Skewered foot",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "D6"
+        }, {
+            "Injury": "Hand run through",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "Two-handed weapons cannot be used",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Hand run through",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "Two-handed weapons cannot be used",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Hand run through",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "Two-handed weapons cannot be used",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Pierced cheek",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "-1 to MANIPULATE",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Pierced cheek",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "-1 to MANIPULATE",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Pierced cheek",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "-1 to MANIPULATE",
+            "Healing time": "D6"  
+        }, {
+            "Injury": "Impaled thigh",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Impaled thigh",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "2D6"  
+        }, {
+            "Injury": "Impaled thigh",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "2D6"  
+        }, {
+            "Injury": "Severed tendon",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "3D6" 
+        }, {
+            "Injury": "Impaled shoulder",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "Two-handed weapons cannot be used",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Impaled shoulder",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "Two-handed weapons cannot be used",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Impaled shoulder",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "Two-handed weapons cannot be used",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Pierced eye",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "-2 to MARKSMANSHIP and SCOUTING",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Pierced eye",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "-2 to MARKSMANSHIP and SCOUTING",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Skewered groin",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "1 point of damage suffered at every MOVE or MELEE roll",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Skewered groin",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "1 point of damage suffered at every MOVE or MELEE roll",
+            "Healing time": "2D6"
+        }, {
+            "Injury": "Punctured lung",
+            "Deadly": "Yes",
+            "Time limit": "D6 days",
+            "Effect": "-2 to ENDURANCE and MOVE",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Punctured lung",
+            "Deadly": "Yes",
+            "Time limit": "D6 days",
+            "Effect": "-2 to ENDURANCE and MOVE",
+            "Healing time": "D6"  
+        }, {
+            "Injury": "Bleeding gut",
+            "Deadly": "Yes",
+            "Time limit": "D6 hours",
+            "Effect": "1 point of damage at each roll for MIGHT, MOVE and MELEE",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Bleeding gut",
+            "Deadly": "Yes",
+            "Time limit": "D6 hours",
+            "Effect": "1 point of damage at each roll for MIGHT, MOVE and MELEE",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Bleeding gut",
+            "Deadly": "Yes",
+            "Time limit": "D6 hours",
+            "Effect": "1 point of damage at each roll for MIGHT, MOVE and MELEE",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Ruptured intestines",
+            "Deadly": "Yes",
+            "Time limit": "D6 hours",
+            "Effect": "Disease with Virulence 6",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Ruptured intestines",
+            "Deadly": "Yes",
+            "Time limit": "D6 hours",
+            "Effect": "Disease with Virulence 6",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Severed arm artery",
+            "Deadly": "Yes, -1",
+            "Time limit": "D6 minutes",
+            "Effect": "Two-handed weapons cannot be used",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Severed leg artery",
+            "Deadly": "Yes, -1",
+            "Time limit": "D6 minutes",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Impaled neck",
+            "Deadly": "Yes, -1",
+            "Time limit": "D6 turns",
+            "Effect": "-2 to ENDURANCE",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Skewered skull",
+            "Deadly": "Yes",
+            "Time limit": "-",
+            "Effect": "You die immediately",
+            "Healing time": "-" 
+        }, {
+            "Injury": "Pierced heart",
+            "Deadly": "Yes",
+            "Time limit": "-",
+            "Effect": "Your heart beats for the last time",
+            "Healing time": "-" 
+        }, {
+            "Injury": "Pierced heart",
+            "Deadly": "Yes",
+            "Time limit": "-",
+            "Effect": "Your heart beats for the last time",
+            "Healing time": "-" 
+        }
+    ],
+    "Blunt force": 
+    [   
+        {
+            "Injury": "Stunned",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "None",
+            "Healing time": "-"
+        }, 
+        {
+            "Injury": "Stunned",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "None",
+            "Healing time": "-"
+        }, {
+            "Injury": "Breathless",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "None",
+            "Healing time": "-"
+        }, {
+            "Injury": "Breathless",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "None",
+            "Healing time": "-" 
+        }, {
+            "Injury": "Concussion",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "-2 to SCOUTING",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Concussion",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "-2 to SCOUTING",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Broken nose",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "-1 to MANIPULATE",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Broken nose",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "-1 to MANIPULATE",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Broken fingers",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "Two-handed weapons can’t be used",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Broken fingers",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "Two-handed weapons can’t be used",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Broken toes",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Broken toes",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "D6"
+        }, {
+            "Injury": "Broken toes",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "D6"
+        }, {
+            "Injury": "Knocked out teeth",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "-1 to MANIPULATE",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Knocked out teeth",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "-1 to MANIPULATE",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Knocked out teeth",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "-1 to MANIPULATE",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Groin hit",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "1 point of damage suffered at every MOVE or MELEE roll",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Groin hit",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "1 point of damage suffered at every MOVE or MELEE roll",
+            "Healing time": "D6"  
+        }, {
+            "Injury": "Groin hit",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "1 point of damage suffered at every MOVE or MELEE roll",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Broken ribs",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "-2 to MOVE and MELEE",
+            "Healing time": "2D6"
+        }, {
+            "Injury": "Broken ribs",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "-2 to MOVE and MELEE",
+            "Healing time": "2D6"
+        }, {
+            "Injury": "Broken ribs",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "-2 to MOVE and MELEE",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Broken arm",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "Two-handed weapons can't be used",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Broken arm",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "Two-handed weapons can't be used",
+            "Healing time": "2D6"  
+        }, {
+            "Injury": "Broken leg",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Broken leg",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "2D6"
+        }, {
+            "Injury": "Gouged eye",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "-2 to MARKSMANSHIP and SCOUTING",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Gouged eye",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "-2 to MARKSMANSHIP and SCOUTING",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Crushed foot",
+            "Deadly": "Yes",
+            "Time limit": "D6 days",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "3D6"
+        }, {
+            "Injury": "Crushed foot",
+            "Deadly": "Yes",
+            "Time limit": "D6 days",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "3D6"
+        }, {
+            "Injury": "Crushed elbow",
+            "Deadly": "Yes",
+            "Time limit": "D6 days",
+            "Effect": "Two-handed weapons cannot be used",
+            "Healing time": "Permanent" 
+        }, {
+            "Injury": "Crushed elbow",
+            "Deadly": "Yes",
+            "Time limit": "D6 days",
+            "Effect": "Two-handed weapons cannot be used",
+            "Healing time": "Permanent" 
+        }, {
+            "Injury": "Crushed knee",
+            "Deadly": "Yes",
+            "Time limit": "D6 days",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "Permanent" 
+        }, {
+            "Injury": "Crushed knee",
+            "Deadly": "Yes",
+            "Time limit": "D6 days",
+            "Effect": "To RUN becomes a slow action",
+            "Healing time": "Permanent" 
+        }, {
+            "Injury": "Broken neck",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "Paralyzed from the neck down. If not HEALED in time, the effect is permanent",
+            "Healing time": "3D6" 
+        }, {
+            "Injury": "Crushed skull",
+            "Deadly": "Yes",
+            "Time limit": "-",
+            "Effect": "Your adventure and your life end here",
+            "Healing time": "-" 
+        }, {
+            "Injury": "Crushed skull",
+            "Deadly": "Yes",
+            "Time limit": "-",
+            "Effect": "Your adventure and your life end here",
+            "Healing time": "-" 
+        }
+    ],
+    "Horror": 
+    [
+        {
+            "Injury": "Trembling",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "Penalty -1 to all rolls for Agility",
+            "Healing time": "D6"
+        }, 
+        {
+            "Injury": "Trembling",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "Penalty -1 to all rolls for Agility",
+            "Healing time": "D6"
+        }, {
+            "Injury": "Trembling",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "Penalty -1 to all rolls for Agility",
+            "Healing time": "D6"
+        }, {
+            "Injury": "Trembling",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "Penalty -1 to all rolls for Agility",
+            "Healing time": "D6"
+        }, {
+            "Injury": "Trembling",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "Penalty -1 to all rolls for Agility",
+            "Healing time": "D6"
+        }, {
+            "Injury": "Trembling",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "Penalty -1 to all rolls for Agility",
+            "Healing time": "D6"
+        }, {
+            "Injury": "White hair",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "None",
+            "Healing time": "Permanent"
+        }, {
+            "Injury": "Anxious",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "Penalty -1 to all rolls for Wits",
+            "Healing time": "D6"
+        }, {
+            "Injury": "Anxious",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "Penalty -1 to all rolls for Wits",
+            "Healing time": "D6"
+        }, {
+            "Injury": "Anxious",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "Penalty -1 to all rolls for Wits",
+            "Healing time": "D6"
+        }, {
+            "Injury": "Sullen",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "Penalty -1 to all rolls for Empathy",
+            "Healing time": "D6"
+        }, {
+            "Injury": "Sullen",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "Penalty -1 to all rolls for Empathy",
+            "Healing time": "D6"
+        }, {
+            "Injury": "Sullen",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "Penalty -1 to all rolls for Empathy",
+            "Healing time": "D6"
+        }, {
+            "Injury": "Nightmares",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "Make an INSIGHT roll every Quarter Day spent SLEEPING. Failure means that the SLEEP doesn't count.",
+            "Healing time": "D6"
+        }, {
+            "Injury": "Nightmares",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "Make an INSIGHT roll every Quarter Day spent SLEEPING. Failure means that the SLEEP doesn't count.",
+            "Healing time": "D6"
+        }, {
+            "Injury": "Nightmares",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "Make an INSIGHT roll every Quarter Day spent SLEEPING. Failure means that the SLEEP doesn't count.",
+            "Healing time": "D6"
+        }, {
+            "Injury": "Nocturnal",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "You can only SLEEP during the light part of the day.",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Nocturnal",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "You can only SLEEP during the light part of the day.",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Phobic",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "You are terrified by something related to what Broke you. The GM decides what it is. You suffer 1 point of damage to Wits each round within NEAR range of the object of your phobia.",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Phobic",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "You are terrified by something related to what Broke you. The GM decides what it is. You suffer 1 point of damage to Wits each round within NEAR range of the object of your phobia.",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Drunkard",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "You must drink wine or mead every day, or suffer 1 point of damage to Agility.",
+            "Healing time": "3D6" 
+        }, {
+            "Injury": "Drunkard",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "You must drink wine or mead every day, or suffer 1 point of damage to Agility.",
+            "Healing time": "3D6" 
+        }, {
+            "Injury": "Claustrophobic",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "Every turn (15 minutes) in a confined environment, you suffer 1 point of damage to Wits.",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Claustrophobic",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "Every turn (15 minutes) in a confined environment, you suffer 1 point of damage to Wits.",
+            "Healing time": "2D6"  
+        }, {
+            "Injury": "Mythomania",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "You cannot stop yourself from lying. About everything. The effect should be roleplayed.",
+            "Healing time": "2D6" 
+        }, {
+            "Injury": "Paranoia",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "You are certain that someone is out to get you. The effect should be roleplayed.",
+            "Healing time": "2D6"
+        }, {
+            "Injury": "Paranoia",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "You are certain that someone is out to get you. The effect should be roleplayed.",
+            "Healing time": "2D6"
+        }, {
+            "Injury": "Delusion",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "You are totally convinced of something that is totally untrue, for example that a certain kin doesn't exist",
+            "Healing time": "3D6" 
+        }, {
+            "Injury": "Hallucinations",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "Make an INSIGHT roll every Quarter Day. If you fail, you suffer a powerful hallucination. The GM determines the details.",
+            "Healing time": "3D6"
+        }, {
+            "Injury": "Altered personality",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "Your personality is altered in a fundamental way. Determine how together with the GM. The effect should be roleplayed.",
+            "Healing time": "Permanent"
+        }, {
+            "Injury": "Altered personality",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "Your personality is altered in a fundamental way. Determine how together with the GM. The effect should be roleplayed.",
+            "Healing time": "Permanent" 
+        }, {
+            "Injury": "Amnesia",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "You lose all memory, and cannot recollect who you or the other adventurers are. The effect should be roleplayed",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Catatonic",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "You stare blankly into oblivion, and do not respond to any stimuli",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Catatonic",
+            "Deadly": "-",
+            "Time limit": "-",
+            "Effect": "You stare blankly into oblivion, and do not respond to any stimuli",
+            "Healing time": "D6" 
+        }, {
+            "Injury": "Heart attack",
+            "Deadly": "Yes",
+            "Time limit": "-",
+            "Effect": "Your heart stops, and you die of pure fright",
+            "Healing time": "-" 
+        }
+    ],
+    "Others": 
+    [
+        {
+            "Injury": "Non-typical damage",
+            "Deadly": "Yes",
+            "Time limit": "D6 days",
+            "Effect": "You remain unconscious until you die or are HEALED",
+            "Healing time": "-" 
+        }, {
+            "Injury": "Pushed damage",
+            "Deadly": "No",
+            "Time limit": "-",
+            "Effect": "None",
+            "Healing time": "-" 
+        }
+    ]
+}

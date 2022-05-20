@@ -1,0 +1,17 @@
+{
+    "Young": {
+        "attrPoint": 15, 
+        "skillPoint": 8,
+        "talents": 1
+    },
+    "Middle aged": {
+        "attrPoint": 14, 
+        "skillPoint": 10, 
+        "talents": 2
+    }, 
+    "Old": {
+        "attrPoint": 13, 
+        "skillPoint": 12, 
+        "talents": 3
+    }
+}

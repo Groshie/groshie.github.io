@@ -1,0 +1,320 @@
+{
+    "Druid": {
+        "Attribute": "Wits", 
+        "Skills": [
+            "Endurance",
+            "Survival",
+            "Insight",
+            "Healing",
+            "Animal handling"
+        ], 
+        "Talents": {
+            "Path of Healing": {
+                "Description": "Your calling is to use the forces of nature to heal and nurture the injured and the lost souls. The rank of this talent determines which spells you can use. Read more about magic in Chapter 6.",
+                "1": "You can cast rank 1 spells from the Healing discipline.",
+                "2": "You can cast rank 1 and rank 2 spells from the Healing discipline.",
+                "3": "You can cast rank 1, 2 and 3 spells from the Healing discipline."
+            },
+            "Path of Shifting Shapes": {
+                "Description": "You are one with the feral creatures of the world and can assume their attributes or even take their form. The rank of this talent determines which spells you can use. Read more about magic in Chapter 6.",
+                "1": "You can cast rank 1 spells from the Shapeshifting discipline.",
+                "2": "You can cast rank 1 and rank 2 spells from the Shapeshifting discipline.",
+                "3": "You can cast rank 1, 2 and 3 spells from the Shapeshifting discipline."
+            },
+            "Path of Sight": {
+                "Description": "You can see beyond sight, and your inner eye can see what has happened and what will happen. The rank of this talent determines which spells you can use. Read more about magic in Chapter 6.",
+                "1": "You can cast rank 1 spells from the Awareness discipline.",
+                "2": "You can cast rank 1 and rank 2 spells from the Awareness discipline.",
+                "3": "You can cast rank 1, 2 and 3 spells from the Awareness discipline."
+            }
+        }, 
+        "Equipment": [
+            "Staff or Knife", 
+            "Utensil item"
+        ], 
+        "Resources": {
+            "Food": "D8", 
+            "Water": "D8"
+        }
+    },
+    "Hunter": {
+        "Attribute": "Agility", 
+        "Skills": [
+            "Stealth",
+            "Move",
+            "Marksmanship",
+            "Scouting",
+            "Survival"
+        ], 
+        "Talents": {
+            "Path of the Beast": {
+                "Description": "You have an animal as a trusted companion. Pick the type of animal yourself from the table on page 124 of the Gamemaster’s Guide, and give your animal a name. You cannot choose a riding animal.",
+                "1": "Your animal can scout for you. You can spend a Willpower Point to send the animal ahead to check out a place nearby, and the animal will warn you if there is a threat there.",
+                "2": "Your animal can help you when you are Broken (see page 107). Every WP you spend recovers one point of the attribute that has reached zero. You cannot use this effect when you are not Broken.",
+                "3": "You can send your animal to fight for you. If you spend a WP when it is your turn to fight, the animal will also fight and follow your orders for one round, at your turn in the initiative order. Roll normally for the animal’s attacks.",
+                "Comment": "Your animal will protect itself if it is attacked, but if you want it to fight for you, you need rank 3 of this talent. If your animal dies, you can tame a new one (read more on page 58). Once you have tamed an animal, you can choose to use it as a new companion. You keep your rank of PATH OF THE beast."
+            },
+            "Path of the Arrow": {
+                "Description": "You are a master archer and fire arrows as if they were controlled by your own will.",
+                "1": "When you hit with a ranged weapon attack, you can spend a Willpower Point to find a weakness in your opponent’s armor or natural armor. The armor offers no protection against your attack.",
+                "2": "Once you have used up all your actions during the round, you can spend a WP to immediately attack again using a ranged weapon. However, said weapon must have been PREPARED earlier.",
+                "3": "When you hit with a ranged weapon attack, you can increase the damage by spending WP. Every point spent increases damage by 1. You must state how many WP you use before your opponent rolls for any armor."
+            },
+            "Path of the Forest": {
+                "Description": "You are a master at surviving in the wilderness. Read more about journeys in Chapter 7.",
+                "1": "When you FORAGE, HUNT, or LEAD THE WAY, you succeed automatically if you spend a Willpower Point. You can roll first and spend the point if you fail.",
+                "2": "When rolling to endure cold (see page 111), you automatically succeed if you spend a WP. You can roll first and spend the point if you fail.",
+                "3": "By spending a WP, you don’t need to eat or drink during one full day."
+            }
+        }, 
+        "Equipment": [
+            "Bow or Sling", 
+            "Utensil item", 
+            "Utensil item"
+        ], 
+        "Resources": {
+            "Food": "D8", 
+            "Water": "D8", 
+            "Arrows": "D10"
+        }},
+    "Fighter": {
+        "Attribute": "Strength", 
+        "Skills": [
+            "Might",
+            "Endurance",
+            "Melee",
+            "Crafting",
+            "Move"
+        ], 
+        "Talents": {
+            "Path of the Blade": {
+                "Description": "You are one with your blade. You practice with your weapon every day and know all its qualities, as if it were part of your own body.",
+                "1": "When you hit with a close combat attack, you can spend a Willpower Point to find a weakness in your opponent’s armor or natural armor. The armor has no effect against your attack.",
+                "2": "Once you have used up all your actions during the round, you can spend a WP to immediately attack again in close combat.",
+                "3": "When you hit with a close combat attack, you can increase the damage by spending WP. Every point spent increases damage by 1. You must state how many WP you use before your opponent rolls for armor."
+            },
+            "Path of the Shield": {
+                "Description": "You are a rock in the heat of battle, immovable and hard to kill. This talent affects how you PARRY attacks, regardless of whether you do it with a shield or a weapon.",
+                "1": "When a friend within NEAR range is attacked, you can spend a Willpower Point to PARRY the attack for him. Your PARRY follows the normal rules and counts as one of your actions in the round.",
+                "2": "When you PARRY, you can immediately spend a WP to not count the PARRY against your actions in the round, making it “free.” You can do this several times in a round, as long as you have WP to spend.",
+                "3": "When you PARRY successfully, you can decrease damage further by spending WP. Every point you spend decreases damage by 1. You must state how many WP you use before you roll for armor."
+            },
+            "Path of the Enemy": {
+                "Description": "You see through your opponent and anticipate his next move before it happens. Observe that this talent is only applicable if you use the system for hidden combinations in close combat (see page 94).",
+                "1": "If you spend a Willpower Point when you and your opponent choose your hidden combinations, your opponent must choose his combination first and then reveal his first or second card to you before you choose your own combination. Your opponent chooses which card to show.",
+                "2": "As per rank 1, but you decide if your opponent shows the first or second card of his combination.",
+                "3": "As per rank 1, but your opponent must show both his actions before you choose your own actions."
+            }
+        }, 
+        "Equipment": [
+            "One-handed weapon", 
+            "Studded leather armor", 
+            "Utensil item"
+        ], 
+        "Resources": {
+            "Food": "D8", 
+            "Water": "D6"
+        }},
+    "Sorcerer": {
+        "Attribute": "Wits", 
+        "Skills": [
+            "Crafting",
+            "Sleight-of-hand",
+            "Lore",
+            "Insight",
+            "Manipulation"
+        ], 
+        "Talents": {
+            "Path of Signs": {
+                "Description": "The rank of this talent determines which spells you can use. Read more about magic in Chapter 6.",
+                "1": "You can cast rank 1 spells from the Symbolism discipline.",
+                "2": "You can cast rank 1 and rank 2 spells from the Symbolism discipline.",
+                "3": "You can cast rank 1, 2 and 3 spells from the Symbolism discipline."
+            },
+            "Path of Stone": {
+                "Description": "The rank of this talent determines which spells you can use. Read more about magic in Chapter 6.",
+                "1": "You can cast rank 1 spells from the Stone Song discipline.",
+                "2": "You can cast rank 1 and rank 2 spells from the Stone Song discipline.",
+                "3": "You can cast rank 1, 2 and 3 spells from the Stone Song discipline."
+            },
+            "Path of Blood": {
+                "Description": "The rank of this talent determines which spells you can use. Read more about magic in Chapter 6.",
+                "1": "You can cast rank 1 spells from the Blood Magic discipline.",
+                "2": "You can cast rank 1 and rank 2 spells from the Blood Magic discipline.",
+                "3": "You can cast rank 1, 2 and 3 spells from the Blood Magic discipline."
+            },
+            "Path of Death": {
+                "Description": "The rank of this talent determines which spells you can use. Read more about magic in Chapter 6.",
+                "1": "You can cast rank 1 spells from the Death Magic discipline.",
+                "2": "You can cast rank 1 and rank 2 spells from the Death Magic discipline.",
+                "3": "You can cast rank 1, 2 and 3 spells from the Death Magic discipline."
+            }
+        }, 
+        "Equipment": [
+            "Staff or Knife", 
+            "Utensil item"
+        ], 
+        "Resources": {
+            "Food": "D6", 
+            "Water": "D8"
+        }},
+    "Peddler": {
+        "Attribute": "Empathy", 
+        "Skills": [
+            "Crafting",
+            "Sleight-of-hand",
+            "Scouting",
+            "Insight",
+            "Manipulation"
+        ], 
+        "Talents": {
+            "Path of Gold": {
+                "Description": "You are a master at bargaining and have an unerring ability to sniff out gold and jewels.",
+                "1": "When you are about to buy an item, you can spend a Willpower Point to automatically negotiate the price down. The price is decreased by one-fifth for every WP you spend. You can spend a maximum of 4 WP per item, which decreases the price to one-fifth.",
+                "2": "When you enter a new room, you can spend a WP to detect if there are valuables in the room and if so, where. This talent only applies to gold and jewels, not unique artifacts.",
+                "3": "You always have gold hidden somewhere. For every WP you spend, you find 1 piece of gold in one of your pockets, even if you were recently searched or something similar."
+            },
+            "Path of Many Things": {
+                "Description": "You carry a knapsack that contains a seemingly endless supply of stuff and knick knacks. The knapsack is a HEAVY item (see page 37).",
+                "1": "When you spend Willpower Points, you can find almost any item from the list of trade goods (see page 182). It cannot be a HEAVY object and it cannot cost more than 1 piece of silver per WP spent.",
+                "2": "As per rank 1, but you can also find a weapon (from the weapon tables) in your knapsack.",
+                "3": "As per rank 2, but the item can cost up to 1 piece of gold per WP spent.",
+                "Comment": "Once you have pulled an item from your knapsack, you must write it down on your character sheet, and you cannot put it back in your knapsack again. If you lose your knapsack, you must get a new one before you can use this talent again. This requires a visit to a trading post of some kind and that you spend a WP and 2D6 silver."
+            },
+            "Path of Lies": {
+                "Description": "You are a master liar, skilled at both seeing through lies and telling them yourself without being discovered.",
+                "1": "If you spend a Willpower Point when speaking with an NPC, the GM must reveal if the NPC is lying or not. The GM does not have to reveal what exactly the NPC is lying about.",
+                "2": "When you MANIPULATE an NPC to make him believe what you are saying (regardless of whether it’s true or not), you can spend a WP to succeed automatically. You can roll first and use this talent if you fail.",
+                "3": "When you MANIPULATE someone and succeed, you can spend a WP to avoid doing something in return (see page 99) and your opponent also loses the ability to attack you. What you are asking must still be reasonable according to the GM’s assessment."
+            }
+        }, 
+        "Equipment": [
+            "Knife", 
+            "Utensil item", 
+            "Utensil item", 
+            "Utensil item"
+        ], 
+        "Resources": {
+            "Food": "D8", 
+            "Water": "D8"
+        }},
+    "Rider": {
+        "Attribute": "Agility", 
+        "Skills": [
+            "Endurance",
+            "Melee",
+            "Marksmanship",
+            "Survival",
+            "Animal handling"
+        ], 
+        "Talents": {
+            "Path of the Companion": {
+                "Description": "Your horse (or another riding animal) is your closest friend and companion, and will help you if you are in trouble.",
+                "1": "If you spend a Willpower Point when you are Broken (see page 107), your horse will stay by your side and defend you. The horse will attack any opponents that attempt to attack or move you.",
+                "2": "Your horse can help you get up on your feet when you are Broken. For every WP you spend, you recover one point of the attribute that has been reduced to zero. You cannot use this effect if you are not Broken.",
+                "3": "Your horse can kick opponents when you are in the saddle. If you spend a WP when it is your turn to act in the round, the horse can also attack in close combat, right after your action. Roll normally for the horse’s attack.",
+                "Comment": "If your mount is killed, you can buy or tame a new one and use your talent with the new mount."
+            },
+            "Path of the Knight": {
+                "Description": "You are a master at fighting mounted. All the effects of this talent require that you are mounted and that you are in an OPEN zone in combat (see page 88).",
+                "1": "You can spend Willpower Points to draw extra initiative cards during the initiative draw, and choose the best card. Every WP allows you to draw one extra card, and you can choose the best one. The cards you have discarded are shuffled back into the deck before the other combatants draw their cards. This talent can be combined with LIGHTNING FAST, letting you draw three initiative cards.",
+                "2": "When you are mounted, you can spend WP to defend against attacks. Every WP you spend eliminates one success your opponent has rolled.",
+                "3": "When you attack from a mount in close combat and your attack roll succeeds, you can spend WP to increase damage. Every point spent increases damage by 1. You must state how many WP you use before your opponent rolls for armor."
+            },
+            "Path of the Plains": {
+                "Description": "Your mount is fast like the wind.",
+                "1": "For every Willpower Point you spend, your mount can move one extra hex square in a Quarter Day (see page 144), in normal terrain. Difficult terrain requires two WP per extra hex square.",
+                "2": "When you are mounted, you can spend a WP to escape from combat without rolling dice (see page 89). All other limitations apply.",
+                "3": "You can coax your mount into running at breakneck speed for a short period of time. Every WP you spend increases the mount’s Movement Rate (see page 115) one step, but only during one round."
+            }
+        }, 
+        "Equipment": [
+            "Riding horse", 
+            "Spear or Axe", 
+            "Shortbow or Sling", 
+            "Utensil item"
+        ], 
+        "Resources": {
+            "Food": "D8", 
+            "Water": "D8", 
+            "Arrows": "D10"
+        }},
+    "Minstrel": {
+        "Attribute": "Empathy", 
+        "Skills": [
+            "Lore",
+            "Insight",
+            "Manipulation",
+            "Performance",
+            "Healing"
+        ], 
+        "Talents": {
+            "Path of the Song": {
+                "Description": "Your beautiful voice can captivate any audience, and can even torment the listeners if you so choose.",
+                "1": "By spending Willpower Points and singing, you can draw the attention of everyone in NEAR range to yourself for a few minutes. They stop what they are doing, and any SCOUTING roll they make is modified negatively by the number of WP you spend. This has no effect in combat.",
+                "2": "As per rank 1, but you can also persuade your audience to pay for your singing. They will pay what they can, up to a number of silver pieces equal to the number of WP you spend.",
+                "3": "You can sing so powerfully that your song cuts into the ears of any listeners within SHORT range. Your song causes 1 point of damage to Strength per WP you spend. You can distribute the damage across as many opponents as you want. The targets may attempt to resist the effect by rolling for INSIGHT – each success rolled negates 1 point of damage. No effect against monsters."
+            },
+            "Path of the Hymn": {
+                "Description": "Your songs can help your comrades get up on their feet, even in the heat of combat. Using the talent in combat counts as a slow action.",
+                "1": "You can help a Broken comrade within SHORT range to get up on her feet. For every WP you spend, your comrade recovers one point of the attribute that has been reduced to zero.",
+                "2": "A number of your comrades, equal to the number of WP you spend and within SHORT range, each recover 1 point of damage to an attribute (see page 104). You decide which attribute they all recover.",
+                "3": "Your song grants a portion of your power to one of your comrades within LONG distance. You simply give a number of WP of your choice to your friend. The half-elf kin talent PSYCHIC POWER cannot be combined with this effect."
+            },
+            "Path of the Warcry": {
+                "Description": "Your voice inspires your comrades and strikes fear into the hearts of your enemies. Using this talent in combat counts as a slow action (see page 85).",
+                "1": "You can emit a warcry that grants all your comrades within SHORT range a bonus to all attacks during the round, until you perform another action. Their rolls are modified by +1 for every WP you spend.",
+                "2": "You can emit a roar that modifies the close combat attacks of all opponents within SHORT range until it’s your turn to act again in the next round. Their rolls are modified by –1 for every WP you spend. Note this has no effect against monsters.",
+                "3": "Your cry can strike fear into the heart of the most savage of opponents. Your cry inflicts 1 point of damage to Wits in a single opponent within SHORT range for every WP you spend. The target may attempt to resist the effect by rolling for INSIGHT – each success rolled negates 1 point of damage. No effect against monsters."
+            }
+        }, 
+        "Equipment": [
+            "Lyre or Flute", 
+            "Knife", 
+            "Utensil item"
+        ], 
+        "Resources": {
+            "Food": "D8", 
+            "Water": "D6"
+        }},
+    "Rogue": {
+        "Attribute": "Agility", 
+        "Skills": [
+            "Melee",
+            "Stealth",
+            "Sleight-of-hand",
+            "Move",
+            "Manipulation"
+        ], 
+        "Talents": {
+            "Path of the Face": {
+                "Description": "You are a master of disguise and can easily assume the appearance of others.",
+                "1": "By spending a Willpower Point and preparing for a moment, you can assume the appearance of another person, but not their voice or demeanor. The person must be of the same sex and kin as you are. Anyone who knows the person and sees you at NEAR range can discover your ruse by rolling INSIGHT. Every extra WP you spend when you create your disguise modifies any roll to see through it by –1.",
+                "2": "As per rank 1, but you can also mimic voices and demeanors. If you talk to someone who knows the person you are imitating, he can see through your disguise as per rank 1 above.",
+                "3": "You can assume another person’s appearance completely, even if they are of the opposite sex or another kin. In other respects, treat this the same as per rank 2."
+            },
+            "Path of Poison": {
+                "Description": "You always carry an assortment of poisons. Your collection counts as one TINY item and doesn’t encumber you.",
+                "1": "By spending a Willpower Point, you can pull out one dose of lethal poison (see page 113) with a Potency equal to the number of WP you spend multiplied by 3.",
+                "2": "As per rank 1, but you can also choose another kind of poison. See the examples on page 113.",
+                "3": "As per rank 2, but you can also choose to have the poison already applied to one of your weapons, for example, right before an attack (see page 114). Using this talent does not count as an action.",
+                "Comment": "If you lose your collection of poisons, you must get a new one before you can use this talent again. This requires a visit to a trading post of some kind and that you spend a WP and 2D6 silver."
+            },
+            "Path of the Killer": {
+                "Description": "Battles are not always fought in the open and with steel clashing against steel. Another, less heroic type of fight takes place in the shadows, with hidden weapons and unsuspecting victims.",
+                "1": "When you succeed with a SNEAK ATTACK (see page 90), you can spend Willpower Points to increase damage. Every WP you spend increases damage by 1.",
+                "2": "By spending a WP, you can slither your way out of any restraints or push yourself through the smallest of openings, down to a few inches wide.",
+                "3": "You can make others do your job for you through the power of hypnosis. By spending a WP, you can force your opponent to perform a specific action at a time of your choosing. However, you must speak to your opponent for a short time before you can use this talent."
+            }
+        }, 
+        "Equipment": [
+            "Dagger", 
+            "Utensil item", 
+            "Utensil item"
+        ], 
+        "Resources": {
+            "Food": "D6", 
+            "Water": "D6"
+        }
+    }
+}

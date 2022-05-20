@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Forbidden Lands - Tools</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Tapestry&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="css/ForbiddenLandsTools.css">
+    </head>
+    <body class="bg-dark" onload="init()">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <script src="js/ForbiddenLandsTools.js" async defer></script>
+
+        <div class="row card pt-4 text-center bg-dark text-danger">
+            <h2>Tools to use in the <p class="color-animation font-forbidden">Forbidden Lands</p></h2>
+        </div>
+
+        <div id="padding-margin" class="p-2 m-2">
+            <div id="mainChar" class="row card bg-dark">
+                <div class="card-header row">
+                    <a class="btn text-white border-2 border-primary" data-bs-toggle="collapse" href="#charCollapse"><h3>Character generator and sheet</h3></a>
+                </div>
+            </div>
+            
+            <div class="row collapse card-body text-light" id="charCollapse" data-bs-parent="#mainChar">
+                <div id="baseInfo" class="col">
+                    <h4>Basic information</h4>
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Kin</th>
+                                <th>Profession</th>
+                                <th>Age group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="nameCell">
+                                    <input class="form-control-sm" id="charName" placeholder="Name"></input>
+                                </td>
+                                <td id="kinCell"></td>
+                                <td id="profCell"></td>
+                                <td id="ageCell"></td>
+                            </tr>
+                            <tr>
+                                <td><b>Attribute points left: </b></td>
+                                <td id="attrPointCounter">0</td>
+                                <td><b>Skill points left: </b></td>
+                                <td id="skillPointCounter">0</td>
+                            </tr>
+                            <tr>
+                                <td><b>Talent points left: </b></td>
+                                <td id="talentPointCounter">0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="charStats" class="row">
+                    <div id="attr-skills" class="col"></div>
+                    <div id="talents" class="col">
+                        <table class="table table-dark table-striped" id="addTalent-table">
+                            <thead>
+                                <tr>
+                                    <th>Talent</th>
+                                    <th class="text-center">+</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="w-50">
+                                        <select title="Add talent" id="addTalentList" class="form-control-sm"></select>
+                                    </td>
+                                    <td class="w-50">
+                                        <button type="button" class="btn btn-primary btn-sm" id="addTalent">+</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-dark table-striped" id="talent-table">
+                            <thead>
+                                <tr>
+                                    <th>Talents</th>
+                                    <th>Level</th>
+                                    <th>-</th>
+                                </tr>
+                            </thead>
+                            <tbody id="talent-body"></tbody>
+                            <tfoot id="talent-foot"></tfoot>
+                        </table>
+                        <table class="table table-dark" id="spell-table">
+                            <thead id="spell-head"></thead>
+                            <tbody id="spell-body"></tbody>
+                            <tfood id="spell-foot"></tfood>
+                        </table>
+                        
+                    </div>
+                    <div id="equipment" class="row">
+                        <h4>Equipment</h4>
+                        <div id="startEq" class="col-sm-4">
+                            <table id="startEq-table" class="table table-dark table-striped">
+                                <thead id="startEq-head">
+                                    <tr>
+                                        <th>Starting equipment</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="startEq-body"></tbody>
+                                <tfoot id="startEq-foot"></tfoot>
+                            </table>
+                            
+                        </div>
+                        <div id="mainEq" class="col-sm-8">
+                            <table id="addEq-table" class="table table-dark table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Add</th>
+                                    </tr>
+                                    <tr>
+                                        <td id="addEqListCell"></td>
+                                        <td id="addEqButtonCell"></td>
+                                    </tr>
+                                </thead>
+                                <tbody id="addEq-body"></tbody>
+                                <tfoot id="addEq-foot"></tfoot>
+                            </table>
+
+                            <table id="mainEq-table" class="table table-dark table-striped">
+                                <thead id="mainEq-head">
+                                    <tr>
+                                        <th>Current items</th>
+                                        <th>Weight</th>
+                                        <th>Bonus</th>
+                                        <th>Type</th>
+                                        <th>-</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="mainEq-body"></tbody>
+                                <tfoot id="mainEq-foot"></tfoot>
+                            </table>
+
+                            <table id="addWeapon-table" class="table table-dark table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Weapon</th>
+                                        <th>Add</th>
+                                    </tr>
+                                    <tr>
+                                        <td id="addWeaponListCell"></td>
+                                        <td id="addWeaponButtonCell"></td>
+                                    </tr>
+                                </thead>
+                                <tbody id="addWeapon-body"></tbody>
+                                <tfoot id="addWeapon-foot"></tfoot>
+                            </table>
+
+                            <table id="mainWeapon-table" class="table table-dark table-striped">
+                                <thead id="mainWeapon-head">
+                                    <tr>
+                                        <th>Current weapons</th>
+                                        <th>Grip</th>
+                                        <th>Bonus</th>
+                                        <th>Damage</th>
+                                        <th>Range</th>
+                                        <th>-</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="mainWeapon-body"></tbody>
+                                <tfoot id="mainWeapon-foot"></tfoot>
+                            </table>
+
+                            <table id="addArmor-table" class="table table-dark table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Armor</th>
+                                        <th>Add</th>
+                                    </tr>
+                                    <tr>
+                                        <td id="addArmorListCell"></td>
+                                        <td id="addArmorButtonCell"></td>
+                                    </tr>
+                                </thead>
+                                <tbody id="addArmor-body"></tbody>
+                                <tfoot id="addArmor-foot"></tfoot>
+                            </table>
+
+                            <table id="mainArmor-table" class="table table-dark table-striped">
+                                <thead id="mainArmor-head">
+                                    <tr>
+                                        <th>Current armor</th>
+                                        <th>Armor rating</th>
+                                        <th>Features</th>
+                                        <th>Body part</th>
+                                        <th>-</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="mainArmor-body"></tbody>
+                                <tfoot id="mainArmor-foot"></tfoot>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div> 
+
+            <div id="mainDice" class="row card bg-dark">
+                <div class="card-header row">
+                    <a class="btn text-white border-2 border-primary" data-bs-toggle="collapse" href="#diceCollapse">
+                        <h3>Dice roller</h3>
+                    </a>
+                </div>
+            
+                <div id="diceCollapse" class="row collapse card-body bg-dark text-light" data-bs-parent="#mainDice">
+                    <div class="col-sm-7" id="dicepicker">
+                        <h3>Dice
+                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#mainModal">
+                                History
+                            </button>
+                        </h3>
+                        
+                        <div id="dice-picker"></div> 
+                        <div id="dice-list"></div>
+                    </div>
+                    
+
+                    <div id="diceResult" class="col-sm-5">
+                        <h3>Dice results</h3>
+                        <div id="dice-results" class="bg-dark rounded text-dark"></div>
+                    </div>
+                </div> 
+            </div>
+
+            <div id="mainDM" class="row card bg-dark">
+                <div class="row card-header">
+                    <a class="btn text-light border-2 border-primary" data-bs-toggle="collapse" href="#dmCollapse">
+                        <h3>DM Tools</h3>
+                    </a>
+                </div>
+
+                <div id="dmCollapse" class="collapse card-body text-light" data-bs-parent="#mainDM">
+                    <div id="lookup1" class="row">
+                        <div id="itemLookup" class="col-6"><h5>Item lookup</h5></div>
+                        <div id="weaponLookup" class="col-6"><h5>Weapon lookup</h5></div>
+                    </div>
+                    <div id="lookup2" class="row">
+                        <div id="armorLookup" class="col-6"><h5>Armor lookup</h5></div>
+                        <div id="talentLookup" class="col-6"><h5>Talent lookup</h5></div>
+                    </div>
+                    <div id="critDamage" class="row">
+                        <h5 id="critH1">Critical injury</h5>
+                    </div>
+                </div>
+            </div>      
+        </div>
+    </body>
+</html>

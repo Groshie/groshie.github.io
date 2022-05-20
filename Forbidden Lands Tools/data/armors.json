@@ -1,0 +1,50 @@
+{
+    "Leather": {
+        "Armor Rating": 2,
+        "Cost": 3,
+        "Body Part": "Body",
+        "Features": ["Light"]
+    }, 
+    "Studded Leather": {
+        "Armor Rating": 3,
+        "Cost": 5,
+        "Body Part": "Body",
+        "Features": []
+    },
+    "Chainmail": {
+        "Armor Rating": 6,
+        "Cost": 24,
+        "Body Part": "Body",
+        "Features": ["Heavy item", "Armor Rating 3 against arrows", "Armor Rating 3 against Stabs"]
+    },
+    "Plate Armor": {
+        "Armor Rating": 8,
+        "Cost": 80,
+        "Body Part": "Body",
+        "Features": ["Heavy item", "Modifies Move by -2"]
+    }, 
+    "Studded Leather Cap": {
+        "Armor Rating": 1,
+        "Cost": 2,
+        "Body Part": "Head",
+        "Features": ["Light"]
+    }, 
+    "Open Helmet": {
+        "Armor Rating": 2,
+        "Cost": 8,
+        "Body Part": "Head",
+        "Features": ["Light"]
+    }, 
+    "Closed Helmet": {
+        "Armor Rating": 3,
+        "Cost": 18,
+        "Body Part": "Head",
+        "Features": []
+    }, 
+    "Great Helm": {
+        "Armor Rating": 4,
+        "Cost": 30,
+        "Body Part": "Head",
+        "Features": ["Modifies Scout by -2"]
+    }
+}

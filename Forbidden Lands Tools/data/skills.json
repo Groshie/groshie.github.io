@@ -1,0 +1,24 @@
+{
+    "Strength": [
+        "Might", 
+        "Endurance", 
+        "Melee", 
+        "Crafting"
+    ],
+    "Agility": [
+        "Stealth", 
+        "Sleight-of-hand", 
+        "Move", 
+        "Marksmanship"
+    ],
+    "Wits": ["Scouting", 
+        "Lore", 
+        "Survival", 
+        "Insight"
+    ],
+    "Empathy": ["Manipulation", 
+        "Performance", 
+        "Healing", 
+        "Animal handling"
+    ]
+}
