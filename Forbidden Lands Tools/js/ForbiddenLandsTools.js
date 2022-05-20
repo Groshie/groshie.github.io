@@ -20,7 +20,7 @@ const selectedDice = [["D6", "Strength"]]; // Always start with D6
 const rollHistory = [];
 
 // Declare general talents + spells and chosen talent list (does not include kin-talent)
-const generalTalents = getData("https://github.com/Groshie/groshie.github.io/tree/main/Forbidden%20Lands%20Tools/data/generalTalents.json");
+const generalTalents = getData("data/generalTalents.json");
 const selectedTalents = {};
 const selectedItems = {
     "Eq": [],
@@ -28,27 +28,27 @@ const selectedItems = {
     "Weapons": []
 };
 
-const spells = getData("https://github.com/Groshie/groshie.github.io/tree/main/Forbidden%20Lands%20Tools/data/spells.json");
+const spells = getData("data/spells.json");
 
 // Declare main skill object
-const skills = getData("https://github.com/Groshie/groshie.github.io/tree/main/Forbidden%20Lands%20Tools/data/skills.json");
+const skills = getData("data/skills.json");
 
 // Declare main kin object
-const kins = getData("https://github.com/Groshie/groshie.github.io/tree/main/Forbidden%20Lands%20Tools/data/kins.json");
+const kins = getData("data/kins.json");
 
 // Declare main profession object
-const profs = getData("https://github.com/Groshie/groshie.github.io/tree/main/Forbidden%20Lands%20Tools/data/profs.json");
+const profs = getData("data/profs.json");
 
 // Declare main age group object
-const ages = getData("https://github.com/Groshie/groshie.github.io/tree/main/Forbidden%20Lands%20Tools/data/ages.json");
+const ages = getData("data/ages.json");
 
 // Declare item objects
-const items = getData("https://github.com/Groshie/groshie.github.io/tree/main/Forbidden%20Lands%20Tools/data/items.json");
-const weapons = getData("https://github.com/Groshie/groshie.github.io/tree/main/Forbidden%20Lands%20Tools/data/weapons.json");
-const armors = getData("https://github.com/Groshie/groshie.github.io/tree/main/Forbidden%20Lands%20Tools/data/armors.json");
+const items = getData("data/items.json");
+const weapons = getData("data/weapons.json");
+const armors = getData("data/armors.json");
 
 // Declare critical injury object
-const critDamage = getData("https://github.com/Groshie/groshie.github.io/tree/main/Forbidden%20Lands%20Tools/data/critInjuries.json");
+const critDamage = getData("data/critInjuries.json");
 
 /*
 #############################
@@ -1542,8 +1542,8 @@ function setEventListeners() {
 // Supporting function for easily fetching json to variable
 async function getData(url) {
     try {
-        let result = await fetch(url);
-        return await result.json();
+        let res = await fetch(url);
+        return await res.json();
     } catch (error) {
         console.log(error);
     }
