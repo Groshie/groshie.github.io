@@ -20,7 +20,7 @@ const selectedDice = [["D6", "Strength"]]; // Always start with D6
 const rollHistory = [];
 
 // Declare general talents + spells and chosen talent list (does not include kin-talent)
-const generalTalents = getData("data/generalTalents.json");
+const generalTalents = await getData("data/generalTalents.json");
 const selectedTalents = {};
 const selectedItems = {
     "Eq": [],
@@ -28,27 +28,27 @@ const selectedItems = {
     "Weapons": []
 };
 
-const spells = getData("data/spells.json");
+const spells = await getData("data/spells.json");
 
 // Declare main skill object
-const skills = getData("data/skills.json");
+const skills = await getData("data/skills.json");
 
 // Declare main kin object
-const kins = getData("data/kins.json");
+const kins = await getData("data/kins.json");
 
 // Declare main profession object
-const profs = getData("data/profs.json");
+const profs = await getData("data/profs.json");
 
 // Declare main age group object
-const ages = getData("data/ages.json");
+const ages = await getData("data/ages.json");
 
 // Declare item objects
-const items = getData("data/items.json");
-const weapons = getData("data/weapons.json");
-const armors = getData("data/armors.json");
+const items = await getData("data/items.json");
+const weapons = await getData("data/weapons.json");
+const armors = await getData("data/armors.json");
 
 // Declare critical injury object
-const critDamage = getData("data/critInjuries.json");
+const critDamage = await getData("data/critInjuries.json");
 
 /*
 #############################
