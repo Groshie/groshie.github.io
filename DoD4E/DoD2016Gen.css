@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Texturina&effect=fire-animation');
+
+.hidden {
+	
+}
+
+.top {
+	box-sizing: border-box;
+	width: 50%;
+	top: 0;
+	left: 10;
+}
+
+.split {
+	float: left;
+	width: 50%;
+	height: 91%;
+	box-sizing: border-box;
+	padding: 5px;
+	padding-bottom: 10px;
+	overflow-x: hidden;
+	z-index: 1;
+	margin-bottom: 8%;
+}
+
+.right {
+	right: 0;
+	top: 0;
+	position: fixed;
+	border-left: 2px solid gray;
+	overflow: auto;
+}
+
+
+.bottom {
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	z-index: 2;
+	background-color: black;
+	border-top: 2px solid gray;
+}
+
+
+body {
+	background-color: black;
+}
+
+html {
+	height: 100%;
+}
+
+p, h2, h3, li, th, td, button {
+	color: white;
+	font-family: Texturina;
+}
+
+button {
+	background-color: #332f2e;
+	font-size: 16px;
+	padding: 10px;
+	box-shadow: 2px 2px 5px gray;
+	margin-left: 10px;
+}
+
+h1 {
+	font-family: Texturina;
+}
+
+table {
+	border: 3px solid white;
+}
+
+td, th {
+	text-align: left;
+	padding-bottom: 7px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-bottom: 1px solid white;
+}
