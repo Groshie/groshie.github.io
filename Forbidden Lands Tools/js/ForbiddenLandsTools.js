@@ -1541,12 +1541,13 @@ function setEventListeners() {
 
 // Supporting function for easily fetching json to variable
 async function getData(url) {
-    try {
-        let res = await fetch(url);
-        return await res.json();
-    } catch (error) {
-        console.log(error);
-    }
+        const result = await fetch(url, {
+            headers: {
+                "Accept": "application/json"
+            }
+        });
+        
+        return await result.json();
 }
 
 // Main function to start generating the webpage and set initial values
