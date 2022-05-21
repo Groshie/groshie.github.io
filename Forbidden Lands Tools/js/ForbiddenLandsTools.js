@@ -1541,9 +1541,16 @@ function setEventListeners() {
 
 // Supporting function for easily fetching json to variable
 async function getData(url) {
-        const data = await fetch(url)
+        const thisObj = {};
+        await fetch(url)
             .then(response => response.json())
-        return data
+            .then(data => {
+                for (obj in data) {
+                    thisObj[obj] = data[obj];
+                }
+            })
+
+        return thisObj
 }
 
 // Main function to start generating the webpage and set initial values
