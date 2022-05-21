@@ -28,27 +28,27 @@ const selectedItems = {
     "Weapons": []
 };
 
-const spells = await getData("data/spells.json");
+const spells = getData("data/spells.json");
 
 // Declare main skill object
-const skills = await getData("data/skills.json");
+const skills =  getData("data/skills.json");
 
 // Declare main kin object
-const kins = await getData("data/kins.json");
+const kins = getData("data/kins.json");
 
 // Declare main profession object
-const profs = await getData("data/profs.json");
+const profs = getData("data/profs.json");
 
 // Declare main age group object
-const ages = await getData("data/ages.json");
+const ages = getData("data/ages.json");
 
 // Declare item objects
-const items = await getData("data/items.json");
-const weapons = await getData("data/weapons.json");
-const armors = await getData("data/armors.json");
+const items = getData("data/items.json");
+const weapons = getData("data/weapons.json");
+const armors = getData("data/armors.json");
 
 // Declare critical injury object
-const critDamage = await getData("data/critInjuries.json");
+const critDamage = getData("data/critInjuries.json");
 
 /*
 #############################
@@ -1550,7 +1550,7 @@ async function getData(url) {
 }
 
 // Main function to start generating the webpage and set initial values
-function init() {
+const init = function () {
     // Start initializing the page
     createAttrTable();
     createSkillTable();
@@ -1582,6 +1582,9 @@ function init() {
 // Display copyright information
 console.log("Copyright: Groshie, 2022");
 console.log("Forbidden Lands property of Free League Publishing.");
+
+// When DOM has loaded, initialize:
+document.addEventListener("DOMContentLoaded", init);
 
 /*
 #####################
