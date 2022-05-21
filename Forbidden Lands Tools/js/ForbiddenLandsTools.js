@@ -20,7 +20,7 @@ const selectedDice = [["D6", "Strength"]]; // Always start with D6
 const rollHistory = [];
 
 // Declare general talents + spells and chosen talent list (does not include kin-talent)
-const generalTalents = await getData("data/generalTalents.json");
+const generalTalents = getData("data/generalTalents.json");
 const selectedTalents = {};
 const selectedItems = {
     "Eq": [],
