@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta author="Groshie">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>xX Sunflower Growth Xx</title>
+        <meta name="description" content="A game about getting your sunflower to grow!">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="SunflowerGrowth.css">
+    </head>
+
+    <body>
+        <div id="bodyDiv">
+            <div id="title">
+                <div class="titleText">
+                    <h2>Grow</h2>
+                    <p>a</p>
+                    <h2>Sunflower</h2>
+                    <p>Click to start!</p>
+                </div>
+            </div>
+
+            <div id="buttonDiv">
+                <img id="canButton" alt="Watering can button" src="https://www.clipartmax.com/png/full/60-605901_watering-can-watering-garden-vector-free.png"></img>
+            </div>
+
+            <div class="sky">
+                <div class="flower">
+                    <div id="head" class="head"></div>
+                    <div id="stalk" class="stalk"></div>
+                </div>
+            </div>
+
+            <div class="ground"></div>
+            
+            <script src="SunflowerGrowth.js" async defer></script>
+        </div>
+    </body>
+
+    <footer>
+        <div id="scoreDiv">
+            <table id="scoreTable">
+                <thead>
+                    <th>Thirst</th>
+                    <th>Drown</th>
+                </thead>
+                <tbody>
+                    <th id="thirstMeter">50</th>
+                    <th id="drownMeter">50</th>
+                </tbody>
+            </table>
+        </div>
+        <div id="instructionDiv">
+            <button id="instructionButton" class="rounded">Instructions</button>
+        </div>
+    </footer>
+</html>
