@@ -1,0 +1,30 @@
+#body-div {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(black, darkblue)
+}
+
+.text-div {
+    display: block;
+    position: flex;
+    margin: auto;
+    padding-left: 20px;
+    justify-content: center;
+    max-width: 70%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow:2px 2px 2px black;
+    color: whitesmoke;
+}   
+
+button {
+    display:block;
+    max-width:650px;
+    margin:auto;
+    font-family:"verdana";
+    text-shadow:2px 2px 2px black;
+    color:black
+}
