@@ -6,6 +6,7 @@ let keysTotal = [];
 let currentKeys = [];
 
 for (row in db) {
+    console.log(row);
     currentKeys = db[row].keys.toString().split(",");
 
     for (key of currentKeys) {
