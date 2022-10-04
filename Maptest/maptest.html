@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="se">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>MapMap</title>
+        <meta name="description" content="TBA">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="title-div" class="container">
+            <h1>Maptest</h1>
+            <h2>- Test i csv-format</h2>
+            <hr>
+        </div>
+
+        <div id="control-div" class="container">
+            <h3>Skriv in ett nyckelord du är intresserad av:</h3>
+            <label for="search-control" class="form-label">Sök:</label>
+            <input class="form-control" list="entryOptions" id="search-control" placeholder="Skriv för att söka...">
+            <datalist id="entryOptions">
+            </datalist>
+            <hr>
+        </div>
+
+        <div id="data-div" class="container">
+            <h3>Här nedan visas valt alternativ:</h3>
+            <table class="table table-striped">
+                <thead></thead>
+                <tbody id="result-table"></tbody>
+            </table>
+        </div>
+        <hr>
+
+        <script src="static/maptest.js" async defer></script>
+    </body>
+    <footer class="container">
+        <p>LoMa Copyright 2022</p>
+    </footer>
+</html>
