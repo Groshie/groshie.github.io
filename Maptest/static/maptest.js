@@ -2,20 +2,20 @@ let db = fetch("data/maptest.csv")
     .then(res => res.text())
     .then(data => db = parseCSV(data));
 
-let keys = [];
+let keysTotal = [];
 let currentKeys = [];
 
 for (row in db) {
     currentKeys = db[row].keys.toString().split(",");
 
     for (key of currentKeys) {
-        if (!keys.includes(key.toString().toLowerCase())) {
-            keys.push(key.toString().toLowerCase());
+        if (!keysTotal.includes(key.toString().toLowerCase())) {
+            keysTotal.push(key.toString().toLowerCase());
         }
     }
 }
 
-for (key of keys) {
+for (key of keysTotal) {
     let thisOption = document.createElement("option");
     thisOption.value = key.toString();
     document.getElementById("entryOptions").append(thisOption);
