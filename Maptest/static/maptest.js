@@ -42,7 +42,7 @@ function showAnswers() {
     for (row in db) {
         for (key of db[row].keys) {
             if (key.toString() == query) {
-                matches[row] = data[row].entry;
+                matches[row] = db[row].entry;
             }
         }
     }
