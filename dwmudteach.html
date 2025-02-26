@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Discworld MUD Teaching Cost Calculator (DMTCC)</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discworld MUD Teaching XP Cost Calculator">
+    <meta name="author" content="Groshie">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="dwmudteach.js"></script>
+    <style>
+        .numput {
+            width: 100px;
+        }
+    </style>
+</head>
+<body class="container-sm pt-5 color-dark bg-dark text-light">
+    <div>
+        <h1>Discworld MUD Teaching Cost Calculator</h1>
+    </div>
+    <div>
+        <p>Welcome, follow the steps below to start calculating your journey to greatness!</p>
+        <p>This tool aims to follow in the footsteps of <a href="http://bonuses.irreducible.org">http://bonuses.irreducible.org</a> when it comes to teaching xp cost. The rest of the tools on that site should still be up to date!</p>
+        <p>The formula has been adapted from <a href="https://dwwiki.mooo.com/wiki/Talk:Teachers">this page</a> (Unofficial Discworld MUD Wiki).</p>
+    </div>
+    <div>
+        <h2>Your stats</h2>
+        <p>Your (raw) stats are needed to calculate the total cost because your bonus in the skill has an effect on the result.</p>
+        <table class="table table-striped table-dark">
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="con">Con:</label>
+                        <input class="form-control numput" type="number" id="con" value="13"/>
+                    </td>
+                    <td>
+                        <label for="dex">Dex:</label>
+                        <input class="form-control numput" type="number" id="dex" value="13"/>
+                    </td>
+                    <td>
+                        <label for="int">Int:</label>
+                        <input class="form-control numput" type="number" id="int" value="13"/>
+                    </td>
+                    <td>
+                        <label for="str">Str:</label>
+                        <input class="form-control numput" type="number" id="str" value="13"/>
+                    </td>
+                    <td>
+                        <label for="wis">Wis:</label>
+                        <input class="form-control numput" type="number" id="wis" value="13"/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h2>The skill</h2>
+        <p>Choose which skill you are learning. It's relevant since skills use different stats for calculating bonus.</p>
+        <table class="table table-striped table-dark">
+            <tbody>
+               <tr>
+                    <td>
+                        <label for="skill-select">Skill:</label>
+                        <select class="form-control form-select" id="skill-select"></select>
+                    </td>
+               </tr> 
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h2>The rest</h2>
+        <p>Here we need your current level, which level you want to reach, the effective teaching bonus (ETB) of the teacher, and if the teacher is specialised. These are all used in the xp cost formula.</p>
+        <table class="table table-striped table-dark">
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="current-level">Current level:</label>
+                        <input class="form-control numput" type="number" id="current-level"/>
+                    </td>
+                    <td>
+                        <label for="wanted-level">Wanted level:</label>
+                        <input class="form-control numput" type="number" id="wanted-level"/>
+                    </td>
+                    <td>
+                        <label for="teacher-etb">Teacher ETB:</label>
+                        <input class="form-control numput" type="number" id="teacher-etb"/>
+                    </td>
+                    <td>
+                        <label for="teacher-spec">Specialised:</label>
+                        <select class="form-control form-select" id="teacher-spec">
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <label for="calcButton">Shiny button to press:</label>
+        <input class="btn btn-primary btn-lg form-control" type="button" id="calcButton" value="Calculate!"/>
+    </div>
+    <div id="result-div" class="pt-3">
+        <h2>Log:</h2>
+        <table class="table table-striped table-dark">
+            <tbody id="log-table"></tbody>
+        </table>
+    </div>
+</body>
+<footer>
+    <hr/>
+    <p>Made by: Groshie (2025)</p>
+</footer>
+</html>
