@@ -26,7 +26,7 @@
                     <div class="col-sm-12">
                         <p><b>Before you start:</b> It is recommended that you also back your savegame up to another folder, just in case!</p>
                         <p>Begin by selecting the savegame you wish to edit using the control below, then click the button to load it.</p>
-                        <p>Tested on Barony version 4.3.2.2025.06.15 (Steam)</p>
+                        <p>Tested on Barony version 5.03 (Steam)</p>
                         <p><i>Note: Saved games are usually located within the game folder (..\Barony\savegames\)</i></p>
                     </div>
                     <div class="col-sm-12 m-1">
@@ -51,25 +51,25 @@
                                             <label for="dungeon-level" class="form-label">Dungeon Level: </label>
                                         </th>
                                         <td>
-                                            <input name="game-info" id="dungeon-level" type="number" min="0" max="35" class="form-control" value="{{saveData.dungeon_lvl}}"/>
+                                            <input name="game-info" id="dungeon-level" type="number" min="0" max="35" class="form-control" ng-model="saveData.dungeon_lvl"/>
                                         </td>
                                         <th>
                                             <label for="game-seed" class="form-label">Game Seed: </label>
                                         </th>
                                         <td>
-                                            <input name="game-info" id="game-seed" type="number" class="form-control" value="{{saveData.gamekey}}"/>
+                                            <input name="game-info" id="game-seed" type="number" class="form-control" ng-model="saveData.gamekey"/>
                                         </td>
                                         <th>
                                             <label for="map-seed" class="form-label">Map Seed: </label>
                                         </th>
                                         <td>
-                                            <input name="game-info" id="map-seed" type="text" class="form-control" value="{{saveData.mapseed}}"/>
+                                            <input name="game-info" id="map-seed" type="text" class="form-control" ng-model="saveData.mapseed"/>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <div ng-repeat="player in saveData.players">
+                        <div ng-repeat="player in saveData.players" ng-if="saveData.players_connected[$index] == 1">
                             <h3>{{player.stats.name ? player.stats.name : "Player " + (player.playerNum + 1)}}</h3>
                             <h4>General stats</h4>
                             <table class="table table-striped">
@@ -80,13 +80,13 @@
                                             <label for="{{player.playerNum}}_name" class="form-label">Name: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_name" type="text" class="form-control" value="{{player.stats.name}}"/>
+                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_name" type="text" class="form-control" ng-model="player.stats.name"/>
                                         </td>
                                         <th>
                                             <label for="{{player.playerNum}}_level" class="form-label">Level: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_level" type="number" class="form-control" value="{{player.stats.LVL}}"/>
+                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_level" type="number" class="form-control" ng-model="player.stats.LVL"/>
                                         </td>
                                     </tr>
                                     <tr>
@@ -94,13 +94,13 @@
                                             <label for="{{player.playerNum}}_exp" class="form-label">Experience: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_exp" type="number" class="form-control" value="{{player.stats.EXP}}"/>
+                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_exp" type="number" class="form-control" ng-model="player.stats.EXP"/>
                                         </td>
                                         <th>
                                             <label for="{{player.playerNum}}_gold" class="form-label">Gold: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_gold" type="number" class="form-control" value="{{player.stats.GOLD}}"/>
+                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_gold" type="number" class="form-control" ng-model="player.stats.GOLD"/>
                                         </td>
                                     </tr>
                                     <tr>
@@ -108,7 +108,7 @@
                                             <label for="{{player.playerNum}}_hunger" class="form-label">Hunger: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_hunger" type="number" class="form-control" value="{{player.stats.HUNGER}}"/>
+                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_hunger" type="number" class="form-control" ng-model="player.stats.HUNGER"/>
                                         </td>
                                         <th></th>
                                         <td></td>
@@ -125,13 +125,13 @@
                                             <label for="{{player.playerNum}}_str" class="form-label">Strength: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_str" type="number" class="form-control" value="{{player.stats.STR}}"/>
+                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_str" type="number" class="form-control" ng-model="player.stats.STR"/>
                                         </td>
                                         <th>
                                             <label for="{{player.playerNum}}_dex" class="form-label">Dexterity: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_dex" type="number" class="form-control" value="{{player.stats.DEX}}"/>
+                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_dex" type="number" class="form-control" ng-model="player.stats.DEX"/>
                                         </td>
                                     </tr>
                                     <tr>
@@ -139,13 +139,13 @@
                                             <label for="{{player.playerNum}}_con" class="form-label">Constitution: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_con" type="number" class="form-control" value="{{player.stats.CON}}"/>
+                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_con" type="number" class="form-control" ng-model="player.stats.CON"/>
                                         </td>
                                         <th>
                                             <label for="{{player.playerNum}}_int" class="form-label">Intelligence: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_int" type="number" class="form-control" value="{{player.stats.INT}}"/>
+                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_int" type="number" class="form-control" ng-model="player.stats.INT"/>
                                         </td>
                                     </tr>
                                     <tr>
@@ -153,13 +153,13 @@
                                             <label for="{{player.playerNum}}_per" class="form-label">Perception: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_per" type="number" class="form-control" value="{{player.stats.PER}}"/>
+                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_per" type="number" class="form-control" ng-model="player.stats.PER"/>
                                         </td>
                                         <th>
                                             <label for="{{player.playerNum}}_chr" class="form-label">Charisma: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_chr" type="number" class="form-control" value="{{player.stats.CHR}}"/>
+                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_chr" type="number" class="form-control" ng-model="player.stats.CHR"/>
                                         </td>
                                     </tr>
                                     <tr>
@@ -167,13 +167,13 @@
                                             <label for="{{player.playerNum}}_hp" class="form-label">HP: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_hp" type="number" class="form-control" value="{{player.stats.HP}}"/>
+                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_hp" type="number" class="form-control" ng-model="player.stats.HP"/>
                                         </td>
                                         <th>
                                             <label for="{{player.playerNum}}_maxhp" class="form-label">Max HP: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_maxhp" type="number" class="form-control" value="{{player.stats.maxHP}}"/>
+                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_maxhp" type="number" class="form-control" ng-model="player.stats.maxHP"/>
                                         </td>
                                     </tr>
                                     <tr>
@@ -181,13 +181,13 @@
                                             <label for="{{player.playerNum}}_mp" class="form-label">MP: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_mp" type="number" class="form-control" value="{{player.stats.MP}}"/>
+                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_mp" type="number" class="form-control" ng-model="player.stats.MP"/>
                                         </td>
                                         <th>
                                             <label for="{{player.playerNum}}_maxmp" class="form-label">Max MP: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_maxmp" type="number" class="form-control" value="{{player.stats.maxMP}}"/>
+                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_maxmp" type="number" class="form-control" ng-model="player.stats.maxMP"/>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -199,16 +199,16 @@
                                 <tbody>
                                     <tr>
                                         <th>
-                                            <label for="{{player.playerNum}}_swimming" class="form-label">Swimming: </label>
+                                            <label for="{{player.playerNum}}_thaumaturgy" class="form-label">Thaumaturgy: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_swimming" type="number" class="form-control" value="{{player.stats.PROFICIENCIES[4]}}"/>
+                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_thaumaturgy" type="number" class="form-control" ng-model="player.stats.PROFICIENCIES[4]"/>
                                         </td>
                                         <th>
                                             <label for="{{player.playerNum}}_stealth" class="form-label">Stealth: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_stealth" type="number" class="form-control" value="{{player.stats.PROFICIENCIES[1]}}"/>
+                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_stealth" type="number" class="form-control" ng-model="player.stats.PROFICIENCIES[1]"/>
                                         </td>
                                     </tr>
                                     <tr>
@@ -216,13 +216,13 @@
                                             <label for="{{player.playerNum}}_blocking" class="form-label">Blocking: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_blocking" type="number" class="form-control" value="{{player.stats.PROFICIENCIES[13]}}"/>
+                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_blocking" type="number" class="form-control" ng-model="player.stats.PROFICIENCIES[13]"/>
                                         </td>
                                         <th>
                                             <label for="{{player.playerNum}}_ranged" class="form-label">Ranged: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_ranged" type="number" class="form-control" value="{{player.stats.PROFICIENCIES[8]}}"/>
+                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_ranged" type="number" class="form-control" ng-model="player.stats.PROFICIENCIES[8]"/>
                                         </td>
                                     </tr>
                                     <tr>
@@ -230,13 +230,13 @@
                                             <label for="{{player.playerNum}}_unarmed" class="form-label">Unarmed: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_unarmed" type="number" class="form-control" value="{{player.stats.PROFICIENCIES[14]}}"/>
+                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_unarmed" type="number" class="form-control" ng-model="player.stats.PROFICIENCIES[14]"/>
                                         </td>
                                         <th>
                                             <label for="{{player.playerNum}}_swords" class="form-label">Swords: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_swords" type="number" class="form-control" value="{{player.stats.PROFICIENCIES[9]}}"/>
+                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_swords" type="number" class="form-control" ng-model="player.stats.PROFICIENCIES[9]"/>
                                         </td>
                                     </tr>
                                     <tr>
@@ -244,13 +244,13 @@
                                             <label for="{{player.playerNum}}_polearms" class="form-label">Polearms: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_polearms" type="number" class="form-control" value="{{player.stats.PROFICIENCIES[12]}}"/>
+                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_polearms" type="number" class="form-control" ng-model="player.stats.PROFICIENCIES[12]"/>
                                         </td>
                                         <th>
                                             <label for="{{player.playerNum}}_axes" class="form-label">Axes: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_axes" type="number" class="form-control" value="{{player.stats.PROFICIENCIES[11]}}"/>
+                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_axes" type="number" class="form-control" ng-model="player.stats.PROFICIENCIES[11]"/>
                                         </td>
                                     </tr>
                                     <tr>
@@ -258,13 +258,13 @@
                                             <label for="{{player.playerNum}}_maces" class="form-label">Maces: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_maces" type="number" class="form-control" value="{{player.stats.PROFICIENCIES[10]}}"/>
+                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_maces" type="number" class="form-control" ng-model="player.stats.PROFICIENCIES[10]"/>
                                         </td>
                                         <th>
                                             <label for="{{player.playerNum}}_leadership" class="form-label">Leadership: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_leadership" type="number" class="form-control" value="{{player.stats.PROFICIENCIES[5]}}"/>
+                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_leadership" type="number" class="form-control" ng-model="player.stats.PROFICIENCIES[5]"/>
                                         </td>
                                     </tr>
                                     <tr>
@@ -272,13 +272,13 @@
                                             <label for="{{player.playerNum}}_trading" class="form-label">Trading: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_trading" type="number" class="form-control" value="{{player.stats.PROFICIENCIES[2]}}"/>
+                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_trading" type="number" class="form-control" ng-model="player.stats.PROFICIENCIES[2]"/>
                                         </td>
                                         <th>
-                                            <label for="{{player.playerNum}}_appraisal" class="form-label">Appraisal: </label>
+                                            <label for="{{player.playerNum}}_lore" class="form-label">Lore: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_appraisal" type="number" class="form-control" value="{{player.stats.PROFICIENCIES[3]}}"/>
+                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_lore" type="number" class="form-control" ng-model="player.stats.PROFICIENCIES[3]"/>
                                         </td>
                                     </tr>
                                     <tr>
@@ -286,416 +286,38 @@
                                             <label for="{{player.playerNum}}_tinkering" class="form-label">Tinkering: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_tinkering" type="number" class="form-control" value="{{player.stats.PROFICIENCIES[0]}}"/>
+                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_tinkering" type="number" class="form-control" ng-model="player.stats.PROFICIENCIES[0]"/>
                                         </td>
                                         <th>
                                             <label for="{{player.playerNum}}_alchemy" class="form-label">Alchemy: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_alchemy" type="number" class="form-control" value="{{player.stats.PROFICIENCIES[15]}}"/>
+                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_alchemy" type="number" class="form-control" ng-model="player.stats.PROFICIENCIES[15]"/>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th>
-                                            <label for="{{player.playerNum}}_magic" class="form-label">Magic: </label>
+                                            <label for="{{player.playerNum}}_sorcery" class="form-label">Sorcery: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_magic" type="number" class="form-control" value="{{player.stats.PROFICIENCIES[7]}}"/>
+                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_sorcery" type="number" class="form-control" ng-model="player.stats.PROFICIENCIES[7]"/>
                                         </td>
                                         <th>
-                                            <label for="{{player.playerNum}}_casting" class="form-label">Casting: </label>
+                                            <label for="{{player.playerNum}}_mysticism" class="form-label">Mysticism: </label>
                                         </th>
                                         <td>
-                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_casting" type="number" class="form-control" value="{{player.stats.PROFICIENCIES[6]}}"/>
+                                            <input name="player{{player.playerNum}}" min="0" max="100" id="{{player.playerNum}}_mysticism" type="number" class="form-control" ng-model="player.stats.PROFICIENCIES[6]"/>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                             <h4>Status effects</h4>
                             <p>Check the relevant box if the effect should be ON. Leave the timer at 0 if you want the effect to be on forever!</p>
-                            <table class="table table-striped">
-                                <thead></thead>
-                                <tbody>
-                                    <tr>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_asleep_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[0]}}"/>
-                                            <label for="{{player.playerNum}}_asleep" class="form-label">Asleep: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_asleep" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[0]}}"/>
-                                        </td>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_poisoned_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[1]}}"/>
-                                            <label for="{{player.playerNum}}_poisoned" class="form-label">Poisoned: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_poisoned" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[1]}}"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_stunned_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[2]}}"/>
-                                            <label for="{{player.playerNum}}_stunned" class="form-label">Stunned: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_stunned" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[2]}}"/>
-                                        </td>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_confused_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[3]}}"/>
-                                            <label for="{{player.playerNum}}_confused" class="form-label">Confused: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_confused" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[3]}}"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_drunk_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[4]}}"/>
-                                            <label for="{{player.playerNum}}_drunk class="form-label">Drunk: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_drunk" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[4]}}"/>
-                                        </td>
-
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_invisible_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[5]}}"/>
-                                            <label for="{{player.playerNum}}_invisible" class="form-label">Invisible: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_invisible" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[5]}}"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_blind_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[6]}}"/>
-                                            <label for="{{player.playerNum}}_blind" class="form-label">Blind: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_blind" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[6]}}"/>
-                                        </td>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_greasy_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[7]}}"/>
-                                            <label for="{{player.playerNum}}_greasy" class="form-label">Greasy: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_greasy" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[7]}}"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_messy_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[8]}}"/>
-                                            <label for="{{player.playerNum}}_messy" class="form-label">Messy: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_messy" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[8]}}"/>
-                                        </td>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_fast_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[9]}}"/>
-                                            <label for="{{player.playerNum}}_fast" class="form-label">Fast: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_fast" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[9]}}"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_paralyzed_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[10]}}"/>
-                                            <label for="{{player.playerNum}}_paralyzed" class="form-label">Paralyzed: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_paralyzed" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[10]}}"/>
-                                        </td>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_levitating_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[11]}}"/>
-                                            <label for="{{player.playerNum}}_levitating" class="form-label">Levitating: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_levitating" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[11]}}"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_telepath_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[12]}}"/>
-                                            <label for="{{player.playerNum}}_telepath" class="form-label">Telepath: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_telepath" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[12]}}"/>
-                                        </td>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_vomiting_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[13]}}"/>
-                                            <label for="{{player.playerNum}}_vomiting" class="form-label">Vomiting: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_vomiting" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[13]}}"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_bleeding_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[14]}}"/>
-                                            <label for="{{player.playerNum}}_bleeding" class="form-label">Bleeding: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_bleeding" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[14]}}"/>
-                                        </td>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_slow_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[15]}}"/>
-                                            <label for="{{player.playerNum}}_slow" class="form-label">Slow: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_slow" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[15]}}"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_magicresist_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[16]}}"/>
-                                            <label for="{{player.playerNum}}_magicresist" class="form-label">Mag. resist: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_magicresist" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[16]}}"/>
-                                        </td>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_magicreflect_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[17]}}"/>
-                                            <label for="{{player.playerNum}}_magicreflect" class="form-label">Mag. reflect: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_magicreflect" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[17]}}"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_vampiricaura_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[18]}}"/>
-                                            <label for="{{player.playerNum}}_vampiricaura" class="form-label">Vampiric Aura: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_vampiricaura" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[18]}}"/>
-                                        </td>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_redbuff_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[19]}}"/>
-                                            <label for="{{player.playerNum}}_redbuff" class="form-label">Red Shrine Buff: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_redbuff" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[19]}}"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_greenbuff_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[20]}}"/>
-                                            <label for="{{player.playerNum}}_greenbuff" class="form-label">Green Shr. Buff: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_greenbuff" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[20]}}"/>
-                                        </td>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_bluebuff_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[21]}}"/>
-                                            <label for="{{player.playerNum}}_bluebuff" class="form-label">Blue Shrine Buff: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_bluebuff" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[21]}}"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_hpregen_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[22]}}"/>
-                                            <label for="{{player.playerNum}}_hpregen" class="form-label">HP Regen: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_hpregen" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[22]}}"/>
-                                        </td>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_mpregen_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[23]}}"/>
-                                            <label for="{{player.playerNum}}_mpregen" class="form-label">MP Regen: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_mpregen" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[23]}}"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_pacified_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[24]}}"/>
-                                            <label for="{{player.playerNum}}_pacified" class="form-label">Pacified: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_pacified" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[24]}}"/>
-                                        </td>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_polymorphed_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[25]}}"/>
-                                            <label for="{{player.playerNum}}_polymorphed" class="form-label">Polymorphed: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_polymorphed" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[25]}}"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_knockback_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[26]}}"/>
-                                            <label for="{{player.playerNum}}_knockback" class="form-label">Knockback: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_knockback" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[26]}}"/>
-                                        </td>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_hungover_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[27]}}"/>
-                                            <label for="{{player.playerNum}}_hungover" class="form-label">Hung over: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_hungover" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[27]}}"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_strength_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[28]}}"/>
-                                            <label for="{{player.playerNum}}_strength" class="form-label">Strength: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_strength" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[28]}}"/>
-                                        </td>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_shapeshift_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[29]}}"/>
-                                            <label for="{{player.playerNum}}_shapeshift" class="form-label">Shapeshift: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_shapeshift" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[29]}}"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_webbed_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[30]}}"/>
-                                            <label for="{{player.playerNum}}_webbed" class="form-label">Webbed: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_webbed" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[30]}}"/>
-                                        </td>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_fear_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[31]}}"/>
-                                            <label for="{{player.playerNum}}_fear" class="form-label">Fear: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_fear" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[31]}}"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_elementalfocus_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[32]}}"/>
-                                            <label for="{{player.playerNum}}_elementalfocus" class="form-label">Elem. Focus: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_elementalfocus" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[32]}}"/>
-                                        </td>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_disoriented_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[33]}}"/>
-                                            <label for="{{player.playerNum}}_disoriented" class="form-label">Disoriented: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_disoriented" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[33]}}"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_arcanemarked_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[34]}}"/>
-                                            <label for="{{player.playerNum}}_arcanemarked" class="form-label">Arcane Mark: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_arcanemarked" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[34]}}"/>
-                                        </td>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_trollsblood_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[35]}}"/>
-                                            <label for="{{player.playerNum}}_trollsblood" class="form-label">Troll's Blood: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_trollsblood" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[35]}}"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_flutter_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[36]}}"/>
-                                            <label for="{{player.playerNum}}_flutter" class="form-label">Flutter: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_flutter" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[36]}}"/>
-                                        </td>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_dash_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[37]}}"/>
-                                            <label for="{{player.playerNum}}_dash" class="form-label">Dash: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_dash" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[37]}}"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_distracted_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[38]}}"/>
-                                            <label for="{{player.playerNum}}_distracted" class="form-label">Distracted: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_distracted" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[38]}}"/>
-                                        </td>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_mimiclocked_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[39]}}"/>
-                                            <label for="{{player.playerNum}}_mimiclocked" class="form-label">Mimic Locked: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_mimiclocked" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[39]}}"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_rooted_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[40]}}"/>
-                                            <label for="{{player.playerNum}}_rooted" class="form-label">Rooted: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_rooted" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[40]}}"/>
-                                        </td>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_nauseaprotection_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[41]}}"/>
-                                            <label for="{{player.playerNum}}_nauseaprotection" class="form-label">Nausea Prot.: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_nauseaprotection" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[41]}}"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_stamina_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[42]}}"/>
-                                            <label for="{{player.playerNum}}_stamina" class="form-label">Stamina: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_stamina" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[42]}}"/>
-                                        </td>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_mentality_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[43]}}"/>
-                                            <label for="{{player.playerNum}}_mentality" class="form-label">Mentality: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_mentality" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[43]}}"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_agility_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[44]}}"/>
-                                            <label for="{{player.playerNum}}_agility" class="form-label">Agility: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_agility" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[44]}}"/>
-                                        </td>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_rally_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[45]}}"/>
-                                            <label for="{{player.playerNum}}_rally" class="form-label">Rally: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_rally" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[45]}}"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_marigoldhealing_check" type="checkbox" class="form-check-input" ng-checked="{{player.stats.EFFECTS[46]}}"/>
-                                            <label for="{{player.playerNum}}_marigoldhealing" class="form-label">Marigold Heal.: </label>
-                                        </th>
-                                        <td>
-                                            <input name="player{{player.playerNum}}" id="{{player.playerNum}}_marigoldhealing" type="number" class="form-control" value="{{player.stats.EFFECTS_TIMERS[46]}}"/>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div ng-repeat="effect in player.stats.EFFECTS track by $index" ng-if="statusEffects[$index]" class="align-items-center input-group">
+                                <input name="player{{player.playerNum}}" id="{{player.playerNum}}_{{statusEffects[$index][0]}}_check" type="checkbox" class="form-check-input mx-2" ng-checked="{{player.stats.EFFECTS[$index]}}" ng-model="player.stats.EFFECTS[$index]" ng-true-value="1" ng-false-value="0"/>
+                                <label for="{{player.playerNum}}_{{statusEffects[$index][0]}}" class="form-label w-25 mx-2 pt-2"><b>{{statusEffects[$index][1]}}:</b></label>
+                                <input name="player{{player.playerNum}}" id="{{player.playerNum}}_{{statusEffects[$index][0]}}" type="number" class="form-control w-25 mx-2" ng-model="player.stats.EFFECTS_TIMERS[$index]"/>
+                            </div>
                             <h4>Spells</h4>
                             <table class="table table-striped">
                                 <thead></thead>
@@ -710,7 +332,7 @@
                                             <label for="{{player.playerNum}}_spell_select"><b>Add spell:</b></label>
                                             <div class="input-group">
                                                 <select class="form-select w-50" id="{{player.playerNum}}_spell_select">
-                                                    <option ng-repeat="s in spells" ng-if="s != 'None'">{{s}}</option>
+                                                    <option ng-repeat="s in spells track by $index" ng-if="!['None', 'Arthropod Form', 'Spray Web'].includes(s)">{{s}}</option>
                                                 </select>
                                                 <input type="button" class="btn btn-primary w-25" id="{{player.playerNum}}_add_spell_button" value="Add spell" ng-click="addSpell()"/>
                                             </div>

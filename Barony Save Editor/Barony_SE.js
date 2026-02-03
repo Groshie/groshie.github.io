@@ -47,6 +47,75 @@ app.controller('BaronyCtrl', function($scope) {
         return
     };
 
+    $scope.proficiencies = [
+        "tinkering",
+        "stealth",
+        "trading",
+        "lore",
+        "thaumaturgy",
+        "leadership",
+        "mysticism",
+        "sorcery",
+        "ranged",
+        "swords",
+        "maces",
+        "axes",
+        "polearms",
+        "blocking",
+        "unarmed",
+        "alchemy"
+    ];
+
+    $scope.statusEffects = [
+        ["asleep", "Asleep"],
+        ["poisoned", "Poisoned"],
+        ["stunned", "Stunned"],
+        ["confused", "Confused"],
+        ["drunk", "Drunk"],
+        ["invisible", "Invisible"],
+        ["blind", "Blind"],
+        ["greasy", "Greasy"],
+        ["messy", "Messy"],
+        ["fast", "Fast"],
+        ["paralyzed", "Paralyzed"],
+        ["levitating", "Levitating"],
+        ["telepath", "Telepath"],
+        ["vomiting", "Vomiting"],
+        ["bleeding", "Bleeding"],
+        ["slow", "Slow"],
+        ["magicresist", "Mag. Resist"],
+        ["magicreflect", "Mag. Reflect"],
+        ["vampiricaura", "Vamp. Aura"],
+        ["redbuff", "Red Shr. Buff"],
+        ["greenbuff", "Green Shr. Buff"],
+        ["bluebuff", "Blue Shr. Buff"],
+        ["hpregen", "HP Regen"],
+        ["mpregen", "MP Regen"],
+        ["pacified", "Pacified"],
+        ["polymorphed", "Polymorphed"],
+        ["knockback", "Knockback"],
+        ["hungover", "Hungover"],
+        ["strength", "Strength"],
+        ["shapeshift", "Shapeshift"],
+        ["webbed", "Webbed"],
+        ["fear", "Fear"],
+        ["elementalfocus", "Elem. Focus"],
+        ["disoriented", "Disoriented"],
+        ["arcanemarked", "Arcane Marked"],
+        ["trollsblood", "Troll's Blood"],
+        ["flutter", "Flutter"],
+        ["dash", "Dash"],
+        ["distracted", "Distracted"],
+        ["mimiclocked", "Mimic Lock."],
+        ["rooted", "Rooted"],
+        ["nauseaprotection", "Nausea Prot."],
+        ["stamina", "Stamina"],
+        ["mentality", "Mentality"],
+        ["agility", "Agility"],
+        ["rally", "Rally"],
+        ["marigoldhealing", "Marigold Heal."]
+    ];
+
     $scope.spells = [
         "None",
         "Forcebolt",
@@ -101,163 +170,181 @@ app.controller('BaronyCtrl', function($scope) {
         "Flutter",
         "Dash",
         "Polymorph",
-        "Crab Form",
-        "Crab Web",
+        "Arthropod Form",
+        "Spray Web",
         "Ghost Bolt",
         "Slime Spray (Acid)",
         "Slime Spray (Water)",
         "Slime Spray (Magma)",
         "Slime Spray (Tar)",
-        "Slime Spray (Metal)"
+        "Slime Spray (Metal)",
+        "Focus of Flames",
+        "Focus of Snow",
+        "Focus of Needles",
+        "Focus of Arcs",
+        "Focus of Sandblast",
+        "Meteor",
+        "SPELL_FLAMES",
+        "SPELL_ICE_WAVE",
+        "SPELL_CONJURE_FOOD",
+        "SPELL_GUARD_BODY",
+        "SPELL_GUARD_SPIRIT",
+        "SPELL_DIVINE_GUARD",
+        "SPELL_PROF_NIMBLENESS",
+        "SPELL_PROF_GREATER_MIGHT",
+        "SPELL_PROF_COUNSEL",
+        "SPELL_PROF_STURDINESS",
+        "SPELL_BLESS_FOOD",
+        "SPELL_PINPOINT",
+        "SPELL_DONATION",
+        "SPELL_SCRY_ALLIES",
+        "SPELL_SCRY_SHRINES",
+        "SPELL_SCRY_TRAPS",
+        "SPELL_SCRY_TREASURES",
+        "SPELL_PENANCE",
+        "SPELL_CALL_ALLIES",
+        "SPELL_SACRED_PATH",
+        "SPELL_MANIFEST_DESTINY",
+        "SPELL_DETECT_ENEMY",
+        "SPELL_DETECT_ENEMIES",
+        "SPELL_TURN_UNDEAD",
+        "SPELL_HEAL_OTHER",
+        "SPELL_BLOOD_WARD",
+        "SPELL_TRUE_BLOOD",
+        "SPELL_DIVINE_ZEAL",
+        "SPELL_ALTER_INSTRUMENT",
+        "SPELL_MAXIMISE",
+        "SPELL_MINIMISE",
+        "SPELL_JUMP",
+        "SPELL_INCOHERENCE",
+        "SPELL_OVERCHARGE",
+        "SPELL_ENVENOM_WEAPON",
+        "SPELL_PSYCHIC_SPEAR",
+        "SPELL_DEFY_FLESH",
+        "SPELL_GREASE_SPRAY",
+        "SPELL_BLOOD_WAVES",
+        "SPELL_BOOBY_TRAP",
+        "Compel",
+        "SPELL_METALLURGY",
+        "SPELL_GEOMANCY",
+        "SPELL_FORGE_KEY",
+        "SPELL_FORGE_JEWEL",
+        "SPELL_ENHANCE_WEAPON",
+        "SPELL_RESHAPE_WEAPON",
+        "SPELL_ALTER_ARROW",
+        "SPELL_VOID_CHEST",
+        "SPELL_PUNCTURE_VOID",
+        "SPELL_LEAD_BOLT",
+        "SPELL_MERCURY_BOLT",
+        "SPELL_NUMBING_BOLT",
+        "SPELL_DELAY_PAIN",
+        "SPELL_CURSE_FLESH",
+        "SPELL_REVENANT_CURSE",
+        "SPELL_COWARDICE",
+        "SPELL_COURAGE",
+        "SPELL_SEEK_ALLY",
+        "SPELL_SEEK_FOE",
+        "SPELL_DEEP_SHADE",
+        "SPELL_SHADE_BOLT",
+        "SPELL_SPIRIT_WEAPON",
+        "SPELL_ADORCISM",
+        "SPELL_TABOO",
+        "SPELL_WONDERLIGHT",
+        "SPELL_SPORES",
+        "SPELL_SPORE_BOMB",
+        "SPELL_WINDGATE",
+        "SPELL_VORTEX",
+        "SPELL_TELEKINESIS",
+        "SPELL_KINETIC_PUSH",
+        "SPELL_DISARM",
+        "SPELL_STRIP",
+        "SPELL_ABUNDANCE",
+        "SPELL_GREATER_ABUNDANCE",
+        "SPELL_PRESERVE",
+        "SPELL_RESTORE",
+        "SPELL_SABOTAGE",
+        "SPELL_HARVEST_TRAP",
+        "SPELL_MIST_FORM",
+        "SPELL_HOLOGRAM",
+        "SPELL_FORCE_SHIELD",
+        "SPELL_REFLECTOR",
+        "Splinter Armor",
+        "SPELL_LIGHTEN_LOAD",
+        "SPELL_ATTRACT_ITEMS",
+        "SPELL_RETURN_ITEMS",
+        "SPELL_ABSORB_MAGIC",
+        "SPELL_SEIZE_MAGIC",
+        "SPELL_DEFACE",
+        "SPELL_SUNDER_MONUMENT",
+        "SPELL_DEMESNE_DOOR",
+        "SPELL_TUNNEL",
+        "SPELL_NULL_AREA",
+        "SPELL_SPHERE_SILENCE",
+        "SPELL_FORGE_METAL_SCRAP",
+        "SPELL_FORGE_MAGIC_SCRAP",
+        "SPELL_FIRE_SPRITE",
+        "SPELL_FLAME_ELEMENTAL",
+        "SPELL_SPIN",
+        "SPELL_DIZZY",
+        "SPELL_VANDALISE",
+        "SPELL_DESECRATE",
+        "SPELL_SANCTIFY",
+        "SPELL_SANCTIFY_WATER",
+        "SPELL_CLEANSE_FOOD",
+        "SPELL_ADORCISE_INSTRUMENT",
+        "SPELL_FLAME_CLOAK",
+        "SPELL_CRITICAL_SPELL",
+        "SPELL_MAGIC_WELL",
+        "SPELL_FLAME_SHIELD",
+        "SPELL_LIGHTNING_BOLT",
+        "SPELL_DISRUPT_EARTH",
+        "SPELL_EARTH_SPINES",
+        "SPELL_LIGHTNING_NEXUS",
+        "SPELL_FIRE_WALL",
+        "SPELL_LIFT",
+        "SPELL_SLAM",
+        "SPELL_IGNITE",
+        "SPELL_SHATTER_OBJECTS",
+        "SPELL_KINETIC_FIELD",
+        "SPELL_ICE_BLOCK",
+        "Meteor Shower",
+        "SPELL_CHRONOMIC_FIELD",
+        "SPELL_ETERNALS_GAZE",
+        "SPELL_SHATTER_EARTH",
+        "SPELL_EARTH_ELEMENTAL",
+        "SPELL_ROOTS",
+        "SPELL_MUSHROOM",
+        "SPELL_MYCELIUM_BOMB",
+        "SPELL_MYCELIUM_SPORES",
+        "SPELL_HEAL_PULSE",
+        "SPELL_SHRUB",
+        "SPELL_THORNS",
+        "SPELL_BLADEVINES",
+        "SPELL_BASTION_MUSHROOM",
+        "SPELL_BASTION_ROOTS",
+        "Icon of Claim Life",
+        "Icon of Void Rift",
+        "Icon of Silence",
+        "Icon of Vengeance",
+        "Icon of Suppress",
+        "Symbol of Peace",
+        "Symbol of Justice",
+        "Symbol of Providence",
+        "Symbol of Purity",
+        "Symbol of Sanctuary",
+        "Scepter Blast",
+        "SPELL_MAGICIANS_ARMOR",
+        "SPELL_PROJECT_SPIRIT",
+        "SPELL_BREATHE_FIRE",
+        "SPELL_HEAL_MINOR",
+        "SPELL_HOLY_FIRE",
+        "SPELL_SIGIL",
+        "SPELL_SANCTUARY",
+        "SPELL_HOLY_BEAM"
     ];
 
+    // Export as file
     $scope.export = function() {
-        //console.log($scope.players);
-        // Save new game information
-        $scope.saveData.dungeon_lvl = parseInt(document.getElementById("dungeon-level").value);
-        $scope.saveData.gamekey = parseInt(document.getElementById("game-seed").value);
-        $scope.saveData.mapseed = parseInt(document.getElementById("map-seed").value);
-
-        for (let i = 0; i < $scope.players.length; i++) {
-            // Save new general stats
-            $scope.saveData.players[i].stats.name = document.getElementById(i + "_name").value;
-            $scope.saveData.players[i].stats.LVL = parseInt(document.getElementById(i + "_level").value);
-            $scope.saveData.players[i].stats.EXP = parseInt(document.getElementById(i + "_exp").value);
-            $scope.saveData.players[i].stats.GOLD = parseInt(document.getElementById(i + "_gold").value);
-            $scope.saveData.players[i].stats.HUNGER = parseInt(document.getElementById(i + "_hunger").value);
-
-            // Save new attributes
-            $scope.saveData.players[i].stats.STR = parseInt(document.getElementById(i + "_str").value);
-            $scope.saveData.players[i].stats.DEX = parseInt(document.getElementById(i + "_dex").value);
-            $scope.saveData.players[i].stats.CON = parseInt(document.getElementById(i + "_con").value);
-            $scope.saveData.players[i].stats.INT = parseInt(document.getElementById(i + "_int").value);
-            $scope.saveData.players[i].stats.PER = parseInt(document.getElementById(i + "_per").value);
-            $scope.saveData.players[i].stats.CHR = parseInt(document.getElementById(i + "_chr").value);
-            $scope.saveData.players[i].stats.HP = parseInt(document.getElementById(i + "_hp").value);
-            $scope.saveData.players[i].stats.maxHP = parseInt(document.getElementById(i + "_maxhp").value);
-            $scope.saveData.players[i].stats.MP = parseInt(document.getElementById(i + "_mp").value);
-            $scope.saveData.players[i].stats.maxMP = parseInt(document.getElementById(i + "_maxmp").value);
-
-            // Save new proficiencies
-            $scope.saveData.players[i].stats.PROFICIENCIES[4] = parseInt(document.getElementById(i + "_swimming").value);
-            $scope.saveData.players[i].stats.PROFICIENCIES[1] = parseInt(document.getElementById(i + "_stealth").value);
-            $scope.saveData.players[i].stats.PROFICIENCIES[13] = parseInt(document.getElementById(i + "_blocking").value);
-            $scope.saveData.players[i].stats.PROFICIENCIES[8] = parseInt(document.getElementById(i + "_ranged").value);
-            $scope.saveData.players[i].stats.PROFICIENCIES[14] = parseInt(document.getElementById(i + "_unarmed").value);
-            $scope.saveData.players[i].stats.PROFICIENCIES[9] = parseInt(document.getElementById(i + "_swords").value);
-            $scope.saveData.players[i].stats.PROFICIENCIES[12] = parseInt(document.getElementById(i + "_polearms").value);
-            $scope.saveData.players[i].stats.PROFICIENCIES[11] = parseInt(document.getElementById(i + "_axes").value);
-            $scope.saveData.players[i].stats.PROFICIENCIES[10] = parseInt(document.getElementById(i + "_maces").value);
-            $scope.saveData.players[i].stats.PROFICIENCIES[5] = parseInt(document.getElementById(i + "_leadership").value);
-            $scope.saveData.players[i].stats.PROFICIENCIES[2] = parseInt(document.getElementById(i + "_trading").value);
-            $scope.saveData.players[i].stats.PROFICIENCIES[3] = parseInt(document.getElementById(i + "_appraisal").value);
-            $scope.saveData.players[i].stats.PROFICIENCIES[0] = parseInt(document.getElementById(i + "_tinkering").value);
-            $scope.saveData.players[i].stats.PROFICIENCIES[15] = parseInt(document.getElementById(i + "_alchemy").value);
-            $scope.saveData.players[i].stats.PROFICIENCIES[7] = parseInt(document.getElementById(i + "_magic").value);
-            $scope.saveData.players[i].stats.PROFICIENCIES[6] = parseInt(document.getElementById(i + "_casting").value);
-
-            // Save new effects
-            $scope.saveData.players[i].stats.EFFECTS[0] = document.getElementById(i + "_asleep_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[0] = parseInt(document.getElementById(i + "_asleep").value ? document.getElementById(i + "_asleep").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[1] = document.getElementById(i + "_poisoned_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[1] = parseInt(document.getElementById(i + "_poisoned").value ? document.getElementById(i + "_poisoned").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[2] = document.getElementById(i + "_stunned_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[2] = parseInt(document.getElementById(i + "_stunned").value ? document.getElementById(i + "_stunned").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[3] = document.getElementById(i + "_confused_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[3] = parseInt(document.getElementById(i + "_confused").value ? document.getElementById(i + "_confused").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[4] = document.getElementById(i + "_drunk_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[4] = parseInt(document.getElementById(i + "_drunk").value ? document.getElementById(i + "_drunk").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[5] = document.getElementById(i + "_invisible_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[5] = parseInt(document.getElementById(i + "_invisible").value ? document.getElementById(i + "_invisible").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[6] = document.getElementById(i + "_blind_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[6] = parseInt(document.getElementById(i + "_blind").value ? document.getElementById(i + "_blind").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[7] = document.getElementById(i + "_greasy_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[7] = parseInt(document.getElementById(i + "_greasy").value ? document.getElementById(i + "_greasy").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[8] = document.getElementById(i + "_messy_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[8] = parseInt(document.getElementById(i + "_messy").value ? document.getElementById(i + "_messy").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[9] = document.getElementById(i + "_fast_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[9] = parseInt(document.getElementById(i + "_fast").value ? document.getElementById(i + "_fast").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[10] = document.getElementById(i + "_paralyzed_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[10] = parseInt(document.getElementById(i + "_paralyzed").value ? document.getElementById(i + "_paralyzed").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[11] = document.getElementById(i + "_levitating_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[11] = parseInt(document.getElementById(i + "_levitating").value ? document.getElementById(i + "_levitating").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[12] = document.getElementById(i + "_telepath_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[12] = parseInt(document.getElementById(i + "_telepath").value ? document.getElementById(i + "_telepath").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[13] = document.getElementById(i + "_vomiting_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[13] = parseInt(document.getElementById(i + "_vomiting").value ? document.getElementById(i + "_vomiting").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[14] = document.getElementById(i + "_bleeding_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[14] = parseInt(document.getElementById(i + "_bleeding").value ? document.getElementById(i + "_bleeding").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[15] = document.getElementById(i + "_slow_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[15] = parseInt(document.getElementById(i + "_slow").value ? document.getElementById(i + "_slow").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[16] = document.getElementById(i + "_magicresist_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[16] = parseInt(document.getElementById(i + "_magicresist").value ? document.getElementById(i + "_magicresist").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[17] = document.getElementById(i + "_magicreflect_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[17] = parseInt(document.getElementById(i + "_magicreflect").value ? document.getElementById(i + "_magicreflect").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[18] = document.getElementById(i + "_vampiricaura_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[18] = parseInt(document.getElementById(i + "_vampiricaura").value ? document.getElementById(i + "_vampiricaura").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[19] = document.getElementById(i + "_redbuff_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[19] = parseInt(document.getElementById(i + "_redbuff").value ? document.getElementById(i + "_redbuff").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[20] = document.getElementById(i + "_greenbuff_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[20] = parseInt(document.getElementById(i + "_greenbuff").value ? document.getElementById(i + "_greenbuff").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[21] = document.getElementById(i + "_bluebuff_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[21] = parseInt(document.getElementById(i + "_bluebuff").value ? document.getElementById(i + "_bluebuff").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[22] = document.getElementById(i + "_hpregen_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[22] = parseInt(document.getElementById(i + "_hpregen").value ? document.getElementById(i + "_hpregen").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[23] = document.getElementById(i + "_mpregen_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[23] = parseInt(document.getElementById(i + "_mpregen").value ? document.getElementById(i + "_mpregen").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[24] = document.getElementById(i + "_pacified_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[24] = parseInt(document.getElementById(i + "_pacified").value ? document.getElementById(i + "_pacified").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[25] = document.getElementById(i + "_polymorphed_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[25] = parseInt(document.getElementById(i + "_polymorphed").value ? document.getElementById(i + "_polymorphed").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[26] = document.getElementById(i + "_knockback_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[26] = parseInt(document.getElementById(i + "_knockback").value ? document.getElementById(i + "_knockback").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[27] = document.getElementById(i + "_hungover_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[27] = parseInt(document.getElementById(i + "_hungover").value ? document.getElementById(i + "_hungover").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[28] = document.getElementById(i + "_strength_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[28] = parseInt(document.getElementById(i + "_strength").value ? document.getElementById(i + "_strength").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[29] = document.getElementById(i + "_shapeshift_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[29] = parseInt(document.getElementById(i + "_shapeshift").value ? document.getElementById(i + "_shapeshift").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[30] = document.getElementById(i + "_webbed_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[30] = parseInt(document.getElementById(i + "_webbed").value ? document.getElementById(i + "_webbed").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[31] = document.getElementById(i + "_fear_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[31] = parseInt(document.getElementById(i + "_fear").value ? document.getElementById(i + "_fear").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[32] = document.getElementById(i + "_elementalfocus_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[32] = parseInt(document.getElementById(i + "_elementalfocus").value ? document.getElementById(i + "_elementalfocus").value : 0); 
-            $scope.saveData.players[i].stats.EFFECTS[33] = document.getElementById(i + "_disoriented_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[33] = parseInt(document.getElementById(i + "_disoriented").value ? document.getElementById(i + "_disoriented").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[34] = document.getElementById(i + "_arcanemarked_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[34] = parseInt(document.getElementById(i + "_arcanemarked").value ? document.getElementById(i + "_arcanemarked").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[35] = document.getElementById(i + "_trollsblood_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[35] = parseInt(document.getElementById(i + "_trollsblood").value ? document.getElementById(i + "_trollsblood").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[36] = document.getElementById(i + "_flutter_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[36] = parseInt(document.getElementById(i + "_flutter").value ? document.getElementById(i + "_flutter").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[37] = document.getElementById(i + "_dash_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[37] = parseInt(document.getElementById(i + "_dash").value ? document.getElementById(i + "_dash").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[38] = document.getElementById(i + "_distracted_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[38] = parseInt(document.getElementById(i + "_distracted").value ? document.getElementById(i + "_distracted").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[39] = document.getElementById(i + "_mimiclocked_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[39] = parseInt(document.getElementById(i + "_mimiclocked").value ? document.getElementById(i + "_mimiclocked").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[40] = document.getElementById(i + "_rooted_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[40] = parseInt(document.getElementById(i + "_rooted").value ? document.getElementById(i + "_rooted").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[41] = document.getElementById(i + "_nauseaprotection_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[41] = parseInt(document.getElementById(i + "_nauseaprotection").value ? document.getElementById(i + "_nauseaprotection").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[42] = document.getElementById(i + "_stamina_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[42] = parseInt(document.getElementById(i + "_stamina").value ? document.getElementById(i + "_stamina").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[43] = document.getElementById(i + "_mentality_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[43] = parseInt(document.getElementById(i + "_mentality").value ? document.getElementById(i + "_mentality").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[44] = document.getElementById(i + "_agility_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[44] = parseInt(document.getElementById(i + "_agility").value ? document.getElementById(i + "_agility").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[45] = document.getElementById(i + "_rally_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[45] = parseInt(document.getElementById(i + "_rally").value ? document.getElementById(i + "_rally").value : 0);
-            $scope.saveData.players[i].stats.EFFECTS[46] = document.getElementById(i + "_marigoldhealing_check").checked ? 1 : 0;
-            $scope.saveData.players[i].stats.EFFECTS_TIMERS[46] = parseInt(document.getElementById(i + "_marigoldhealing").value ? document.getElementById(i + "_marigoldhealing").value : 0);
-
-            //console.log($scope.saveData.players[i].spells);
-            // Footnote: New spells should already be saved.
-        }
-
-        // Export as file
-        console.log($scope.saveData);
         let thisDL = document.createElement("a");
         thisDL.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(JSON.stringify($scope.saveData)));
         thisDL.download = document.getElementById("file-input").files[0].name;
@@ -268,6 +355,7 @@ app.controller('BaronyCtrl', function($scope) {
 
     // Add spell for player from select
     $scope.addSpell = function () {
+        // Find out what player to set the spell to and which spell to add
         let thisSelect = document.getElementById(event.srcElement.id[0] + "_spell_select");
         let thisPlayer = angular.element(document.getElementById(event.srcElement.id)).scope().player;
         let spellList = angular.element(document.getElementById("barony-div")).scope().spells;
@@ -277,6 +365,8 @@ app.controller('BaronyCtrl', function($scope) {
         if (!playerSpells.includes(spellList.indexOf(currentSpell))) {
             // Adds the spell to the player spell list:
             angular.element(document.getElementById(event.srcElement.id)).scope().player.spells.push(spellList.indexOf(currentSpell));
+            angular.element(document.getElementById(event.srcElement.id)).scope().player.learned_spells.push(spellList.indexOf(currentSpell));
+            angular.element(document.getElementById(event.srcElement.id)).scope().player.learned_spells.sort();
 
             // Now we must also add the spell to the player spell inventory:
             let spellInventory = playerInventory.filter(spellFilter => spellFilter.type == 162);
@@ -293,10 +383,11 @@ app.controller('BaronyCtrl', function($scope) {
                 "y": maxX == 3 ? maxY + 1 : maxY
             };
             playerInventory.push(thisSpell);
-            console.log("Spell " + currentSpell + " added to player spell list!");
-        } else {
-            console.log("Spell " + currentSpell + " is already in the list, and was not added again.");
-        }
+            //console.log("Spell " + currentSpell + " added to player spell list!");
+        } 
+        //else {
+        //    console.log("Spell " + currentSpell + " is already in the list, and was not added again.");
+        //}
         return
     }
     return
