@@ -1,0 +1,105 @@
+:root {
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #38bdf8;
+            --text-main: #f8fafc;
+        }
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+code, pre, .mono {
+    font-family: 'Fira Code', monospace;
+}
+
+.navbar {
+    border-bottom: 1px solid #334155;
+    background: rgba(15, 23, 42, 0.9) !important;
+    backdrop-filter: blur(10px);
+}
+
+/* Hero Section */
+.hero-title {
+    font-weight: 700;
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    background-clip: text; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--accent); 
+}
+
+/* Project Cards */
+.project-card {
+    background: var(--card-bg);
+    border: 1px solid #334155;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+}
+
+.project-card h4, 
+.project-card h5 {
+    font-weight: 800;
+    background: linear-gradient(
+        135deg, 
+        #fef9c3 0%,
+        #f59e0b 50%,
+        #fef9c3 100% 
+    );
+    
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.2)) 
+            drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8));
+    color: #fcd34d; 
+    
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+.featured-card h4 {
+    font-size: 1.5rem;
+    text-shadow: none;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.featured-card {
+    border-left: 5px solid var(--accent);
+}
+
+.badge-tech {
+    background: #334155;
+    color: var(--accent);
+    font-size: 0.75rem;
+    margin-right: 5px;
+    border: 1px solid #475569;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    border: none;
+    color: #0f172a;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #7dd3fc;
+    color: #0f172a;
+}
+
+footer {
+    border-top: 1px solid #334155;
+    padding: 2rem 0;
+    margin-top: 4rem;
+    opacity: 0.7;
+}
