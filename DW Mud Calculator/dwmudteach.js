@@ -358,11 +358,10 @@ function startCalc() {
 
     let result = calculateCostsForLevels(currentLevel, wantedLevel, stats, teacherEtb, teacherSpec);
 
-    let thisRow = document.createElement("tr");
-    let thisTd = document.createElement("td");
-    thisTd.append(`The cost would be approximately ${result.toLocaleString()} xp to learn ${thisSkill} to level ${wantedLevel} (bonus: ${calculateSkillBonus(wantedLevel, stats)}) from ${teacherSpec == 0 ? 'an unspecialised' : 'a specialised'} teacher that has a teaching bonus of ${teacherEtb}.`);
-    thisRow.append(thisTd);
-    document.getElementById("log-table").append(thisRow);
+    let thisDiv = document.createElement("div");
+    thisDiv.append(`The cost would be approximately ${result.toLocaleString()} xp to learn ${thisSkill} to level ${wantedLevel} (bonus: ${calculateSkillBonus(wantedLevel, stats)}) from ${teacherSpec == 0 ? 'an unspecialised' : 'a specialised'} teacher that has a teaching bonus of ${teacherEtb}.`);
+    thisDiv.classList.add("col-sm-12", "card");
+    document.getElementById("log-table").append(thisDiv);
     return
 }
 
