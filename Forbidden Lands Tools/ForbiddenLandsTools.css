@@ -1,17 +1,144 @@
-.font-forbidden {
-    font-family: "Tapestry";
-    color: rgb(192, 12, 12); 
-    text-shadow: 2px 2px 5px red;
+/* --- FORBIDDEN LANDS: ACCESSIBLE GRIMDARK --- */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&family=Pirata+One&display=swap');
+
+:root {
+    --blood: #8b0000;
+    --gold: #b38728;
+    --stone: #1a1a1a;
+    --parchment: #fdfaf0;
+    --text-main: #e2e2e2; /* High contrast off-white */
 }
 
-@keyframes colors {
-    0%   {color: rgb(187, 25, 25);text-shadow: 2px 2px 5px red}
-    25%  {color: rgba(219, 8, 8, 0.801);text-shadow: 4px 4px 5px red}
-    50%  {color: rgb(160, 30, 30);text-shadow: 5px 5px 5px red}
-    100% {color: rgb(192, 12, 12);text-shadow: 2px 2px 5px red}
+body {
+    background-color: #0a0a0a;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-matter.png");
+    color: var(--text-main);
+    font-family: 'Crimson Pro', serif;
+    line-height: 1.6;
 }
 
-.color-animation:hover {
-    animation-name: colors;
-    animation-duration: 4s;
+/* Headers: Bright Gold/Red for visibility */
+h1, h2, h3, .navbar-brand {
+    font-family: 'Pirata One', cursive;
+    color: var(--gold);
+    text-shadow: 2px 2px 0px #000;
 }
+
+/* Bootstrap Cards as 'Encampment Gear' */
+.card {
+    background: #1a1614 !important;
+    border: 1px solid #3d3530 !important;
+    border-left: 4px solid #630000 !important; /* The 'Danger' edge */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    color: #c9c1b3;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    border-left-color: #d4af37 !important; /* Hovering reveals the 'Lure of Gold' */
+    transform: translateY(-2px);
+}
+
+/* Inputs & Selects: Rusted Iron */
+.form-control, .form-select {
+    background-color: #0d0d0d !important;
+    border: 1px solid #3d3530 !important;
+    color: #d4af37 !important; /* Gold text for values */
+    font-family: 'Courier New', Courier, monospace; /* Feels like a survival log */
+}
+
+.form-control:focus {
+    border-color: #630000 !important;
+    box-shadow: 0 0 8px rgba(99, 0, 0, 0.5) !important;
+}
+
+.btn-primary:hover {
+    background: #d4af37 !important;
+    color: #0d0d0d !important;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+/* Results: The 'Discovery' area */
+#result {
+    background: var(--parchment);
+    color: #1a1a1a;
+    border: 3px double var(--blood);
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 10px 10px 0px var(--stone);
+}
+
+.text-muted {
+    color: #7a7369 !important;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* A custom 'Stolen Treasure' badge */
+.badge-gold {
+    background-color: #d4af37;
+    color: #0d0d0d;
+    font-weight: bold;
+    border-radius: 0;
+    padding: 3px 8px;
+    text-transform: uppercase;
+}
+
+/* --- COLLAPSE & ALIGNMENT FIX --- */
+.collapse-content, .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    background: #111; /* Slightly lighter than body for depth */
+}
+
+
+/* Row-based inputs inside collapses */
+.input-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 8px;
+}
+
+/* --- ACCESSIBLE FORM CONTROLS --- */
+.form-control, .form-select {
+    background-color: var(--parchment) !important;
+    color: #000 !important; /* Pure black text on light paper */
+    border: 2px solid var(--gold) !important;
+    font-weight: 700;
+    border-radius: 4px;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 10px var(--gold) !important;
+    border-color: var(--blood) !important;
+}
+
+/* Labels: Ensure they stand out */
+label {
+    color: var(--gold);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+/* Buttons: High-visibility Red */
+.btn-primary {
+    background: var(--blood) !important;
+    border: 2px solid var(--gold) !important;
+    color: white !important;
+    font-family: 'Pirata One', cursive;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+    background: #a50000 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 0, 0, 0.4);
+}
+
